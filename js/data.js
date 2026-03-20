@@ -34,7 +34,7 @@ With research findings in hand, I mapped out a full **information architecture**
  
 The IA work clarified the hierarchy before any UI decisions were made — a step that ultimately prevented several costly redesign loops.
  
----
+
  
 ## Design Solutions
  
