@@ -896,9 +896,9 @@ nav {
 
 /* Body */
 .detail-body {
-  max-width: 1200px;
+  max-width: 780;
   margin: 0 auto;
-  padding: 0 120px 120px;
+  padding: 0 48px 120px;
 }
 
 /* h2 — big editorial section breaks */
@@ -910,7 +910,7 @@ nav {
   margin: 96px 0 32px;
   padding-top: 64px;
   border-top: 1px solid var(--border);
-  max-width: 700px;
+  max-width: 100%;
 }
 
 /* h3 — small labeled subsections */
@@ -933,7 +933,7 @@ nav {
   font-size: 1.05rem;
   line-height: 1.85;
   color: var(--muted);
-  max-width: 680px;
+  max-width: 100%;
   margin-bottom: 24px;
 }
 .detail-body strong { color: var(--ink); }
