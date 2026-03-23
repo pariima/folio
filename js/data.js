@@ -1,171 +1,86 @@
 // ─── PROJECTS DATA ───────────────────────────────────────────────────────────
 const PROJECTS = [
-  {
-    id: 1,
-    title: "AllGrow App",
-    tag: "UX Research · Product Design",
-    year: "2024",
-    client: "AllGrow",
-    role: "UX Researcher & Designer",
-    duration: "Ongoing",
-    cover: "https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67db9f757cf317b25e0f739d_Section%201.png",
-    excerpt: "How I optimized user experience and data presentation to streamline administrative tasks and improve educational engagement for an ed-tech platform.",
-    content: `## Overview
-
-## Overview
- 
-AllGrow is an education management platform connecting students, teachers, and mentors. When I joined the project, admins were managing hundreds of users across a fragmented system — emails, spreadsheets, and manual tracking were the norm. I led end-to-end UX research and design to replace this patchwork with a unified, intuitive admin dashboard.
- 
----
- 
-## The Problem
- 
-Education admins are doing critical work — monitoring student progress, coordinating mentors, distributing content — but their tools weren't built with them in mind. The existing setup forced admins to context-switch constantly between disconnected systems, leading to delays and missed interventions for struggling students.
- 
-**Core pain points identified:**
- 
-- No reliable way to search or filter users by role, status, or cohort
-- Zero visibility into which students were actively engaged or at risk
-- Newsletter and content management buried in menus with no clear workflow
-- Navigation was inconsistent, making routine tasks feel unnecessarily complex
- 
----
- 
-## Discovery & Research
- 
-I started by conducting **structured interviews with admins, educators, and stakeholders** to surface real pain points before touching any design. Alongside this, I ran **competitive analysis** of similar education management platforms to benchmark best practices in admin UX.
- 
-Key quotes from research sessions:
- 
-> *"There's no easy way to filter or search for users — I end up scrolling forever."*
- 
-> *"We can't tell who's engaged, who's falling behind, or who needs support until it's too late."*
- 
-> *"The newsletter feature is so confusing I just stopped using it."*
- 
-These weren't just inconveniences — they had direct downstream effects on student outcomes.
- 
----
- 
-## Information Architecture
- 
-With research findings in hand, I mapped out a full **information architecture** to restructure how content and tasks were organized. This ensured every admin action had a logical, predictable home before a single wireframe was drawn.
- 
-### Sitemap Overview
- 
-![AllGrow Admin Sitemap](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67db9b6aeb92eba866755e12_All%20Grow%20Sitemaps%20Admin%20-%20Admin%20Page%20-%20Sitemap%2000.jpg)
- 
-### User Management Architecture
- 
-![User Management Tab](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67db9c3992e7b97f7d664d80_All%20Grow%20Sitemaps%20Admin%20-%20User%20Management%20Tab.jpg)
- 
-### Students Section Breakdown
- 
-![Students IA](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67db9c4ab7d6f14488fd05c3_All%20Grow%20Sitemaps%20Admin%20-%20Students.jpg)
- 
-### Student Profile Structure
- 
-![Student Profile IA](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67db9c2a41b4278c6dd8111f_All%20Grow%20Sitemaps%20Admin%20-%20Student%20Profile.jpg)
- 
-The IA work clarified the hierarchy before any UI decisions were made — a step that ultimately prevented several costly redesign loops.
- 
-
- 
-## Design Solutions
- 
-Each problem identified in research was paired with a deliberate design response:
- 
-### 1 — User Management: Find Anyone, Fast
- 
-**Problem:** No filtering or search meant admins wasted time scrolling through long user lists.
- 
-**Solution:** Designed an interactive filtering system with real-time search, multi-parameter sorting, and clear **status indicators** (Active · Inactive · Needs Attention). Admins could now surface the right user in seconds rather than minutes.
- 
----
- 
-### 2 — Progress Tracking: Make Engagement Visible
- 
-**Problem:** There was no way to proactively identify struggling students — admins only found out when it was too late.
- 
-**Solution:** Introduced a dedicated **progress tracking dashboard** surfacing:
-- Module completion rates per student
-- Engagement signals (login frequency, time on task)
-- Automated flags for students showing disengagement patterns
- 
-This shifted admin behavior from reactive to proactive.
- 
----
- 
-### 3 — Newsletter Management: One Place, One Flow
- 
-**Problem:** The newsletter feature was buried and non-intuitive, so most admins simply didn't use it.
- 
-**Solution:** Consolidated all content distribution into a **dedicated Newsletter section** with a single, prominent "Create" action. No more hunting through menus.
- 
----
- 
-## Wireframes & Prototyping
- 
-### Low-Fidelity Wireframes
- 
-I moved quickly into lo-fi wireframes to validate structural decisions before investing in visual design. This allowed fast iteration on layout and flow.
- 
-![Low-Fidelity Wireframe — User Management](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67db9ed3b7d6f14488ff2f02_User%20Management%20_%20Students.png)
- 
-### High-Fidelity Prototype
- 
-Once structure was validated, I refined to high-fidelity — incorporating the design system, interaction states, and realistic content.
- 
-![High-Fidelity Prototype](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67db9f757cf317b25e0f739d_Section%201.png)
- 
----
- 
-## Usability Testing
- 
-I ran an **unmoderated usability study on UserTesting.com** with real admins completing representative tasks:
- 
-- *"Find a student named Amelia Bardot."*
-- *"Create a new newsletter."*
-- *"Find students who need attention."*
- 
-Sessions were recorded and analyzed for task completion rates, hesitation points, and verbal feedback.
- 
-### Key Findings & Iterations
- 
-| Finding | Design Response |
-|---|---|
-| Search and filter controls were not prominent enough | Repositioned and visually elevated filter bar |
-| Newsletter section label wasn't clear at first glance | Renamed and added contextual icon |
-| Leaderboard lacked useful sorting options | Added filters for grade level, project type, and mentor recommendation |
- 
-Each iteration was validated before moving forward — no assumption went untested.
- 
----
- 
-## Outcomes
- 
-The redesigned dashboard gave AllGrow admins a tool that genuinely fit their workflow:
- 
-- ✅ **User lookup** reduced from multi-step scrolling to instant filtered search
-- ✅ **At-risk students** now surfaced automatically — no manual tracking required
-- ✅ **Newsletter creation** consolidated into a single, discoverable workflow
-- ✅ **Navigation** restructured so admins reach any task in fewer steps
- 
----
- 
-## Reflection
- 
-This project reinforced that **good admin UX is about logic and workflow, not just visual polish**. The biggest design wins came not from how things looked, but from how they were structured — which is why leading with IA and research before wireframes made such a difference.
- 
-**What I'd explore next:**
-- Automated weekly progress reports sent to mentors
-- Predictive engagement scoring to surface at-risk students earlier
-- Smarter mentor-student matching based on engagement patterns
- 
----
- 
-*Interested in the full interactive prototype? [Get in touch](mailto:parima.bajra@gmail.com)*`
-  },
+{
+  id: 1,
+  title: "AllGrow App",
+  tag: "UX Research · Product Design",
+  year: "2024",
+  client: "AllGrow",
+  role: "UX Researcher & Designer",
+  duration: "Ongoing",
+  cover: "https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67db9f757cf317b25e0f739d_Section%201.png",
+  excerpt: "How I optimized user experience and data presentation to streamline administrative tasks and improve educational engagement for an ed-tech platform.",
+  sections: [
+    {
+      type: "text",
+      title: "Overview",
+      body: "AllGrow is an education management platform connecting students, teachers, and mentors. When I joined the project, admins were managing hundreds of users across a fragmented system — emails, spreadsheets, and manual tracking were the norm. I led end-to-end UX research and design to replace this patchwork with a unified, intuitive admin dashboard."
+    },
+    {
+      type: "text",
+      title: "The Problem",
+      body: "Education admins are doing critical work — but their tools weren't built with them in mind. The existing setup forced constant context-switching between disconnected systems, leading to delays and missed interventions for struggling students."
+    },
+    {
+      type: "quote",
+      text: "We can't tell who's engaged, who's falling behind, or who needs support until it's too late."
+    },
+    {
+      type: "text",
+      title: "Discovery & Research",
+      body: "I started with structured interviews with admins, educators, and stakeholders to surface real pain points before touching any design. Alongside this, I ran competitive analysis of similar platforms to benchmark best practices in admin UX."
+    },
+    {
+      type: "text",
+      title: "Information Architecture",
+      body: "With research findings in hand, I mapped out a full information architecture to restructure how content and tasks were organized. Every admin action needed a logical, predictable home before a single wireframe was drawn."
+    },
+    {
+      type: "image",
+      src: "https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67db9b6aeb92eba866755e12_All%20Grow%20Sitemaps%20Admin%20-%20Admin%20Page%20-%20Sitemap%2000.jpg",
+      caption: "AllGrow Admin Sitemap"
+    },
+    {
+      type: "image",
+      src: "https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67db9ed3b7d6f14488ff2f02_User%20Management%20_%20Students.png",
+      caption: "Low-Fidelity Wireframes"
+    },
+    {
+      type: "text",
+      title: "Find Anyone, Fast",
+      body: "Problem: No filtering or search meant admins wasted time scrolling through long user lists. Solution: Designed an interactive filtering system with real-time search, multi-parameter sorting, and clear status indicators — Active · Inactive · Needs Attention."
+    },
+    {
+      type: "text",
+      title: "Make Engagement Visible",
+      body: "Problem: No way to proactively identify struggling students. Solution: Introduced a dedicated progress tracking dashboard surfacing module completion rates, engagement signals, and automated flags for students showing disengagement patterns."
+    },
+    {
+      type: "text",
+      title: "One Place, One Flow",
+      body: "Problem: The newsletter feature was buried and non-intuitive. Solution: Consolidated all content distribution into a dedicated Newsletter section with a single, prominent Create action."
+    },
+    {
+      type: "image",
+      src: "https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67db9f757cf317b25e0f739d_Section%201.png",
+      caption: "High-Fidelity Prototype"
+    },
+    {
+      type: "outcomes",
+      items: [
+        "User lookup reduced from multi-step scrolling to instant filtered search",
+        "At-risk students now surfaced automatically — no manual tracking required",
+        "Newsletter creation consolidated into a single discoverable workflow",
+        "Navigation restructured so admins reach any task in fewer steps"
+      ]
+    },
+    {
+      type: "text",
+      title: "Reflection",
+      body: "This project reinforced that good admin UX is about logic and workflow, not visual polish. The biggest wins came from how things were structured — which is why leading with IA and research before wireframes made such a difference."
+    }
+  ]
+},
   {
     id: 2,
     title: "Naer VR",
