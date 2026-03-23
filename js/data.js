@@ -12,6 +12,32 @@ const PROJECTS = [
     excerpt: "How I optimized user experience and data presentation to streamline administrative tasks and improve educational engagement for an ed-tech platform.",
     content: `## Overview
 
+AllGrow is an education management platform connecting students, teachers, and mentors. When I joined the project, admins were managing hundreds of users across a fragmented system — emails, spreadsheets, and manual tracking were the norm. I led end-to-end UX research and design to replace this patchwork with a unified, intuitive admin dashboard.
+
+The Problem
+Education admins are doing critical work — monitoring student progress, coordinating mentors, distributing content — but their tools weren't built with them in mind. The existing setup forced admins to context-switch constantly between disconnected systems, leading to delays and missed interventions for struggling students.
+Core pain points identified:
+
+No reliable way to search or filter users by role, status, or cohort
+Zero visibility into which students were actively engaged or at risk
+Newsletter and content management buried in menus with no clear workflow
+Navigation was inconsistent, making routine tasks feel unnecessarily complex
+
+
+Discovery & Research
+I started by conducting structured interviews with admins, educators, and stakeholders to surface real pain points before touching any design. Alongside this, I ran competitive analysis of similar education management platforms to benchmark best practices in admin UX.
+Key quotes from research sessions:
+
+"There's no easy way to filter or search for users — I end up scrolling forever."
+
+
+"We can't tell who's engaged, who's falling behind, or who needs support until it's too late."
+
+
+"The newsletter feature is so confusing I just stopped using it."
+
+These weren't just inconveniences — they had direct downstream effects on student outcomes.
+
 ## Information Architecture
  
 With research findings in hand, I mapped out a full **information architecture** to restructure how content and tasks were organized. This ensured every admin action had a logical, predictable home before a single wireframe was drawn.
