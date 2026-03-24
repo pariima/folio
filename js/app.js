@@ -99,7 +99,7 @@ homeGrid.innerHTML = projects.slice(0, 4).map((p, i) => {
     ? `<img src="${p.cover}" alt="${p.title}">`
     : `<div style="width:100%;height:100%;background:var(--ink)"></div>`;
   return `
-    <div class="hp-card" onclick="navigate('detail', ${p.id})">
+    <div class="hp-card" onclick="pushProject(${p.id})">
       <div class="hp-info">
         <div class="hp-tag">${p.tag}</div>
         <div class="hp-title">${p.title}</div>
@@ -144,7 +144,7 @@ function renderProjects() {
     const tags = (p.tag || '').split('·').map(t =>
       `<span class="pcard-tag">${t.trim()}</span>`).join('');
     return `
-      <div class="pcard" onclick="navigate('detail', ${p.id})">
+      <div class="pcard" onclick="pushProject(${p.id})">
         <div class="pcard-num">0${i + 1}</div>
         <div class="pcard-info">
           <div class="pcard-title">${p.title}</div>
@@ -490,6 +490,68 @@ function initFooterWave() {
   }
   animate();
 }
+// ─── ROUTER ──────────────────────────────────────────────────────────────────
+function pushProject(id) {
+  history.pushState({ projectId: id }, '', `/project/${id}`);
+  renderProjectDetail(projects.find(p => p.id === id));
+}
+
+function goHome() {
+  history.pushState({}, '', '/');
+  handleRouting();
+}
+
+function renderProjectDetail(project) {
+  if (!project) { navigate('home'); return; }
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  document.getElementById('page-detail').classList.add('active');
+  window.scrollTo(0, 0);
+
+  const el = document.getElementById('detailContent');
+  const heroImg = project.cover
+    ? `<img src="${project.cover}" alt="${project.title}">`
+    : `<div style="width:100%;height:100%;background:linear-gradient(135deg,#1a2550,var(--blue))"></div>`;
+
+  el.innerHTML = `
+    <button class="back-btn" onclick="goHome()">← Back to projects</button>
+    <div class="detail-hero">${heroImg}
+      <div class="detail-hero-text">
+        <div class="detail-tag">${project.tag}</div>
+        <h1>${project.title}</h1>
+      </div>
+    </div>
+    <div class="detail-meta">
+      <div class="detail-meta-item"><label>Client</label><span>${project.client || '—'}</span></div>
+      <div class="detail-meta-item"><label>Role</label><span>${project.role || '—'}</span></div>
+      <div class="detail-meta-item"><label>Year</label><span>${project.year || '—'}</span></div>
+      <div class="detail-meta-item"><label>Duration</label><span>${project.duration || '—'}</span></div>
+    </div>
+    <div class="cs-body">${project.sections ? project.sections.map(renderSection).join('') : ''}</div>`;
+
+  el.querySelectorAll('.cs-image img').forEach(img => {
+    img.addEventListener('click', () => openLightbox(img.src, img.alt));
+  });
+}
+
+function handleRouting() {
+  const path = window.location.pathname;
+  if (path.startsWith('/project/')) {
+    const id = parseInt(path.split('/project/')[1]);
+    const project = projects.find(p => p.id === id);
+    if (project) {
+      renderAll();
+      renderProjectDetail(project);
+      return;
+    }
+  }
+  renderAll();
+  navigate('home');
+  setTimeout(initFooterWave, 500);
+}
+
+window.addEventListener('popstate', handleRouting);
+
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 function renderAll() {
   renderHome();
@@ -497,8 +559,5 @@ function renderAll() {
   renderBlog();
 }
 
-
-renderAll();
-navigate('home');
-setTimeout(initFooterWave, 500);
+document.addEventListener('DOMContentLoaded', handleRouting);
 
