@@ -93,212 +93,56 @@ const PROJECTS = [
     excerpt: "Designing a mixed-reality fitness companion that adapts to user movement — researching interaction paradigms for VR controllers and spatial interfaces.",
     content: `## Overview
 
-Naer VR is a mixed reality productivity app designed to boost collaboration and teamwork. Despite its ambitious vision, the app had significant usability and accessibility gaps that were limiting adoption. I joined as a rotating UX researcher and designer — cycling through PM, researcher, and designer roles every two weeks — and ultimately owned the toolbar redesign end-to-end.
- 
-The challenge wasn't just visual. It was about rethinking how people physically interact with tools in three-dimensional space.
- 
----
- 
-## The Problem
- 
-Naer's core issues weren't cosmetic — they were structural and accessibility-critical:
- 
-- **Tool icons were nearly invisible** — low contrast caused them to blend into the virtual environment, especially for visually impaired users
-- **Hand gesture activation was unreliable** — the toolbar required users to look at the back of their hand, which was non-intuitive and broke flow with certain head movements
-- **Sticky notes only supported voice typing** — excluding users who couldn't or preferred not to use voice input
-- **Customization was minimal** — no font, size, or content options available
-- **Error correction was painful** — no undo/redo, and exiting tools was cumbersome
- 
-These weren't edge cases. Every user we tested ran into at least two of these issues within minutes.
- 
----
- 
-## Research
- 
-### Competitive Analysis
- 
-Before designing anything, I benchmarked Naer against comparable productivity and VR collaboration tools to understand the landscape and identify gaps.
- 
-![Competitive Analysis](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d4895ae834aa07569fead3_665e8694944a9429511fe75c_CA.png)
- 
-### Proto Persona
- 
-Based on initial stakeholder conversations, I built a proto persona to align the team on who we were designing for — capturing goals, frustrations, and context of use before formal user research began.
- 
-![Proto Persona](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d48958e3f5052125c16c2d_665e8d320ca63e57db20972c_PERSONA.png)
- 
-### User Journey Map
- 
-I mapped the full user journey through Naer — from onboarding through active use — to pinpoint exactly where frustration and drop-off were happening.
- 
-![User Journey Map](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d48957a8234e3be3514cbb_665e8da451c4aab200bcc9ef_journey.png)
- 
----
- 
-## Information Architecture
- 
-With a clear picture of user needs, I structured the information architecture to ensure a logical, navigable system before any UI decisions were made.
- 
-![Information Architecture](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67ddcb602456597c39284c1e_ia.webp)
- 
----
- 
-## Lo-Fi Wireframes
- 
-Early wireframes were deliberately rough — focused on testing structure and interaction logic, not visual polish. These were printed and shown to participants during usability testing to gather immediate feedback.
- 
-![Lo-Fi Wireframe 1](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d48a1c6506bc3b33a8b406_665e8c3a0e1e2aef8cbb98f8_image%252016.png)
- 
-![Lo-Fi Wireframe 2](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d48957b7f010ec15c87314_665e8c3fb7640d4c44145901_image%252017.png)
- 
----
- 
-## Research Goals
- 
-Before running usability sessions, the team aligned on five focused research objectives:
- 
-**1. Understand User Needs in VR**
-Capture goals, pain points, and preferences for VR-based productivity — particularly for users with varying familiarity with VR and remote collaboration tools like Miro.
- 
-**2. Assess Naer's Role in Design Workflows**
-Explore how users naturally incorporate Naer into their processes and what specific needs it fulfills — or fails to fulfill.
- 
-**3. Test Proposed Solutions**
-Evaluate the lo-fi design concepts directly with users to gauge feasibility and desirability before investing in high-fidelity work.
- 
-**4. Evaluate Tool Efficiency**
-Investigate how effectively users operate existing tools — focusing on icon visibility, gesture reliability, and voice input limitations.
- 
-**5. Explore Interactive Elements**
-Probe user perceptions of Naer's interactive "cubes" to determine their perceived value and identify opportunities for richer interactivity.
- 
----
- 
-## Usability Testing — Round 1
- 
-We ran a **moderated usability study** spanning the full user journey — from first-time tutorial through free-form exploration. This gave us both structured task data and naturalistic observation.
- 
-![Usability Testing Session](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d4895778b5e0cbf814d6c8_668ca7250766a296312a2060_6670d12b3a1df3315c984109_Screenshot%2525202024-06-04%252520at%2525202.53.52%2525E2%252580%2525AFAM.png)
- 
-**Focus areas during testing:**
-- Accessibility and visual clarity of tool icons
-- Inclusivity of input methods (voice vs. alternatives)
-- General usability and learnability of the environment
- 
-After participants explored the app, we showed them our lo-fi paper wireframes and gathered direct reactions — testing whether new icons felt intuitive and whether proposed accessibility changes resonated.
- 
----
- 
-## Synthesis & Insights
- 
-![Research Insights](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67ddcca3a31b8f4e83245079_Frame%203.jpg)
- 
-![Usability Findings](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d489571b7c8955092ce6c5_668ca7a6b889ccc7f946d327_6670cba6c6ffa44485b7e1d0_image%25252023.png)
- 
----
- 
-## Prioritization: Effort-Impact Matrix
- 
-With a rich set of findings, the team used an **Effort-Impact Matrix** to prioritize what to tackle first. This kept us focused on changes that would meaningfully improve the experience without over-engineering.
- 
-![Effort-Impact Matrix](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d48958441a7707d1309d58_668ca7a6feed4d8cf0037128_6670cb415bbb130f9693407a_image%25252024.png)
- 
-**High-priority actions identified:**
-- Improve iconography for clarity and instant recognition
-- Expand customization and personalization options
-- Clarify the purpose of interactive elements
-- Add keyboard typing and controller gesture support
-- Add undo, redo, and erase to sticky notes
-- Increase contrast and size of text and icons
- 
----
- 
-## My Focus: The Toolbar Redesign
- 
-After synthesis, the team divided the work. **I owned the toolbar redesign** — the most critical and complex piece, since the toolbar is the gateway to every tool in the app.
- 
-### The Current Toolbar
- 
-![Toolbar in Display](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d489575e98540f0d2299c4_668ca7a63b95cde16a9c78d1_6670cb65c6ffa44485b781c1_com.cohere.png)
- 
-The toolbar hosts the core tools — Sticky Note, Sponge, Laser Pointer, Microphone — but had three fundamental problems:
- 
-![Toolbar Issues](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d48958c4ce222a65311d15_668ca7a608d71a7f19cd605c_6670cc81ef96c234e775f4f8_image%25252018.png)
- 
-1. **Poor contrast** — icons and labels nearly disappeared against the virtual environment background
-2. **Non-intuitive activation** — users had to look at the back of their hand to trigger it, which conflicted with natural movement and caused the toolbar to vanish when their head moved
-3. **Anchored to view** — because the toolbar tracked the user's viewport, head movements caused it to disappear unpredictably, disrupting workflow
- 
-### My Design Solution
- 
-![Toolbar Solution Overview](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d48958a10bd11b3ae96211_668ca7a65ff6e31fddc3e081_6670ccdda86b6d0d62af576f_image%25252019.png)
- 
-![Toolbar Redesign Detail](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d48957cd3d4512a4aee208_668ca7a608d71a7f19cd605f_6670cd1d0d7d34e345bcbe7d_Group%25252036.png)
- 
-**Three core changes:**
- 
-**Wristband tap activation** — Replaced hand-flip activation with a simple wristband tap. Users tap once to summon the toolbar, eliminating dependency on head position entirely.
- 
-**High-contrast color scheme** — Increased opacity and introduced a contrast-rich palette so icons are legible regardless of the virtual environment behind them.
- 
-**New icon system** — Replaced ambiguous icons with purpose-designed symbols built for instant recognition, reducing cognitive load and shortening the learning curve for new users.
- 
----
- 
-## Mid-Fi Wireframes
- 
-With the concept validated, I moved to mid-fidelity to refine interaction states, spacing, and layout before building the interactive prototype.
- 
-![Mid-Fi Wireframes](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d48957d5e9200dbd1e7569_669146d1d4eb2a8ee0f87725_Group%252034.png)
- 
----
- 
-## Usability Testing — Round 2: Testing in VR
- 
-### Building the Interactive Prototype
- 
-I built the interactive prototype using **Glitch** for rapid web-based prototyping and **A-Frame** for the VR environment — a combination that allowed fast iteration directly in immersive 3D space without requiring native app builds.
- 
-![Prototype in VR (Quest 3)](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d48957e07e57c69075e443_668ca811b93226b6ad5dec2a_6670f6b7c1fd03e1a3591465_1.png)
- 
-*Prototype running on Meta Quest 3*
- 
-### Testing the Prototype
- 
-With the prototype live in VR, I ran a second round of testing — this time evaluating real interactions with the redesigned toolbar in an actual headset.
- 
-![VR Testing Session](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d4905dab687ad5fd40bdec_668ca811ec02e1404218ce53_6670f8478ff1704effaf1c43_2.png)
- 
----
- 
-## Recommendations
- 
-Based on second-round feedback, I identified three targeted improvements to carry into the next iteration:
- 
-| Finding | Recommendation |
-|---|---|
-| Some icons still not immediately identifiable | Redesign lowest-performing icons with clearer visual metaphors |
-| Active tool selection wasn't always obvious | Increase visibility and distinctiveness of selected state feedback |
-| Hover effects inconsistent across tools | Standardize hover behavior across all toolbar items |
- 
----
- 
-## Reflection
- 
-This project was my first deep dive into VR-specific UX — and it fundamentally changed how I think about interaction design. In flat UI, affordances are implied by convention. In VR, **affordances have to be physically intuitive**. A button isn't just a button; it's something users reach toward, tap, or gesture at in three-dimensional space.
- 
-The rotating role structure was also valuable. Being PM one sprint and researcher the next gave me a much broader view of how design decisions ripple outward into project planning and user expectations.
- 
-**What I'd explore next:**
-- Haptic feedback integration for tool selection confirmation
-- Personalized toolbar layouts — letting power users reorder tools
-- Accessibility profiles: pre-set contrast and icon-size combinations for different visual needs
- 
----
- 
-*Full research report available in Figma — [view here](https://www.figma.com/design/pnY3qtMbaddtIfOnd6WUWi/Naer-Research-Report?node-id=0-1&t=jQbAENWn5sYe2yxn-1)*
- 
----`
+sections: [
+  {
+    type: "text",
+    title: "Overview",
+    body: "Naer is a mixed reality fitness experience built for users who want immersive, full-body workouts. My team of three rotated across PM, research, and design roles — giving each of us a holistic view of the product development process."
+  },
+  {
+    type: "text",
+    title: "Research Phase",
+    body: "We began with competitive analysis to understand the landscape of VR fitness apps, then developed proto-personas to represent our core user segments. From there we conducted user interviews to surface real friction points in existing fitness routines."
+  },
+  {
+    type: "image",
+    src: "https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d48957e07e57c69075e443_668ca811b93226b6ad5dec2a_6670f6b7c1fd03e1a3591465_1.png",
+    caption: "Naer VR — Research Phase"
+  },
+  {
+    type: "text",
+    title: "User Journey Mapping",
+    body: "Mapping the end-to-end experience revealed key drop-off moments — particularly around onboarding and session transitions — that became our primary design targets. The biggest insight: users felt kicked out of the experience every time they had to navigate a menu."
+  },
+  {
+    type: "quote",
+    text: "The biggest friction point wasn't the workout itself — it was the transitions between states."
+  },
+  {
+    type: "text",
+    title: "Information Architecture",
+    body: "We restructured the IA to reduce cognitive load during active workouts, where users can't afford to navigate complex menus while moving. Every interaction needed to feel like a natural extension of physical movement."
+  },
+  {
+    type: "text",
+    title: "Wireframes & Testing",
+    body: "Lo-fi wireframes explored spatial layout in VR — how to present information in 3D space without overwhelming the user's field of view. We conducted usability testing with Meta Quest 2 headsets, gathering qualitative data on gesture fatigue, menu discoverability, and session flow."
+  },
+  {
+    type: "text",
+    title: "Rotating Roles",
+    body: "Working across rotating roles forced me to develop genuine empathy for each discipline. As a PM I learned to hold ambiguity. As a researcher I learned to listen without leading. As a designer I learned to prototype fast and kill my darlings."
+  },
+  {
+    type: "outcomes",
+    items: [
+      "Identified key drop-off moments in onboarding and session transitions",
+      "Redesigned menu navigation to reduce interruption during active workouts",
+      "Validated lo-fi spatial layouts with real Meta Quest 2 usability sessions",
+      "Delivered a cohesive handoff across three rotating team roles"
+    ]
+  }
+],
   },
   {
     id: 3,
