@@ -262,49 +262,43 @@ function renderDetail(id) {
         <div class="detail-body">${marked.parse(item.content)}</div>
       </div>`;
   } else {
+   } else {
     const heroImg = item.cover
       ? `<img src="${item.cover}" alt="${item.title}">`
       : `<div style="width:100%;height:100%;background:linear-gradient(135deg,#1a2550,var(--blue))"></div>`;
-    //   el.innerHTML = `
-    //     <button class="back-btn" onclick="navigate('${backPage}')">
-    //       ← Back to projects
-    //     </button>
-    //     <div class="detail-hero">${heroImg}
-    //       <div class="detail-hero-text">
-    //         <div class="detail-tag">${item.tag}</div>
-    //         <h1>${item.title}</h1>
-    //       </div>
-    //     </div>
-    //     <div class="detail-meta">
-    //       <div class="detail-meta-item"><label>Client</label><span>${item.client || '—'}</span></div>
-    //       <div class="detail-meta-item"><label>Role</label><span>${item.role || '—'}</span></div>
-    //       <div class="detail-meta-item"><label>Year</label><span>${item.year || '—'}</span></div>
-    //       <div class="detail-meta-item"><label>Duration</label><span>${item.duration || '—'}</span></div>
-    //     </div>
-    //     <div class="detail-body">${marked.parse(item.content)}</div>`;
-    // 
+
+    const body = item.sections
+      ? item.sections.map(renderSection).join('')
+      : `<div class="detail-body"><p class="detail-intro">${item.excerpt}</p>${marked.parse(item.content || '')}</div>`;
+
     el.innerHTML = `
-  <button class="back-btn" onclick="navigate('${backPage}')">
-    ← Back to projects
-  </button>
-  <div class="detail-hero">${heroImg}
-    <div class="detail-hero-text">
-      <div class="detail-tag">${item.tag}</div>
-      <h1>${item.title}</h1>
-    </div>
-  </div>
-  <div class="detail-meta">
-    <div class="detail-meta-item"><label>Client</label><span>${item.client || '—'}</span></div>
-    <div class="detail-meta-item"><label>Role</label><span>${item.role || '—'}</span></div>
-    <div class="detail-meta-item"><label>Year</label><span>${item.year || '—'}</span></div>
-    <div class="detail-meta-item"><label>Duration</label><span>${item.duration || '—'}</span></div>
-  </div>
-  <div class="detail-body">${marked.parse(item.content)}</div>`;
-    
-  // Make images clickable
-    el.querySelectorAll('.detail-body img').forEach(img => {
-      img.addEventListener('click', () => openLightbox(img.src, img.alt));
-    });
+      <button class="back-btn" onclick="navigate('${backPage}')">
+        ← Back to projects
+      </button>
+      <div class="detail-hero">${heroImg}
+        <div class="detail-hero-text">
+          <div class="detail-tag">${item.tag}</div>
+          <h1>${item.title}</h1>
+        </div>
+      </div>
+      <div class="detail-meta">
+        <div class="detail-meta-item"><label>Client</label><span>${item.client || '—'}</span></div>
+        <div class="detail-meta-item"><label>Role</label><span>${item.role || '—'}</span></div>
+        <div class="detail-meta-item"><label>Year</label><span>${item.year || '—'}</span></div>
+        <div class="detail-meta-item"><label>Duration</label><span>${item.duration || '—'}</span></div>
+      </div>
+      <div class="cs-body">${body}</div>`;
+
+    if (!item.sections) {
+      el.querySelectorAll('.detail-body img').forEach(img => {
+        img.addEventListener('click', () => openLightbox(img.src, img.alt));
+      });
+    } else {
+      el.querySelectorAll('.cs-image img').forEach(img => {
+        img.addEventListener('click', () => openLightbox(img.src, img.alt));
+      });
+    }
+  }
   }
 }
 
