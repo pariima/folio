@@ -91,9 +91,7 @@ const PROJECTS = [
     duration: "Semester project",
     cover: "https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d48957e07e57c69075e443_668ca811b93226b6ad5dec2a_6670f6b7c1fd03e1a3591465_1.png",
     excerpt: "Designing a mixed-reality fitness companion that adapts to user movement — researching interaction paradigms for VR controllers and spatial interfaces.",
-    content: `## Overview
-
-sections: [
+    sections: [
   {
     type: "text",
     title: "Overview",
@@ -141,8 +139,6 @@ sections: [
       "Validated lo-fi spatial layouts with real Meta Quest 2 usability sessions",
       "Delivered a cohesive handoff across three rotating team roles"
     ]
-  }
-],
   },
   {
     id: 3,
@@ -154,216 +150,51 @@ sections: [
     duration: "12 weeks",
     cover: "https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d4d3379768cdde583760f7_AGV_vUeCWQYGb2ISBcrBBSz2a3KctMYra6SivEeNqc1Jg6B2aJi6Ruyt_QYajjeGt7a993JaLt3dqDUro_epu3N7pHoQKosGdhGT9qhm3FMsbEV5lF5hr2z13uC-vK1qQAFYCFoWaVBV_6HhmYU8eoY-rnhsl08oOT3U%3Ds2048.jpeg",
     excerpt: "Researching and prototyping a VR mental wellness application that uses immersive journaling and biofeedback to support emotional regulation.",
-    content: `## Overview
-
-## The Origin
- 
-Mental health apps are everywhere. Headspace for meditation. Moodfit for mood tracking. Rootd for anxiety. And yet, despite VR's proven clinical success in treating PTSD and anxiety disorders, it has barely made a dent in *everyday* mental wellness.
- 
-That gap bothered me.
- 
-MankoVR started as a question: **What if journaling — one of the most evidence-backed mental wellness practices — could be reimagined inside a fully immersive VR environment?** Not just a screen floating in space, but a genuinely new way to reflect, process, and connect with your own thoughts.
- 
-This was my passion project. No client. No brief. Just curiosity, a Meta Quest 3, and a research-first approach to find out whether the idea had legs.
- 
----
- 
-## The Problem Space
- 
-Mobile wellness apps are polished and accessible, but they're still *just apps* — limited to a flat screen and easily dismissed with a swipe. VR, by contrast, creates presence. It removes distractions. It can make you feel like you're somewhere else entirely.
- 
-**So why hasn't VR broken into mainstream mental wellness?**
- 
-My research explored three hypotheses to frame the investigation:
- 
-| Hypothesis | Question |
-|---|---|
-| **Engagement** | Will VR outperform mobile in emotional impact and sustained engagement? |
-| **Usability** | Can a well-designed VR app match or exceed mobile app usability scores? |
-| **Therapeutic Efficacy** | Does immersion meaningfully enhance therapeutic outcomes? |
- 
----
- 
-## Research Approach
- 
-![Research Methods Overview](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d4cce996c7efce38f38f7e_Screenshot%202025-03-14%20at%208.40.32%20PM.png)
- 
-I designed a multi-phase research plan combining secondary research, competitive analysis, user surveys, and a structured within-subjects usability study.
- 
-**Tools used:**
-- **Design & Prototyping:** Unity, Figma, ShapesXR, Sketchfab
-- **Research & Analysis:** Maze, Google Forms, Google Sheets, Notion
-- **Hardware:** Meta Quest 3 for all prototype testing and VR interaction studies
- 
-![Research Framework](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d4ccf9fdf9dba83bb3ff97_Screenshot%202025-03-14%20at%208.40.38%20PM.png)
- 
----
- 
-## Literature Review
- 
-Before doing any primary research, I reviewed existing clinical and academic literature on VR in therapeutic settings. Key takeaways:
- 
-![Literature Review Insights](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d4cd109768cdde5833b8be_Screenshot%202025-03-14%20at%208.40.42%20PM.png)
- 
-- **Adjustable exposure levels** in VR enable tailored, personalized therapy experiences
-- **Privacy and presence** — VR environments create a sense of safety that encourages openness
-- **Declining costs** are making VR more viable for home and clinical use
-- **Gamification and immersion** are consistently rated positively in therapeutic contexts
-- **Transformative potential** is well-documented for conditions like PTSD, phobias, and anxiety — but consumer-facing wellness applications lag far behind
- 
-The literature pointed clearly to VR's clinical credibility. The open question was *why that credibility hadn't translated to everyday wellness tools.*
- 
----
- 
-## Competitive Analysis
- 
-I conducted a comparative analysis of both mobile and VR mental wellness apps to map the current landscape.
- 
-![Competitive Analysis](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d4c22128f61f28bef51b13_Screenshot%202025-03-14%20at%207.54.56%20PM.png)
- 
-**Mobile apps reviewed:** Rootd, MindShift, Headspace, Moodfit — assessed for usability, feature depth, and therapeutic scaffolding.
- 
-**VR apps reviewed:** TRIPP, Guided Meditation VR — assessed for immersion quality, interaction model, and feature set.
- 
-### Comparative Feature Analysis
- 
-![Comparative Feature Analysis](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d4cd1c432050339dd28ebd_Screenshot%202025-03-14%20at%208.40.48%20PM.png)
- 
-Both platforms handled breathing exercises and guided meditation reasonably well. VR added an immersion layer that elevated engagement. But one category stood out:
- 
----
- 
-## The Gap: Journaling
- 
-Mobile apps like Rootd and MindShift offer robust journaling, mood tracking, and daily check-ins. **Not a single VR mental wellness app did.**
- 
-> Journaling — specifically writing — had not been explored or implemented in VR at all. Given the well-documented benefits of journaling for emotional processing, stress reduction, and psychological clarity, this was a meaningful and actionable gap.
- 
-![Journaling Gap Visualization](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d6f6fc3308e4811948d33b_123.png)
- 
-This became MankoVR's core focus: **bring the therapeutic practice of reflective writing into an immersive VR environment.**
- 
----
- 
-## Primary Research: Surveys & Interviews
- 
-I ran user surveys and interviews to validate the opportunity and gather qualitative insight before prototyping.
- 
-![Survey Results 1](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d4d1cdfa4575aabe4ed773_Screenshot%202025-03-14%20at%209.00.13%20PM.png)
- 
-![Survey Results 2](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d4d1dda6d9dae6ceaa789a_Screenshot%202025-03-14%20at%209.00.22%20PM.png)
- 
-![Survey Results 3](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d4d1fbd436f8ae41bc4647_Screenshot%202025-03-14%20at%209.00.39%20PM.png)
- 
-![Survey Results 4](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d4d20590d45621f04e12e4_Screenshot%202025-03-14%20at%209.00.50%20PM.png)
- 
-![Interview Recurring Themes](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d4d1b6fa4575aabe4ecdea_Screenshot%202025-03-14%20at%209.00.59%20PM.png)
- 
-*Recurring themes from user interviews and surveys*
- 
-Survey findings confirmed appetite for VR-based wellness tools and strong existing journaling habits — but users had never considered combining the two. That unfamiliarity was actually an opportunity: there were no bad habits or preconceptions to overcome.
- 
----
- 
-## Prototyping
- 
-With research grounding the direction, I moved into rapid prototyping — starting on paper, then moving directly into VR.
- 
-### Paper Sketches → VR Environment
- 
-![Early Prototype Sketch 1](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d4d3379768cdde583760f7_AGV_vUeCWQYGb2ISBcrBBSz2a3KctMYra6SivEeNqc1Jg6B2aJi6Ruyt_QYajjeGt7a993JaLt3dqDUro_epu3N7pHoQKosGdhGT9qhm3FMsbEV5lF5hr2z13uC-vK1qQAFYCFoWaVBV_6HhmYU8eoY-rnhsl08oOT3U%3Ds2048.jpeg)
- 
-![Early Prototype Sketch 2](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d4d3379a7088c922e34084_AGV_vUcy204zxMhHKcym_zgO_-MVoo44mh_CnsQUli3wDqpFe5HbIs7aipS1_sq_tyrD8Iw_CsNmBalL-wDOlYzIy8oq_ziapjSB_dsRW4FazwHBpi3Is7YjJS-Gc_poOyJ1Lqh-QJTMbF4itLSXnEawP8JAKFMVG4KH%3Ds2048.jpeg)
- 
-I used **ShapesXR** on my Meta Quest 3 to build the initial VR prototype, importing 3D environment assets from Sketchfab and integrating UI components designed in Figma. This let me test spatial layout and interaction feel inside an actual headset — not just on a flat screen.
- 
-![VR Prototype in Environment](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d51ea6f01d679b5aea5947_AGV_vUcDhT4WZCTr-rhAn_jUViZP8t8VJ0j17oeKLzhZw1r4uDKBgaQLUYjQset4lYUTzWZqDTwSFVRbrqhCErajUQx-pZAwwI9YbdbyImC7K9o4iMtp5AapD9QPSgjzV7JC7al02YRKIhWDihPYrebLn7rV1FRr5LD5%3Ds2048.jpeg)
- 
-**Key features prototyped:**
-- **Voice-to-text journaling** — hands-free writing inside VR using speech recognition
-- **Emotional recognition prompts** — guided questions designed to encourage deeper self-reflection
-- **Immersive environments** — calming, customizable spaces designed to reduce external distraction
- 
-Each iteration was tested with real users before moving to the next version.
- 
----
- 
-## Usability Testing — Within-Subjects Design
- 
-To isolate VR's unique contribution, I designed a **3-day within-subjects study** where every participant experienced all three conditions:
- 
-| Day | Condition |
-|---|---|
-| Day 1 | Traditional journaling on paper |
-| Day 2 | Journaling in the MankoVR prototype (Meta Quest 3) |
-| Day 3 | Journaling via mobile app (MindShift) |
- 
-This design controlled for individual differences — each person was their own baseline — making VR's impact measurable against direct alternatives.
- 
-**Testing objectives:**
-- Evaluate physical and psychological comfort during VR use
-- Assess interface intuitiveness and learnability
-- Measure engagement depth and sense of immersion
-- Identify interaction problems and technical friction
-- Test how effectively guided prompts supported reflective writing
-- Compare subjective experience across all three conditions
- 
----
- 
-## Testing Results
- 
-![Usability Testing Outcomes](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d52551dc72582cf7bb081c_Screenshot%202025-03-15%20at%202.57.43%20AM.png)
- 
-On Day 3, participants completed a post-study survey rating their experience across all three conditions.
- 
-![Post-Study Survey Results 1](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d52568c62a36d6c6198546_AGV_vUcy_lWnU2K3cJcRvxkUmD9tvKrUT8f-Iy4CYg3ybQHO-eKt9j3-gdhg7wcMm_uq32V8iFC-Dy9bbWUNONsHu45k0lTC-fJKDnHiDtDp-jPPVduS0aUl2SXuzFbGGydk7Z8tsFS1vlkOm1LK4qpbbAGv8ljwfd58%3Ds2048.png)
- 
-![Post-Study Survey Results 2](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d525688bb68546dda6e333_AGV_vUd-eUVUFuKrINY7YioVdxW-PXs7302OsUqbE957Yy_5NNpPn0_jAzOdfdOCEnfO-ZhDUQs5XeNTDEmzSKSEyZNuiYy95Yy998V3vmh1Q9YZoSLjJ3X9NFB-Svg0czlJuq-iuzZ9nt-xyJSL9xByxivwyoAMb_WR%3Ds2048.png)
- 
-![Post-Study Survey Results 3](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d52575cbff40c07cd97293_AGV_vUfFgd_qEHoQWO6cAow_pkJ7qbWUDY47OdETT9pY26MW36XprpmxotaDVGmY-cO29uMo7_a1GvvV_nx3rrkOOT1qI9SfCk6STN3FZDFK7tliR7vhihjQh6c5PsBJL_TDQlW8SoT1QTBcmRba33jhtaVURNGFmeZ5%3Ds2048.png)
- 
-![Analysis Metrics](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d525ba7797f8f4a797d99b_Screenshot%202025-03-15%20at%202.59.58%20AM.png)
- 
-### Key Findings
- 
-**Engagement:** VR produced significantly higher engagement — participants reported stronger emotional resonance and a greater sense of presence compared to mobile or paper journaling.
- 
-**Usability challenges:** Navigation and user fatigue emerged as friction points, addressed iteratively across prototype versions. These were known costs of VR; the question was whether the benefits outweighed them — and for this use case, they did.
- 
-**Therapeutic potential:** Participants described VR journaling as feeling more *intentional* — the act of entering the environment created a ritual-like quality that primed deeper reflection.
- 
-![Final Findings Summary](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d525e1f66e4ec40e045c6e_Screenshot%202025-03-15%20at%203.00.34%20AM.png)
- 
----
- 
-## Outcomes & Implications
- 
-All three hypotheses were supported:
- 
-| Hypothesis | Result |
-|---|---|
-| VR will outperform mobile in engagement | ✅ Confirmed — users reported higher emotional impact and presence |
-| Well-designed VR will match mobile usability | ✅ Confirmed with caveats — navigation needed iteration, but overall usability scores were competitive |
-| VR will deliver more effective therapeutic interventions | ✅ Supported — immersive context meaningfully enhanced reflective depth |
- 
-MankoVR demonstrates that VR mental wellness isn't just a clinical tool — it has real potential as an everyday practice, particularly when designed around habits people already have, like journaling.
- 
----
- 
-## Reflection
- 
-This project taught me that **the most interesting design problems live in the gaps between existing solutions**. Every competitive analysis I've ever done has surfaced incremental differences. MankoVR was different — there was a complete absence of journaling in VR, not just a weak version of it.
- 
-Running a solo research project also pushed me to be rigorous in ways that team projects don't always demand. Without collaborators to pressure-test my thinking, I had to build that rigor into my methodology — the within-subjects design, the three-day structure, the post-study survey — to make sure my findings were defensible, not just directionally interesting.
- 
-**What I'd build next:**
-- AI-generated personalized journaling prompts that adapt to mood patterns over time
-- Longitudinal tracking of emotional well-being across sessions
-- Accessibility modes for users with motion sensitivity or limited VR experience
-- Expanded input methods — handwriting recognition, controller typing, voice and text hybrid
- 
----`
+   sections: [
+  {
+    type: "text",
+    title: "Overview",
+    body: "MankoVR is a passion project exploring how virtual reality can support mental wellness through immersive journaling. The hypothesis: the presence and embodiment of VR creates a uniquely safe psychological container for reflective practice."
   },
+  {
+    type: "text",
+    title: "Research Methods",
+    body: "I used a mixed-methods approach combining literature review, comparative analysis, and user surveys to establish the theoretical and practical foundation. Academic research on VR therapy consistently shows promise for anxiety, PTSD, and phobia treatment — I synthesized findings across 20+ papers to identify patterns and gaps."
+  },
+  {
+    type: "image",
+    src: "https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d4d3379768cdde583760f7_AGV_vUeCWQYGb2ISBcrBBSz2a3KctMYra6SivEeNqc1Jg6B2aJi6Ruyt_QYajjeGt7a993JaLt3dqDUro_epu3N7pHoQKosGdhGT9qhm3FMsbEV5lF5hr2z13uC-vK1qQAFYCFoWaVBV_6HhmYU8eoY-rnhsl08oOT3U%3Ds2048.jpeg",
+    caption: "MankoVR — Research Overview"
+  },
+  {
+    type: "text",
+    title: "Comparative Analysis",
+    body: "Existing mental wellness apps fall into two categories: traditional (text-based, 2D interfaces) and emerging (VR, biofeedback). MankoVR aimed to bridge both — using the spatial presence of VR to create emotional safety that flat interfaces can't replicate."
+  },
+  {
+    type: "quote",
+    text: "Participants reported feeling more emotionally honest in VR environments compared to traditional journaling."
+  },
+  {
+    type: "text",
+    title: "Prototyping",
+    body: "Early prototypes used cardboard VR viewers and paper interfaces to test spatial layout concepts before committing to digital development. The final prototype was built in ShapesXR, allowing rapid iteration on spatial UI without requiring Unity development at each step."
+  },
+  {
+    type: "outcomes",
+    items: [
+      "VR significantly reduced journaling inhibition for 73% of participants",
+      "Ambient soundscapes improved session depth and duration",
+      "Visual metaphors (weather, seasons) resonated more than abstract color systems",
+      "Identified clear path toward AI integration for personalized therapy sessions"
+    ]
+  },
+  {
+    type: "text",
+    title: "Reflection",
+    body: "This project pushed me to think seriously about the ethics of designing for emotional vulnerability. The most important design decisions weren't visual — they were about pacing, safety, and giving users genuine control over their own experience."
+  }
+],
   {
     id: 4,
     title: "Vrroom VR",
@@ -374,135 +205,72 @@ Running a solo research project also pushed me to be rigorous in ways that team 
     duration: "Semester project",
     cover: "https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d47d763576770286fb64bc_6691892e7fd89cd15de4351e_667a30fd77eb9c4eac93a8aa_Group%252520166.png",
     excerpt: "Engineering a realistic VR scooter simulation by scripting collision dynamics and controller-to-movement translation in Unity — bridging physical affordances with virtual interaction.",
-    content: `## About Vrroom VR
-
-I crafted a **virtual reality Vespa scooter simulation** using Unity, incorporating Oculus Integration, for an immersive riding experience. Players accelerate by pressing trigger buttons on their VR controllers and steer by turning their head.
-
-Vrroom VR is a first-person virtual reality scooter simulation built in Unity for the Meta Quest 2. Players ride a Vespa through an interactive street environment — accelerating with the controller triggers, steering with head rotation, and triggering dynamic collision effects as they navigate the world.
- 
-This project sits at the intersection of **interaction design and technical development** — every mechanic required both a design decision (how should this *feel*?) and an implementation solution (how do I *build* this?). Working solo across the full stack, from ideation through scripting, gave me a ground-level understanding of how UX decisions manifest in real-time 3D interaction.
- 
----
- 
-## Phase 1: Ideation — Designing for Controller Affordances
- 
-The first design question was how to map real-world scooter mechanics to VR controller input in a way that felt *physical* and intuitive, not abstract.
- 
-My initial concept was to use the controllers as scooter handlebars — held parallel to the floor, tilted to steer, with triggers as accelerators. This felt right conceptually: it mirrored the actual act of riding.
- 
-![Ideation Sketch 1](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d47d29b88e5d56191eb76c_669187feba320e5b27c6114d_667a2e647ce4944d3b8625ce_image%2525203.png)
- 
-![Ideation Sketch 2](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d47d2aa8952d765f1aa818_669187fe553c69c7f84e4119_667a2e0f4c420b6c32bf58da_image%2525204.png)
- 
-![Ideation Sketch 3](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d47d292f6e6ecf037e16f1_669187fea54504d966f6c0e4_667a2e06cd8c3f965054b054_image%2525205.png)
- 
-### First Roadblock: Tilt Calibration
- 
-Implementing the tilt-to-steer mechanic proved harder than expected. Accurately calibrating Y-axis controller rotation and translating it to smooth scooter steering introduced precision and jitter issues that would have required significant time to resolve cleanly.
- 
-Rather than shipping a broken mechanic, I made a deliberate pivot: **steering via head rotation**. This was a pragmatic trade-off — head-based steering is less physically mimetic, but it's reliable, consistent, and actually maps well to how riders look into turns in real life. The interaction *feels* grounded even if it's not controller-driven.
- 
-This decision taught me something important early: **in interaction design, a polished simpler mechanic beats an ambitious broken one every time.**
- 
----
- 
-## Phase 2: Prototyping the Scooter Model
- 
-With the interaction model decided, I moved into Unity to build the physical foundation.
- 
-**Setup:** Created a new 3D URP project in Unity with the [Oculus Integration package](https://developers.meta.com/horizon/downloads/package/unity-integration/) installed for Meta Quest 2 compatibility.
- 
-**White-boxing first:** I prototyped with a basic geometric scooter model on a flat plane before introducing any visual detail — keeping early iteration fast and focused on mechanics, not aesthetics.
- 
-**Player positioning:** Integrated an OVR Player Controller positioned to simulate sitting on the scooter, with left and right handles attached to the controller's hand anchors for a physically grounded riding posture.
- 
-![Prototype Model Overview](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d47d4b07244ccaa6aa99bc_66918831a5230eba8fdc8dee_667a2f6bd248b3f315142f27_Group%252520165.png)
- 
-![Handle Alignment Work](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d47d4bb7691ea36ba6f388_669188327ff8807ac60ed87e_667a2f8c749c53c580ae8bb2_Screenshot%2525202024-03-27%252520at%2525208.33.png)
- 
-### Second Roadblock: Handle Misalignment
- 
-During Quest 2 headset testing, the handles were rendering rotated 90 degrees off-axis — a mismatch between the model's coordinate system and Unity's runtime transform. I corrected this with manual orientation adjustments and added a center sphere as a spatial reference guide, using an average transform script to standardize handle distance and spacing.
- 
-Small fix, but it reinforced a core principle: **always test in the actual target hardware early.** Emulator previews don't catch spatial alignment issues.
- 
----
- 
-## Phase 3: Movement Mechanics
- 
-### Acceleration
- 
-I wrote a custom accelerator script that listens for the **Secondary Index Trigger** on either Meta Quest controller and applies forward velocity to the scooter's rigidbody. Pressing the trigger moves the scooter forward; releasing it decelerates naturally.
- 
-![Accelerator Script](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/69169504ab9b311578d9323b_Screenshot%202025-11-13%20at%209.32.48%20PM.png)
- 
-### Steering
- 
-Steering reads the player's **head orientation** via the OVR camera rig, extracting the Y-axis rotation (horizontal turn) and applying it to the scooter's direction vector — with vertical head movement intentionally excluded to keep forward momentum stable and prevent nausea-inducing tilts.
- 
-The result is a steering model that feels natural: look left, the scooter drifts left. It mimics the visual-motor loop of real riding without requiring precise controller manipulation.
- 
----
- 
-## Phase 4: Building the Game Environment
- 
-With core mechanics working, I shifted focus to building an environment worth riding through.
- 
-**Assets sourced from:**
-- [Unity Asset Store](https://assetstore.unity.com/) — detailed Vespa model, houses, road surfaces
-- [Sketchfab](https://sketchfab.com/) — vehicles, lamp posts, traffic cones, animals
-- [Mixamo](https://www.mixamo.com/) — animated player character
- 
-Replacing the white-box scooter with the detailed Vespa model was the single biggest leap in perceived quality — a reminder that **visual fidelity directly affects immersion**, especially in VR where users are fully surrounded by the environment.
- 
-![Game Environment](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d47d763576770286fb64bc_6691892e7fd89cd15de4351e_667a30fd77eb9c4eac93a8aa_Group%252520166.png)
- 
----
- 
-## Phase 5: Collision Dynamics
- 
-The final phase focused on making the world feel *alive* — responsive to the player's movement rather than static scenery.
- 
-I implemented a range of collision mechanics covering all major Unity collider interaction types:
- 
-| Collision Type | Behavior |
-|---|---|
-| Non-trigger + rigidbody vs. non-trigger without rigidbody | Lamp post color change on contact |
-| Trigger collider vs. non-trigger with rigidbody | Animal audio triggers on proximity |
-| Non-trigger + rigidbody interactions | Particle effects on scooter collision |
- 
-![Collision System Overview](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d48766fdf9dba83b7e1c59_669189467fd89cd15de446da_667a4e1106e3891bdbf4a75c_Group%252520168.png)
- 
-![Collision Script](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/6916952225b7b4b092df7064_Screenshot%202025-11-13%20at%209.33.10%20PM.png)
- 
-**Highlighted implementation — lamp post color change:**
- 
-When the scooter collides with a lamp post, a C# script detects the collision event and programmatically changes the post's material color. This uses a Non-Trigger Collider with Rigidbody against a Non-Trigger Collider without Rigidbody — one of the more nuanced collision type combinations in Unity.
- 
-![Lamp Post Collision Detail](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d47dc567a3aac2181209ce_66918979aff493b411fe56e1_667a49e925fb0289df630ab2_Group%252520167.png)
- 
-![Lamp Post Script](https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/6916953ae1b0e9ab9cd668a9_Screenshot%202025-11-13%20at%209.33.18%20PM.png)
- 
-These collision systems transformed the environment from a backdrop into a dynamic space — animals react, objects respond, the world pushes back.
- 
----
- 
-## Key Learnings
- 
-**Interaction design and technical constraints are inseparable in VR.** Every design decision I made — head steering instead of tilt, trigger-based acceleration, excluded vertical head movement — was shaped directly by what was technically reliable. In VR development, you can't design for the ideal interaction and hand it to an engineer. You have to understand the medium well enough to design *within* it.
- 
-**Rapid pivoting is a skill, not a compromise.** The shift from tilt-steering to head-steering wasn't a failure — it was a judgment call based on real testing. Shipping something that works and feels good beats a technically ambitious mechanic that breaks immersion.
- 
-**White-boxing saves time.** Testing mechanics on geometric primitives before committing to detailed assets meant I could iterate fast on the things that mattered most — feel, timing, collision response — without being slowed down by visual complexity.
- 
-**What I'd build next:**
-- Tilt-based steering with improved Y-axis calibration and dead-zone tuning
-- A scoring system with time trials or obstacle challenges
-- Haptic feedback patterns mapped to terrain type (smooth road vs. cobblestone)
-- Multiplayer support for head-to-head scooter racing
- `
+    sections: [
+  {
+    type: "text",
+    title: "Overview",
+    body: "Vrroom VR is a virtual reality Vespa scooter simulation built in Unity with Oculus Integration. Players accelerate by pressing trigger buttons on their VR controllers and steer by turning their head — a solution born from a creative pivot when the original tilt-based steering proved too difficult to calibrate."
+  },
+  {
+    type: "text",
+    title: "Phase 1 — Ideation",
+    body: "The original concept used controller tilt to simulate handlebar steering — envisioning the controllers as scooter handles. Accurately calibrating the Y-axis tilt and translating it to scooter rotation proved too complex. I pivoted to head rotation for steering, which felt more intuitive in practice."
+  },
+  {
+    type: "image",
+    src: "https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d47d4b07244ccaa6aa99bc_66918831a5230eba8fdc8dee_667a2f6bd248b3f315142f27_Group%252520165.png",
+    caption: "Ideation Sketches"
+  },
+  {
+    type: "text",
+    title: "Phase 2 — Scooter Model",
+    body: "The project started with a 3D URP project in Unity with the Oculus Integration package installed. I white-boxed a basic scooter model on a simple plane, then refined it with separate detailed components. An OVR player controller was positioned to mimic how a person sits on a scooter, with handles attached to hand anchors."
+  },
+  {
+    type: "image",
+    src: "https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d47d4bb7691ea36ba6f388_669188327ff8807ac60ed87e_667a2f8c749c53c580ae8bb2_Screenshot%2525202024-03-27%252520at%2525208.33.png",
+    caption: "Unity Whitebox and Final Scooter Setup"
+  },
+  {
+    type: "text",
+    title: "Phase 3 — Movement Mechanics",
+    body: "The movement system is driven by an accelerator script for Meta Quest controllers — forward movement triggers when the Secondary Index Trigger is pressed. Steering is determined by the player's head orientation, excluding vertical movements for a consistent and natural riding experience."
+  },
+  {
+    type: "text",
+    title: "Phase 4 — Game Environment",
+    body: "I sourced detailed models from the Unity Asset Store and Sketchfab — a Vespa scooter, houses, roads, vehicles, lamp posts, and animals. My player character was imported from Mixamo. Replacing the whitebox model with a detailed scooter significantly improved visual immersion."
+  },
+  {
+    type: "image",
+    src: "https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d47d763576770286fb64bc_6691892e7fd89cd15de4351e_667a30fd77eb9c4eac93a8aa_Group%252520166.png",
+    caption: "Game Environment Overview"
+  },
+  {
+    type: "text",
+    title: "Phase 5 — Collision Dynamics",
+    body: "I implemented diverse collision scripts to make the environment interactive — particle systems for visual effects, audio triggers on animal objects, and lamp post scripts that change color as the scooter passes. The system uses Non-Trigger Colliders with Rigidbody interactions and Trigger Collider interactions to simulate realistic physics."
+  },
+  {
+    type: "image",
+    src: "https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d48766fdf9dba83b7e1c59_669189467fd89cd15de446da_667a4e1106e3891bdbf4a75c_Group%252520168.png",
+    caption: "Collision System Setup"
+  },
+  {
+    type: "outcomes",
+    items: [
+      "Successfully pivoted from tilt-based to head-rotation steering",
+      "Built a fully interactive VR environment with realistic collision physics",
+      "Integrated assets from Unity Asset Store, Sketchfab, and Mixamo",
+      "Demonstrated how UX principles apply directly to game development"
+    ]
+  },
+  {
+    type: "text",
+    title: "Reflection",
+    body: "This project pushed me to think about embodied interaction design — how physical controller affordances translate into virtual movement. The constraints of the medium forced creative problem-solving, and the final result demonstrates that UX thinking applies even in game development contexts."
   }
-];
+],
 
 // ─── BLOGS DATA ───────────────────────────────────────────────────────────────
 const BLOGS = [
