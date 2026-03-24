@@ -274,7 +274,8 @@ const PROJECTS = [
     body: "This project pushed me to think about embodied interaction design — how physical controller affordances translate into virtual movement. The constraints of the medium forced creative problem-solving, and the final result demonstrates that UX thinking applies even in game development contexts."
     }
   ]
-},
+}, 
+];
 // ─── BLOGS DATA ───────────────────────────────────────────────────────────────
 const BLOGS = [
   {
