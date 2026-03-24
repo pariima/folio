@@ -194,7 +194,8 @@ const PROJECTS = [
     title: "Reflection",
     body: "This project pushed me to think seriously about the ethics of designing for emotional vulnerability. The most important design decisions weren't visual — they were about pacing, safety, and giving users genuine control over their own experience."
   }
-],
+]
+  },
   {
     id: 4,
     title: "Vrroom VR",
@@ -270,7 +271,8 @@ const PROJECTS = [
     title: "Reflection",
     body: "This project pushed me to think about embodied interaction design — how physical controller affordances translate into virtual movement. The constraints of the medium forced creative problem-solving, and the final result demonstrates that UX thinking applies even in game development contexts."
   }
-],
+]
+  },
 
 // ─── BLOGS DATA ───────────────────────────────────────────────────────────────
 const BLOGS = [
