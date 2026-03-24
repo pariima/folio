@@ -262,7 +262,7 @@ function renderDetail(id) {
         <div class="detail-body">${marked.parse(item.content)}</div>
       </div>`;
   } else {
-   } else {
+   
     const heroImg = item.cover
       ? `<img src="${item.cover}" alt="${item.title}">`
       : `<div style="width:100%;height:100%;background:linear-gradient(135deg,#1a2550,var(--blue))"></div>`;
