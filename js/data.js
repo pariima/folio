@@ -138,8 +138,9 @@ const PROJECTS = [
       "Redesigned menu navigation to reduce interruption during active workouts",
       "Validated lo-fi spatial layouts with real Meta Quest 2 usability sessions",
       "Delivered a cohesive handoff across three rotating team roles"
-    ]
-  },
+      }
+  ]
+},
   {
     id: 3,
     title: "MankoVR",
@@ -187,8 +188,9 @@ const PROJECTS = [
       "Ambient soundscapes improved session depth and duration",
       "Visual metaphors (weather, seasons) resonated more than abstract color systems",
       "Identified clear path toward AI integration for personalized therapy sessions"
-    ]
-  },
+      }
+  ]
+},
   {
     type: "text",
     title: "Reflection",
@@ -270,11 +272,9 @@ const PROJECTS = [
     type: "text",
     title: "Reflection",
     body: "This project pushed me to think about embodied interaction design — how physical controller affordances translate into virtual movement. The constraints of the medium forced creative problem-solving, and the final result demonstrates that UX thinking applies even in game development contexts."
-  }
-]
-  }
-      ];
-
+    }
+  ]
+},
 // ─── BLOGS DATA ───────────────────────────────────────────────────────────────
 const BLOGS = [
   {
