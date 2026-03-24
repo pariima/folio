@@ -92,28 +92,6 @@ function renderHome() {
     .join('');
   mqTrack.innerHTML = items + items;
 
-  // Project grid
-  // const homeGrid = document.getElementById('homeGrid');
-  // homeGrid.innerHTML = projects.slice(0, 4).map((p, i) => {
-  //   const imgEl = p.cover
-  //     ? `<img src="${p.cover}" alt="${p.title}">`
-  //     : `<div style="width:100%;height:100%;background:var(--ink)"></div>`;
-  //   return `
-  //     <div class="hp-card" onclick="navigate('detail', ${p.id})">
-  //       <div class="hp-bg">${imgEl}</div>
-  //       <div class="hp-overlay">
-  //         <div class="hp-tag">${p.tag}</div>
-  //         <div class="hp-title">${p.title}</div>
-  //         <div class="hp-excerpt">${p.excerpt}</div>
-  //       </div>
-  //       <div class="hp-arrow">
-  //         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-  //           <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="white" stroke-width="1.5"/>
-  //         </svg>
-  //       </div>
-  //     </div>`;
-  // }).join('');
-
   // home project grid
 const homeGrid = document.getElementById('homeGrid');
 homeGrid.innerHTML = projects.slice(0, 4).map((p, i) => {
@@ -136,14 +114,6 @@ homeGrid.innerHTML = projects.slice(0, 4).map((p, i) => {
     </div>`;
 }).join('');
 
-// dots
-const dots = document.getElementById('hsDots');
-if (dots) {
-  dots.innerHTML = projects.map((_, i) =>
-    `<div class="hs-dot ${i === 0 ? 'active' : ''}" onclick="hscrollTo(${i})"></div>`
-  ).join('');
-}
-
 
 
   // Blog grid
@@ -156,40 +126,9 @@ if (dots) {
       <div class="blog-rt">${b.readTime}</div>
     </div>`).join('');
 
-    setTimeout(() => hscrollTo(0), 50);
 }
 
 // ─── RENDER PROJECTS ─────────────────────────────────────────────────────────
-// function renderProjects() {
-//   const grid = document.getElementById('projectsGrid');
-//   if (!grid) return;
-//   grid.innerHTML = projects.map((p, i) => {
-//     const imgEl = p.cover
-//       ? `<img src="${p.cover}" alt="${p.title}" loading="lazy">`
-//       : `<div style="width:100%;height:100%;background:var(--ink)"></div>`;
-//     const tags = (p.tag || '').split('·').map(t =>
-//       `<span class="pcard-tag">${t.trim()}</span>`).join('');
-//     return `
-//       <div class="pcard" onclick="navigate('detail', ${p.id})">
-//         <div class="pcard-img">${imgEl}</div>
-//         <div class="pcard-body">
-//           <div class="pcard-info">
-//             <div class="pcard-num">0${i + 1}</div>
-//             <div class="pcard-title">${p.title}</div>
-//             <div class="pcard-exc">${p.excerpt}</div>
-//           </div>
-//           <div class="pcard-right">
-//             <div class="pcard-tags">${tags}</div>
-//             <div class="pcard-arrow">
-//               <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-//                 <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5"/>
-//               </svg>
-//             </div>
-//           </div>
-//         </div>
-//       </div>`;
-//   }).join('');
-// }
 
 function renderProjects() {
   const grid = document.getElementById('projectsGrid');
@@ -223,6 +162,42 @@ function renderProjects() {
         </div>
       </div>`;
   }).join('');
+}
+// ─── RENDER SECTION ──────────────────────────────────────────────────────────
+function renderSection(s) {
+  switch(s.type) {
+    case 'text': return `
+      <div class="cs-section">
+        <div class="cs-section-left">
+          <div class="cs-section-title">${s.title}</div>
+        </div>
+        <div class="cs-section-right">
+          <p>${s.body}</p>
+        </div>
+      </div>`;
+    case 'image': return `
+      <div class="cs-image">
+        <img src="${s.src}" alt="${s.caption || ''}">
+        ${s.caption ? `<div class="cs-caption">${s.caption}</div>` : ''}
+      </div>`;
+    case 'quote': return `
+      <div class="cs-quote">
+        <div class="cs-quote-mark">"</div>
+        <blockquote>${s.text}</blockquote>
+      </div>`;
+    case 'outcomes': return `
+      <div class="cs-outcomes">
+        <div class="cs-section-left">
+          <div class="cs-section-title">Outcomes</div>
+        </div>
+        <div class="cs-section-right">
+          <ul class="cs-outcome-list">
+            ${s.items.map(item => `<li>${item}</li>`).join('')}
+          </ul>
+        </div>
+      </div>`;
+    default: return '';
+  }
 }
 
 // ─── RENDER BLOG ─────────────────────────────────────────────────────────────
@@ -526,4 +501,4 @@ function renderAll() {
 renderAll();
 navigate('home');
 setTimeout(initFooterWave, 500);
-initCarousel();
+
