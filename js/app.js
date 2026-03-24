@@ -300,7 +300,7 @@ function renderDetail(id) {
     }
   }
   }
-}
+
 
 
 // Image zoom //
