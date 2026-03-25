@@ -193,6 +193,28 @@ nav {
   margin-bottom: 40px;
   position: relative;
 }
+.hero-greeting {
+  font-family: var(--fd);
+  font-style: italic;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: var(--blue);
+  align-self: flex-start;
+  margin-left: 8%;
+  margin-bottom: 4px;
+  letter-spacing: -.01em;
+  opacity: .85;
+}
+.hero-greeting {
+  font-family: var(--fd);
+  font-style: italic;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: var(--blue);
+  align-self: flex-end;
+  margin-right: 8%;
+  margin-bottom: 8px;
+  letter-spacing: -.01em;
+  opacity: .85;
+}
 .hero-line {
   display: flex;
   flex-wrap: wrap;
