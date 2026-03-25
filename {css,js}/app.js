@@ -389,4 +389,4 @@ function renderAll() {
 
 renderAll();
 navigate('home');
-initHeroProximity();
+setTimeout(initHeroProximity, 50);
