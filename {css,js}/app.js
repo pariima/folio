@@ -389,3 +389,4 @@ function renderAll() {
 
 renderAll();
 navigate('home');
+initHeroProximity();

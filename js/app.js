@@ -276,7 +276,35 @@ function renderDetail(id) {
   }
   }
 
+// ─── HERO PROXIMITY EFFECT ────────────────────────────────────────────────────
+function initHeroProximity() {
+  const lines = document.querySelectorAll('.hero-line');
+  if (!lines.length) return;
 
+  lines.forEach(line => {
+    const text = line.dataset.text;
+    line.innerHTML = text.split('').map(ch => {
+      if (ch === ' ') return `<span class="hero-letter space"> </span>`;
+      return `<span class="hero-letter">${ch}</span>`;
+    }).join('');
+  });
+
+  const letters = document.querySelectorAll('.hero-letter:not(.space)');
+  const RADIUS = 120;
+
+  document.addEventListener('mousemove', e => {
+    letters.forEach(letter => {
+      const rect = letter.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const dist = Math.sqrt((e.clientX - cx) ** 2 + (e.clientY - cy) ** 2);
+      const proximity = Math.max(0, 1 - dist / RADIUS);
+      const scale = 1 + proximity * 0.45;
+      letter.style.transform = `scale(${scale})`;
+      letter.style.opacity = 0.4 + proximity * 0.6;
+    });
+  });
+}
 
 // Image zoom //
 

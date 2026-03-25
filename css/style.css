@@ -162,12 +162,13 @@ nav {
 }
 
 /* ─── HOME ───────────────────────────────────────────────────────── */
+/* ─── HERO ─── */
 .hero {
-  padding: 96px 48px 64px;
-  max-width: 1200px;
+  padding: 120px 64px 80px;
+  max-width: 1400px;
   margin: 0 auto;
+  position: relative;
 }
-
 .hero-eyebrow {
   display: flex;
   align-items: center;
@@ -176,28 +177,39 @@ nav {
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
-
 .hero-eyebrow::before {
   content: '';
-  width: 32px;
-  height: 1px;
+  width: 32px; height: 1px;
   background: var(--blue);
 }
 
-.hero h1 {
-  font-family: var(--fd);
-  font-size: clamp(3rem, 6vw, 5.5rem);
-  line-height: 1.05;
-  letter-spacing: -.03em;
-  max-width: 800px;
-  margin-bottom: 32px;
+.hero-headline {
+  margin-bottom: 40px;
+  position: relative;
 }
-
-.hero h1 em {
-  font-style: italic;
+.hero-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.18em;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.hero-line--accent .hero-letter {
   color: var(--blue);
+}
+.hero-letter {
+  font-family: var(--fd);
+  font-size: clamp(3.5rem, 8vw, 8rem);
+  letter-spacing: -.04em;
+  display: inline-block;
+  transition: transform 0.15s ease, color 0.15s ease;
+  cursor: default;
+  will-change: transform;
+}
+.hero-letter.space {
+  width: 0.3em;
 }
 
 .hero-sub {
@@ -205,20 +217,18 @@ nav {
   color: var(--muted);
   max-width: 480px;
   margin-bottom: 48px;
+  line-height: 1.7;
 }
-
 .hero-stats {
   display: flex;
   gap: 48px;
 }
-
 .stat-num {
   font-family: var(--fd);
   font-size: 2.5rem;
   letter-spacing: -.03em;
   color: var(--blue);
 }
-
 .stat-label {
   font-size: .8rem;
   letter-spacing: .08em;

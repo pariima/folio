@@ -36,7 +36,10 @@
   <div class="page active" id="page-home">
     <div class="hero">
       <div class="hero-eyebrow">UX Designer &amp; Researcher</div>
-      <h1>Designing for people,<br><em>not just screens.</em></h1>
+      <div class="hero-headline" id="heroHeadline">
+        <div class="hero-line" data-text="Good design is"></div>
+        <div class="hero-line hero-line--accent" data-text="felt, not noticed."></div>
+      </div>
       <p class="hero-sub">I'm a UX designer who believes the best interfaces disappear — leaving only the experience
         behind.</p>
       <div class="hero-stats">
@@ -62,10 +65,10 @@
       <span class="section-link" onclick="navigate('projects')">View all</span>
     </div> -->
     <div class="section-head">
-  <div class="section-title">Selected Work</div>
-  <span class="section-link" onclick="navigate('projects')">View all</span>
-</div>
-<!-- <div class="hscroll-wrap">
+      <div class="section-title">Selected Work</div>
+      <span class="section-link" onclick="navigate('projects')">View all</span>
+    </div>
+    <!-- <div class="hscroll-wrap">
   <div class="hscroll-track" id="homeGrid"></div>
   <div class="hscroll-nav">
   <button class="hscroll-btn" onclick="hscrollMove(-1)">←</button>
@@ -87,28 +90,28 @@
       <span class="section-link" onclick="navigate('blog')">View all</span>
     </div>
     <div class="home-blog-grid" id="homeBlogGrid"></div>
-     
-   <footer>
-  <div class="footer-inner">
-    <div>
-      <div class="footer-name">Parima Bajracharya</div>
-      <div class="footer-copy">© 2025. All rights reserved.</div>
-    </div>
-    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:16px;">
-      <div class="footer-links">
-        <a href="mailto:parima.bajra@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/parima-bajracharya/" target="_blank">LinkedIn</a>
-        <a href="https://medium.com/@parima." target="_blank">Medium</a>
-        <a href="https://www.youtube.com/@Parima-Designs" target="_blank">YouTube</a>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <div class="footer-name">Parima Bajracharya</div>
+          <div class="footer-copy">© 2025. All rights reserved.</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:16px;">
+          <div class="footer-links">
+            <a href="mailto:parima.bajra@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/parima-bajracharya/" target="_blank">LinkedIn</a>
+            <a href="https://medium.com/@parima." target="_blank">Medium</a>
+            <a href="https://www.youtube.com/@Parima-Designs" target="_blank">YouTube</a>
+          </div>
+          <button class="footer-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Back to top</button>
+        </div>
       </div>
-      <button class="footer-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Back to top</button>
-    </div>
-  </div>
-  <div class="footer-wave" id="footerWave"></div>
-</footer>
+      <div class="footer-wave" id="footerWave"></div>
+    </footer>
   </div>
 
-  
+
   <!-- PROJECTS -->
   <!-- <div class="page" id="page-projects">
     <div class="page-header">
@@ -128,19 +131,20 @@
   </div> -->
 
   <div class="page" id="page-projects">
-  <div class="projects-masthead">
-    <div>
-      <div class="pm-eyebrow">Selected Work</div>
-      <h1>Case<br><em>Studies.</em></h1>
+    <div class="projects-masthead">
+      <div>
+        <div class="pm-eyebrow">Selected Work</div>
+        <h1>Case<br><em>Studies.</em></h1>
+      </div>
+      <div class="pm-right">
+        <div class="pm-bignum" id="pmCount">04</div>
+        <div class="pm-desc">UX research, interaction design, and spatial computing — built from the ground up with real
+          users in mind.</div>
+      </div>
     </div>
-    <div class="pm-right">
-      <div class="pm-bignum" id="pmCount">04</div>
-      <div class="pm-desc">UX research, interaction design, and spatial computing — built from the ground up with real users in mind.</div>
-    </div>
+    <div class="pc-grid" id="projectsGrid"></div>
+    <!-- your footer here -->
   </div>
-  <div class="pc-grid" id="projectsGrid"></div>
-  <!-- your footer here -->
-</div>
 
   <!-- BLOG -->
   <div class="page" id="page-blog">
@@ -163,98 +167,104 @@
   <!-- ABOUT -->
   <div class="page" id="page-about">
 
-  <div class="about-intro">
-    <div class="about-intro-left">
-      <div>
-        <div class="about-name-tag">Parima Bajracharya — UX Designer</div>
-        <div class="about-headline">
-          I ask<br>
-          <em>"what if?"</em><br>
-          for a living.
+    <div class="about-intro">
+      <div class="about-intro-left">
+        <div>
+          <div class="about-name-tag">Parima Bajracharya — UX Designer</div>
+          <div class="about-headline">
+            I ask<br>
+            <em>"what if?"</em><br>
+            for a living.
+          </div>
+        </div>
+        <div class="about-bio">
+          <p>I'm a curious person. I've been asking "why" and "how" and "WHAT IF?" since I was a little kid — often to
+            my dad's endless patience. That relentless need to peel back the layers and truly understand people? That's
+            the heart of my UX game.</p>
+          <p>If you're looking for someone who doesn't just design, but deeply <em>feels</em> the user's journey — let's
+            chat about turning those <strong>"what ifs" into what's next.</strong></p>
+          <div class="about-ctas">
+            <a href="mailto:parima.bajra@gmail.com" class="btn btn-primary">Get in touch</a>
+            <a href="https://www.linkedin.com/in/parima-bajracharya/" target="_blank"
+              class="btn btn-outline">LinkedIn</a>
+            <a href="https://medium.com/@parima." target="_blank" class="btn btn-outline">Medium</a>
+          </div>
         </div>
       </div>
-      <div class="about-bio">
-        <p>I'm a curious person. I've been asking "why" and "how" and "WHAT IF?" since I was a little kid — often to my dad's endless patience. That relentless need to peel back the layers and truly understand people? That's the heart of my UX game.</p>
-        <p>If you're looking for someone who doesn't just design, but deeply <em>feels</em> the user's journey — let's chat about turning those <strong>"what ifs" into what's next.</strong></p>
-        <div class="about-ctas">
-          <a href="mailto:parima.bajra@gmail.com" class="btn btn-primary">Get in touch</a>
-          <a href="https://www.linkedin.com/in/parima-bajracharya/" target="_blank" class="btn btn-outline">LinkedIn</a>
-          <a href="https://medium.com/@parima." target="_blank" class="btn btn-outline">Medium</a>
+      <div class="about-intro-right">
+        <img src="https://cdn.prod.website-files.com/683e2affb12aea5a8996c3c2/6840ec51d71bee74ba8e7cb0_Frame%203.png"
+          alt="Parima Bajracharya">
+      </div>
+    </div>
+
+    <div class="about-skills-section">
+      <div class="about-skills-intro">
+        <div>
+          <div class="about-skills-eyebrow">Skills</div>
+          <h2 class="about-skills-title">From late-night studio sessions to real-world design sprints.</h2>
+        </div>
+        <p class="about-skills-desc">I've picked up skills in user research, prototyping, and storytelling — by
+          learning, building, and sometimes failing fast.</p>
+      </div>
+      <div class="about-skills-grid">
+        <div class="skill-col">
+          <div class="skill-col-label">UX Design</div>
+          <ul class="skill-list">
+            <li>Human Centered Design</li>
+            <li>Wireframing & Prototyping</li>
+            <li>Design Systems</li>
+            <li>User Flows</li>
+            <li>Information Architecture</li>
+            <li>Accessibility (WCAG)</li>
+            <li>UX Writing</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <div class="skill-col-label">UX Research</div>
+          <ul class="skill-list">
+            <li>User Interviews</li>
+            <li>Usability Testing</li>
+            <li>Heuristic Evaluation</li>
+            <li>Competitive Analysis</li>
+            <li>Data Synthesis</li>
+            <li>A/B Testing</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <div class="skill-col-label">Coding</div>
+          <ul class="skill-list">
+            <li>HTML5 / CSS</li>
+            <li>JavaScript</li>
+            <li>C#</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>Git</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <div class="skill-col-label">Tools</div>
+          <ul class="skill-list">
+            <li>Figma</li>
+            <li>Unity</li>
+            <li>ShapesXR</li>
+            <li>Sketchfab</li>
+            <li>Mixamo</li>
+            <li>Meta Quest</li>
+          </ul>
         </div>
       </div>
     </div>
-    <div class="about-intro-right">
-      <img src="https://cdn.prod.website-files.com/683e2affb12aea5a8996c3c2/6840ec51d71bee74ba8e7cb0_Frame%203.png" alt="Parima Bajracharya">
-    </div>
-  </div>
 
-  <div class="about-skills-section">
-    <div class="about-skills-intro">
-      <div>
-        <div class="about-skills-eyebrow">Skills</div>
-        <h2 class="about-skills-title">From late-night studio sessions to real-world design sprints.</h2>
+    <footer>
+      <div class="footer-name">Parima Bajracharya</div>
+      <div class="footer-links">
+        <a href="mailto:parima.bajra@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/parima-bajracharya/" target="_blank">LinkedIn</a>
+        <a href="https://medium.com/@parima." target="_blank">Medium</a>
+        <a href="https://www.youtube.com/@Parima-Designs" target="_blank">YouTube</a>
       </div>
-      <p class="about-skills-desc">I've picked up skills in user research, prototyping, and storytelling — by learning, building, and sometimes failing fast.</p>
-    </div>
-    <div class="about-skills-grid">
-      <div class="skill-col">
-        <div class="skill-col-label">UX Design</div>
-        <ul class="skill-list">
-          <li>Human Centered Design</li>
-          <li>Wireframing & Prototyping</li>
-          <li>Design Systems</li>
-          <li>User Flows</li>
-          <li>Information Architecture</li>
-          <li>Accessibility (WCAG)</li>
-          <li>UX Writing</li>
-        </ul>
-      </div>
-      <div class="skill-col">
-        <div class="skill-col-label">UX Research</div>
-        <ul class="skill-list">
-          <li>User Interviews</li>
-          <li>Usability Testing</li>
-          <li>Heuristic Evaluation</li>
-          <li>Competitive Analysis</li>
-          <li>Data Synthesis</li>
-          <li>A/B Testing</li>
-        </ul>
-      </div>
-      <div class="skill-col">
-        <div class="skill-col-label">Coding</div>
-        <ul class="skill-list">
-          <li>HTML5 / CSS</li>
-          <li>JavaScript</li>
-          <li>C#</li>
-          <li>Python</li>
-          <li>Java</li>
-          <li>Git</li>
-        </ul>
-      </div>
-      <div class="skill-col">
-        <div class="skill-col-label">Tools</div>
-        <ul class="skill-list">
-          <li>Figma</li>
-          <li>Unity</li>
-          <li>ShapesXR</li>
-          <li>Sketchfab</li>
-          <li>Mixamo</li>
-          <li>Meta Quest</li>
-        </ul>
-      </div>
-    </div>
+    </footer>
   </div>
-
-  <footer>
-    <div class="footer-name">Parima Bajracharya</div>
-    <div class="footer-links">
-      <a href="mailto:parima.bajra@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/parima-bajracharya/" target="_blank">LinkedIn</a>
-      <a href="https://medium.com/@parima." target="_blank">Medium</a>
-      <a href="https://www.youtube.com/@Parima-Designs" target="_blank">YouTube</a>
-    </div>
-  </footer>
-</div>
 
   <!-- DETAIL -->
   <div class="page" id="page-detail">
@@ -288,9 +298,9 @@
   <script src="/js/app.js"></script>
 
   <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <button class="lightbox-close" onclick="closeLightbox()">✕ close</button>
-  <img id="lightboxImg" src="" alt="">
-</div>
+    <button class="lightbox-close" onclick="closeLightbox()">✕ close</button>
+    <img id="lightboxImg" src="" alt="">
+  </div>
 </body>
 
 </html>
