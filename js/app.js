@@ -488,6 +488,29 @@ function initFooterWave() {
   }
   animate();
 }
+// ─── WORD FLIP ──────────────────────────────────────────────────────────────────
+function initWordFlip() {
+  const el = document.getElementById('flipWord');
+  if (!el) return;
+  const words = ['noticed.', 'felt.', 'remembered.', 'human.', 'invisible.'];
+  let index = 0;
+
+  function showWord(word) {
+    el.innerHTML = '';
+    word.split('').forEach((letter, i) => {
+      const span = document.createElement('span');
+      span.textContent = letter;
+      span.style.cssText = `display:inline-block;opacity:0;filter:blur(8px);animation:flipLetterIn 0.4s ease forwards;animation-delay:${i * 0.04}s`;
+      el.appendChild(span);
+    });
+  }
+
+  showWord(words[index]);
+  setInterval(() => {
+    index = (index + 1) % words.length;
+    showWord(words[index]);
+  }, 3000);
+}
 // ─── ROUTER ──────────────────────────────────────────────────────────────────
 function pushProject(id) {
   history.pushState({ projectId: id }, '', `/project/${id}`);
@@ -560,5 +583,6 @@ function renderAll() {
 document.addEventListener('DOMContentLoaded', () => {
   handleRouting();
   initTextCursorProximity();
+  initWordFlip();
 });
 

@@ -240,6 +240,17 @@ nav {
   width: 0.25em;
 }
 
+@keyframes flipLetterIn {
+  to { opacity: 1; filter: blur(0px); }
+}
+
+#flipWord {
+  display: inline;
+  color: var(--blue);
+  font-family: var(--fd);
+  font-style: italic;
+}
+
 .hero-sub {
   font-size: 1.1rem;
   color: var(--muted);
