@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Melodrama';
+  src: url('/fonts/Melodrama-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+}
+
 /* ─── RESET & TOKENS ──────────────────────────────────────────────── */
 *,
 *::before,
@@ -228,7 +234,7 @@ nav {
   color: var(--blue);
 }
 .hero-letter {
-  font-family: var(--fd);
+  font-family: 'Melodrama', serif;
   font-size: clamp(3.5rem, 8vw, 8rem);
   letter-spacing: -.02em;
   display: inline-block;
