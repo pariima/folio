@@ -276,7 +276,7 @@ const PROJECTS = [
     ]
   },
   {
-    id: 2, // Update ID based on your database
+    id: 5, // Update ID based on your database
     title: "WheelsUp",
     tag: "Product Design · UX Research",
     year: "2026",
