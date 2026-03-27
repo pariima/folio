@@ -33,7 +33,7 @@ function initTextCursorProximity() {
       heroSub.style.opacity = '0';
       heroSub.style.transform = 'translateY(6px)';
       setTimeout(() => {
-        heroSub.textContent = text;
+        heroSub.innerHTML = `Currently I am: <span style="color:var(--blue)">${text}</span>`;
         heroSub.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
         heroSub.style.opacity = '1';
         heroSub.style.transform = 'translateY(0)';
