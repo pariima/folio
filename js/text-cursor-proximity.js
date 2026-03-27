@@ -16,8 +16,7 @@ function initTextCursorProximity() {
   }, { passive: true });
 
   // Wrap each character in a span
-  const flipPhrases = [
-    'a UX Designer.',
+  const subPhrases = [
     'Hand-coding this.',
     'Finding the logic.',
     'Building in 3D.',
@@ -27,31 +26,27 @@ function initTextCursorProximity() {
     'Testing AI edge cases.',
     'Prompting, then pivoting.',
   ];
-  let flipIndex = 0;
-
-  function renderAccentLine(text) {
-    const accentLine = document.querySelector('.hero-line--accent');
-    if (!accentLine) return;
-    accentLine.setAttribute('aria-label', text);
-    accentLine.innerHTML = text.split('').map(ch =>
-      ch === ' '
-        ? `<span class="hero-letter hero-letter--space" aria-hidden="true">&nbsp;</span>`
-        : `<span class="hero-letter" aria-hidden="true" style="opacity:0;filter:blur(8px);animation:flipLetterIn 0.4s ease forwards">${ch}</span>`
-    ).join('');
-    accentLine.querySelectorAll('.hero-letter:not(.hero-letter--space)').forEach((span, i) => {
-      span.style.animationDelay = `${i * 0.03}s`;
-    });
+  let subIndex = 0;
+  const heroSub = document.querySelector('.hero-sub');
+  if (heroSub) {
+    function showSubPhrase(text) {
+      heroSub.style.opacity = '0';
+      heroSub.style.transform = 'translateY(6px)';
+      setTimeout(() => {
+        heroSub.textContent = text;
+        heroSub.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        heroSub.style.opacity = '1';
+        heroSub.style.transform = 'translateY(0)';
+      }, 300);
+    }
+    showSubPhrase(subPhrases[0]);
+    setInterval(() => {
+      subIndex = (subIndex + 1) % subPhrases.length;
+      showSubPhrase(subPhrases[subIndex]);
+    }, 4500);
   }
 
   lines.forEach(line => {
-    if (line.classList.contains('hero-line--accent')) {
-      renderAccentLine(flipPhrases[0]);
-      setInterval(() => {
-        flipIndex = (flipIndex + 1) % flipPhrases.length;
-        renderAccentLine(flipPhrases[flipIndex]);
-      }, 3000);
-      return;
-    }
     const text = line.dataset.text || '';
     line.setAttribute('aria-label', text);
     line.innerHTML = text.split('').map(ch =>
