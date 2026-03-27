@@ -233,6 +233,9 @@ nav {
 .hero-line--accent .hero-letter {
   color: var(--blue);
 }
+.hero-line--small .hero-letter {
+  font-size: clamp(2.2rem, 5vw, 5rem);
+}
 .hero-letter {
   font-family: 'Melodrama', serif;
   font-size: clamp(3.5rem, 8vw, 8rem);

@@ -16,7 +16,42 @@ function initTextCursorProximity() {
   }, { passive: true });
 
   // Wrap each character in a span
+  const flipPhrases = [
+    'a UX Designer.',
+    'Hand-coding this.',
+    'Finding the logic.',
+    'Building in 3D.',
+    "Asking 'Why?'",
+    'Making time for courses.',
+    'Debugging my own logic.',
+    'Testing AI edge cases.',
+    'Prompting, then pivoting.',
+  ];
+  let flipIndex = 0;
+
+  function renderAccentLine(text) {
+    const accentLine = document.querySelector('.hero-line--accent');
+    if (!accentLine) return;
+    accentLine.setAttribute('aria-label', text);
+    accentLine.innerHTML = text.split('').map(ch =>
+      ch === ' '
+        ? `<span class="hero-letter hero-letter--space" aria-hidden="true">&nbsp;</span>`
+        : `<span class="hero-letter" aria-hidden="true" style="opacity:0;filter:blur(8px);animation:flipLetterIn 0.4s ease forwards">${ch}</span>`
+    ).join('');
+    accentLine.querySelectorAll('.hero-letter:not(.hero-letter--space)').forEach((span, i) => {
+      span.style.animationDelay = `${i * 0.03}s`;
+    });
+  }
+
   lines.forEach(line => {
+    if (line.classList.contains('hero-line--accent')) {
+      renderAccentLine(flipPhrases[0]);
+      setInterval(() => {
+        flipIndex = (flipIndex + 1) % flipPhrases.length;
+        renderAccentLine(flipPhrases[flipIndex]);
+      }, 3000);
+      return;
+    }
     const text = line.dataset.text || '';
     line.setAttribute('aria-label', text);
     line.innerHTML = text.split('').map(ch =>
