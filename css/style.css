@@ -1599,7 +1599,7 @@ footer {
   font-size: 1.8rem;
   letter-spacing: -.03em;
   line-height: 1.1;
-  color: var(--ink);
+  color: var(--blue);
   position: sticky;
   top: 100px;
 }
