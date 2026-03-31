@@ -14,11 +14,11 @@
 }
 
 :root {
-  --cream: #0E0E0E;
-  --ink: #F0EBE3;
+  --cream: #F5F0E8;
+  --ink: #1A1714;
   --blue: #2B4EE6;
-  --muted: #8A8A8A;
-  --surface: #1A1A1A;
+  --muted: #7A6E65;
+  --surface: #EDE8DF;
   --border: rgba(43, 78, 230, 0.2);
   --fd: 'Instrument Serif', serif;
   --fb: 'Satoshi', sans-serif;
