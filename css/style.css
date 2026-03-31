@@ -330,6 +330,18 @@ nav {
 }
 
 /* ─── HOME PROJECT GRID ──────────────────────────────────────────── */
+.selected-work-section {
+  background: var(--blue);
+  padding: 64px 0;
+  margin-bottom: 96px;
+}
+.selected-work-section .section-title,
+.selected-work-section .section-link {
+  color: #fff;
+}
+.selected-work-section .section-link:hover {
+  color: rgba(255,255,255,.7);
+}
 .section-head {
   display: flex;
   align-items: center;
@@ -345,7 +357,6 @@ nav {
   font-family: var(--fd);
   font-size: 1.75rem;
   letter-spacing: -.02em;
-  color: var(--blue);
 }
 
 .section-link {
@@ -401,23 +412,23 @@ nav {
   flex-direction: column;
   justify-content: center;
   padding: 64px;
-  background: var(--surface);
+  background: var(--blue);
   transition: background .3s;
 }
-.hp-card:hover .hp-info { background: #e4dfd6; }
+.hp-card:hover .hp-info { background: #1e3bc4; }
 
 .hp-tag {
   font-size: .68rem;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: rgba(255,255,255,.6);
   display: flex; align-items: center; gap: 10px;
   margin-bottom: 20px;
 }
 .hp-tag::before {
   content: '';
   width: 16px; height: 1px;
-  background: var(--blue);
+  background: #fff;
 }
 .hp-title {
   font-family: var(--fd);
@@ -425,30 +436,30 @@ nav {
   letter-spacing: -.04em;
   line-height: 1;
   margin-bottom: 16px;
-  color: var(--ink);
+  color: #fff;
   transition: transform .4s var(--ease);
 }
 .hp-card:hover .hp-title { transform: translateX(8px); }
 
 .hp-excerpt {
   font-size: .9rem;
-  color: var(--muted);
+  color: rgba(255,255,255,.7);
   line-height: 1.7;
   max-width: 420px;
   margin-bottom: 32px;
 }
 .hp-arrow {
   width: 44px; height: 44px;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255,255,255,.4);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  color: var(--muted);
+  color: #fff;
   transition: background .25s, color .25s, border-color .25s, transform .3s var(--ease);
 }
 .hp-card:hover .hp-arrow {
-  background: var(--blue);
-  color: #fff;
-  border-color: var(--blue);
+  background: #fff;
+  color: var(--blue);
+  border-color: #fff;
   transform: rotate(45deg);
 }
 
