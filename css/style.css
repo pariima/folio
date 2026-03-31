@@ -30,12 +30,20 @@ html {
 }
 
 body {
-  background: url('/Sky02.jpg') center center / cover fixed;
+  background: var(--cream);
   color: var(--ink);
   font-family: var(--fb);
   font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url('/Sky02.jpg') center center / cover no-repeat;
+  z-index: -1;
 }
 
 /* ─── PAPER TEXTURE ──────────────────────────────────────────────── */
@@ -384,10 +392,11 @@ nav {
   position: sticky;
   top: 80px;
   margin-bottom: 24px;
-  box-shadow: 0 8px 48px rgba(26,23,20,.12);
+  border-radius: 16px;
+  box-shadow: 0 8px 48px rgba(20, 40, 140, 0.3);
   transition: box-shadow .3s;
 }
-.hp-card:hover { box-shadow: 0 16px 64px rgba(26,23,20,.2); }
+.hp-card:hover { box-shadow: 0 16px 64px rgba(20, 40, 140, 0.5); }
 
 .hp-card:nth-child(1) { top: 80px; }
 .hp-card:nth-child(2) { top: 104px; }
@@ -401,10 +410,12 @@ nav {
   flex-direction: column;
   justify-content: center;
   padding: 64px;
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   transition: background .3s;
 }
-.hp-card:hover .hp-info { background: #e4dfd6; }
+.hp-card:hover .hp-info { background: rgba(255, 255, 255, 0.22); }
 
 .hp-tag {
   font-size: .68rem;
