@@ -345,6 +345,7 @@ nav {
   font-family: var(--fd);
   font-size: 1.75rem;
   letter-spacing: -.02em;
+  color: var(--blue);
 }
 
 .section-link {
