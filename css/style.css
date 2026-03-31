@@ -14,11 +14,11 @@
 }
 
 :root {
-  --cream: #F5F0E8;
+  --cream: transparent;
   --ink: #1A1714;
   --blue: #2B4EE6;
   --muted: #7A6E65;
-  --surface: #EDE8DF;
+  --surface: rgba(237, 232, 223, 0.75);
   --border: rgba(43, 78, 230, 0.2);
   --fd: 'Instrument Serif', serif;
   --fb: 'Satoshi', sans-serif;
@@ -1462,7 +1462,7 @@ nav {
 
 /* ─── FOOTER ─────────────────────────────────────────────────────── */
 footer {
-  background: var(--cream);
+  background: transparent;
   color: var(--ink);
   position: relative;
   overflow: hidden;
