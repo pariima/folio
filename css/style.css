@@ -42,8 +42,11 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
+  width: 100vw;
+  height: 100vh;
   background: url('/Sky02.jpg') center center / cover no-repeat;
   z-index: -1;
+}
 }
 
 /* ─── PAPER TEXTURE ──────────────────────────────────────────────── */
@@ -351,8 +354,8 @@ nav {
 
 .section-title {
   font-family: var(--fd);
-  font-size: 1.75rem;
-  letter-spacing: -.02em;
+  font-size: clamp(3rem, 6vw, 6rem);
+  letter-spacing: -.04em;
   color: var(--blue);
 }
 
