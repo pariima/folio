@@ -610,7 +610,7 @@ function initCardOpacity() {
       const windowH = window.innerHeight;
       // how much the card is buried under the next card (0 = fully visible, 1 = fully covered)
       const overlap = Math.max(0, Math.min(1, (windowH - rect.top) / windowH - 0.5));
-      const opacity = 0.15 + overlap * 0.05;
+      const opacity = 0.15 + overlap * 0.15;
       card.querySelector('.hp-info').style.background = `rgba(255,255,255,${opacity})`;
     });
   }, { passive: true });
