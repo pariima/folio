@@ -403,7 +403,7 @@ nav {
 .hp-card:nth-child(3) { top: 128px; }
 .hp-card:nth-child(4) { top: 152px; }
 
-.hp-card:nth-child(even) .hp-bg { order: 0; }
+.hp-card .hp-bg { order: -1; }
 
 .hp-info {
   display: flex;
