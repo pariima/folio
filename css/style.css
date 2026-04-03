@@ -146,7 +146,7 @@ nav {
   z-index: 1;
 }
 .hero-greeting {
-  font-family: 'Fraunces', serif;
+  font-family: var(--fb);
   font-size: clamp(3.5rem, 6vw, 7rem);
   font-weight: 800;
   line-height: 1;
@@ -167,7 +167,7 @@ nav {
   to   { filter: blur(0px);  opacity: 1; transform: translateY(0); }
 }
 .hero-faded-word {
-  font-family: 'Fraunces', serif;
+  font-family: var(--fb);
   font-size: clamp(5rem, 10vw, 11rem);
   font-weight: 800;
   letter-spacing: -0.04em;
@@ -184,7 +184,7 @@ nav {
   to   { opacity: 1; transform: translateX(0); }
 }
 .hero-tagline {
-  font-family: 'Fraunces', serif;
+  font-family: var(--fb);
   font-size: clamp(1.8rem, 3.5vw, 3.2rem);
   font-weight: 700;
   line-height: 1.2;
@@ -235,7 +235,7 @@ nav {
   background: var(--border);
   flex-shrink: 0;
 }
-.bio-greeting { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: -.01em; }
+.bio-greeting { font-family: var(--fb); font-size: 1.2rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: -.01em; }
 .bio-text { font-family: var(--fb); font-size: 0.92rem; color: var(--muted); line-height: 1.75; margin-bottom: 1.5rem; }
 .social-links { display: flex; gap: 0.75rem; }
 .social-link {
