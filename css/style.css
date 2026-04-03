@@ -118,7 +118,7 @@ nav {
 /* ─── HERO ─── */
 .hero {
   display: grid;
-  grid-template-columns: 1fr 360px;
+  grid-template-columns: 1fr 460px;
   min-height: calc(100vh - 81px);
   border-bottom: 1px solid var(--border);
   position: relative;
