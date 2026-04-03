@@ -193,9 +193,9 @@ nav {
   position: relative;
   z-index: 2;
   margin-top: auto;
-  padding-bottom: 6rem;
+  padding-bottom: 2rem;
 }
-.tagline-label { display: block; font-size: 0.55em; font-weight: 500; color: var(--muted); letter-spacing: 0; margin-bottom: 0.2em; }
+.tagline-label { display: block; font-size: 0.85em; font-weight: 500; color: var(--muted); letter-spacing: 0; margin-bottom: 0.2em; }
 .typed-wrap { display: block; min-height: 1.15em; }
 .typed-text { color: var(--ink); }
 .typed-cursor {
