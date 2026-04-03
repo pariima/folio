@@ -1,3 +1,26 @@
+// ─── TYPED TEXT ──────────────────────────────────────────────────────────────
+(function initTyped() {
+  const phrases = ['favourite food group.', 'superpower.', 'language.', 'obsession.', 'way of thinking.'];
+  let pi = 0, ci = 0, deleting = false;
+  const typedEl = document.getElementById('typed');
+  if (!typedEl) return;
+  function type() {
+    const phrase = phrases[pi];
+    if (!deleting) {
+      typedEl.textContent = phrase.slice(0, ci + 1);
+      ci++;
+      if (ci === phrase.length) { deleting = true; setTimeout(type, 1800); return; }
+      setTimeout(type, 60);
+    } else {
+      typedEl.textContent = phrase.slice(0, ci - 1);
+      ci--;
+      if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; setTimeout(type, 400); return; }
+      setTimeout(type, 35);
+    }
+  }
+  setTimeout(type, 1200);
+})();
+
 // ─── PAPER GRAIN TEXTURE ─────────────────────────────────────────────────────
 (function generateGrain() {
   const size = 256;
@@ -601,7 +624,6 @@ function renderAll() {
 document.addEventListener('DOMContentLoaded', () => {
   handleRouting();
   initTextCursorProximity();
-  initWordFlip();
   initCardOpacity();
 });
 
