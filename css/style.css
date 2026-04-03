@@ -38,6 +38,7 @@ body::before {
   background: url('/Sky02.jpg') center center / cover no-repeat;
   z-index: -2;
 }
+body.projects-page::before { display: none; }
 
 /* ─── PAPER TEXTURE ──────────────────────────────────────────────── */
 #paperTexture {

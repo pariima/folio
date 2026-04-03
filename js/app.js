@@ -76,6 +76,8 @@ function navigate(page, id) {
   const navLink = document.querySelector('[data-page="' + page + '"]');
   if (navLink) navLink.classList.add('active');
 
+  document.body.classList.toggle('projects-page', page === 'projects' || page === 'detail');
+
   if (page === 'detail') renderDetail(id);
   window.scrollTo(0, 0);
 }
@@ -542,6 +544,7 @@ function renderProjectDetail(project) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
   document.getElementById('page-detail').classList.add('active');
+  document.body.classList.add('projects-page');
   window.scrollTo(0, 0);
 
   const el = document.getElementById('detailContent');
