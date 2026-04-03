@@ -1,6 +1,6 @@
 // ─── TYPED TEXT ──────────────────────────────────────────────────────────────
 (function initTyped() {
-  const phrases = ['favourite food group.', 'superpower.', 'language.', 'obsession.', 'way of thinking.'];
+  const phrases = ['Design and human psychology.', 'Friction in user experience.', 'Nudge theory in interfaces.'];
   let pi = 0, ci = 0, deleting = false;
   const typedEl = document.getElementById('typed');
   if (!typedEl) return;
