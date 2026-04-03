@@ -124,6 +124,14 @@ nav {
   position: relative;
   overflow: hidden;
 }
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.45);
+  z-index: 0;
+  pointer-events: none;
+}
 .hero-left {
   padding: 5rem 4rem 3rem;
   display: flex;
@@ -132,6 +140,7 @@ nav {
   border-right: 1px solid var(--border);
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 .hero-greeting {
   font-family: 'Fraunces', serif;
@@ -213,6 +222,8 @@ nav {
   flex-direction: column;
   gap: 2rem;
   animation: fadeSlideIn 1s cubic-bezier(0.16,1,0.3,1) 0.5s both;
+  position: relative;
+  z-index: 1;
 }
 .profile-photo {
   width: 110px; height: 110px;
