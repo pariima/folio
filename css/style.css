@@ -14,8 +14,8 @@
   --muted: #7A6E65;
   --surface: rgba(237, 232, 223, 0.75);
   --border: rgba(43, 78, 230, 0.2);
-  --fd: 'Instrument Serif', serif;
-  --fb: 'Satoshi', sans-serif;
+  --fd: 'Fraunces', serif;
+  --fb: 'DM Sans', sans-serif;
   --ease: cubic-bezier(.25, .1, .25, 1);
 }
 
@@ -38,7 +38,8 @@ body::before {
   background: url('/Sky02.png') center center / cover no-repeat;
   z-index: -2;
 }
-body.projects-page::before { display: none; }
+body.projects-page::before { display: none; background: #d8e5f2; }
+#page-projects { background: #d8e5f2; }
 body::after {
   content: '';
   position: fixed;
@@ -146,7 +147,7 @@ nav {
   z-index: 1;
 }
 .hero-greeting {
-  font-family: var(--fb);
+  font-family: 'Fraunces', serif;
   font-size: clamp(3.5rem, 6vw, 7rem);
   font-weight: 800;
   line-height: 1;
@@ -270,8 +271,8 @@ nav {
 /* ─── SECTION HEAD ───────────────────────────────────────────────── */
 .section-head {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 48px; margin-bottom: 32px;
-  max-width: 1200px; margin-left: auto; margin-right: auto;
+  padding: 0 64px; margin-bottom: 32px;
+  max-width: 1400px; margin-left: auto; margin-right: auto;
 }
 .section-title {
   font-family: var(--fd);
