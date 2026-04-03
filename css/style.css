@@ -168,8 +168,8 @@ nav {
 }
 .hero-faded-word {
   font-family: var(--fb);
-  font-size: clamp(5rem, 10vw, 11rem);
-  font-weight: 800;
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  font-weight: 500;
   letter-spacing: -0.04em;
   color: rgba(43,78,230,0.18);
   line-height: 1;
@@ -185,10 +185,10 @@ nav {
 }
 .hero-tagline {
   font-family: var(--fb);
-  font-size: clamp(0.95rem, 1.8vw, 1.4rem);
-  font-weight: 500;
+  font-size: clamp(1.8rem, 3.5vw, 3.2rem);
+  font-weight: 700;
   line-height: 1.2;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.025em;
   color: var(--muted);
   position: relative;
   z-index: 2;
@@ -731,8 +731,8 @@ footer { background: transparent; color: var(--ink); position: relative; overflo
 .footer-links a:hover { color: var(--blue); }
 .footer-top-btn { font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); background: none; border: none; cursor: none; transition: color .2s; padding: 0; }
 .footer-top-btn:hover { color: var(--ink); }
-.footer-wave { overflow: hidden; height: 220px; margin-top: 0; }
-.footer-wave-bar { width: 100%; background: var(--blue); margin-top: -2px; will-change: transform; transition: transform 0.1s ease; }
+.footer-wave { display: none; }
+.footer-wave-bar { display: none; }
 
 /* ─── FEATURE CAROUSEL ─── */
 .fcarousel {
