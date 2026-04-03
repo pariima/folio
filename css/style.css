@@ -185,10 +185,10 @@ nav {
 }
 .hero-tagline {
   font-family: var(--fb);
-  font-size: clamp(1.8rem, 3.5vw, 3.2rem);
-  font-weight: 700;
+  font-size: clamp(0.95rem, 1.8vw, 1.4rem);
+  font-weight: 500;
   line-height: 1.2;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.01em;
   color: var(--muted);
   position: relative;
   z-index: 2;
