@@ -48,17 +48,17 @@ const PROJECTS = [
       {
         type: "text",
         title: "Find Anyone, Fast",
-        body: "Problem: No filtering or search meant admins wasted time scrolling through long user lists. \nSolution: Designed an interactive filtering system with real-time search, multi-parameter sorting, and clear status indicators — Active · Inactive · Needs Attention."
+        body: "Problem: No filtering or search meant admins wasted time scrolling through long user lists.<br><br>Solution: Designed an interactive filtering system with real-time search, multi-parameter sorting, and clear status indicators — Active · Inactive · Needs Attention."
       },
       {
         type: "text",
         title: "Make Engagement Visible",
-        body: "Problem: No way to proactively identify struggling students. \nSolution: Introduced a dedicated progress tracking dashboard surfacing module completion rates, engagement signals, and automated flags for students showing disengagement patterns."
+        body: "Problem: No way to proactively identify struggling students.<br><br>Solution: Introduced a dedicated progress tracking dashboard surfacing module completion rates, engagement signals, and automated flags for students showing disengagement patterns."
       },
       {
         type: "text",
         title: "One Place, One Flow",
-        body: "Problem: The newsletter feature was buried and non-intuitive. \nSolution: Consolidated all content distribution into a dedicated Newsletter section with a single, prominent Create action."
+        body: "Problem: The newsletter feature was buried and non-intuitive.<br><br>Solution: Consolidated all content distribution into a dedicated Newsletter section with a single, prominent Create action."
       },
       {
         type: "image",
