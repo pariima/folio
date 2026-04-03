@@ -196,7 +196,7 @@ nav {
   padding-bottom: 2rem;
 }
 .tagline-label { display: block; font-size: .55em; font-weight: 500; color: var(--muted); letter-spacing: 0; margin-bottom: 0.2em; }
-.typed-wrap { display: block; min-height: 1.15em; }
+.typed-wrap { display: block; min-height: 1.15em; font-size: .55em; }
 .typed-text { color: var(--ink); }
 .typed-cursor {
   display: inline-block;
