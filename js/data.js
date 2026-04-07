@@ -276,81 +276,77 @@ const PROJECTS = [
     ]
   },
   {
-    id: 5, // Update ID based on your database
-    title: "WheelsUp",
-    tag: "Product Design · UX Research",
+
+    id: 2,
+    title: "WheelsUp: A Letter to My Sister",
+    tag: "UX Research · Social Impact · Mobile",
     year: "2026",
-    client: "Personal Project",
-    role: "Product Designer & Researcher",
-    duration: "Solo Project",
-    cover: "https://your-image-hosting-link.com/wheelsup-cover.png",
-    excerpt: "How I designed a glanceable, high-contrast tracking interface to eliminate the 'information black hole' and reduce anxiety for student transit.",
+    client: "Personal Venture",
+    role: "UX Generalist (Researcher & Designer)",
+    duration: "Ongoing",
+    cover: "https://your-image-link-here.png",
+    excerpt: "Designing a high-fidelity transportation ecosystem for the working parents of Kathmandu, inspired by my sister’s journey into motherhood.",
     sections: [
       {
         type: "text",
-        title: "Overview",
-        body: "While we can track a pizza delivery in real-time, student transportation often remains a data 'black hole.' When a school bus is late, parents are left guessing, and school front offices are flooded with calls. I designed WheelsUp as a solo project to centralize this fragmented experience into a secure, mobile-first dashboard built on real-time visual certainty."
-      },
-      {
-        type: "text",
-        title: "The Problem",
-        body: "Student transit suffer from a massive trust and information gap. Without live data, a bus that is merely five minutes late triggers an 'anxiety tax' for parents. Meanwhile, school staff lose up to 45 minutes a day simply tracking down vehicles over radio and repeating coordinates over the phone."
+        title: "The 'Why': More Than Just an App",
+        body: "This project didn't start in a boardroom; it started with a phone call from my sister in Kathmandu. She just had her first baby, and amidst the joy was a looming shadow of anxiety: How would she balance her long working hours with the safety of her child’s future commute? In a city like Kathmandu—where traffic is unpredictable and the 'gallis' are narrow—sending a child to school shouldn't feel like a leap of faith. I started WheelsUp as a promise to her: that by the time her little one is ready for school, the 'Information Black Hole' of student transit will be a thing of the past."
       },
       {
         type: "quote",
-        text: "We have no idea where the bus is. If it’s five minutes late, we don't know if we should keep waiting in the cold or if it broke down."
+        text: "In Kathmandu, we don't just track a bus; we track our peace of mind. I want my sister to focus on her career and her child, not on the dust and delays of the Ring Road."
       },
       {
         type: "text",
-        title: "Discovery & Research",
-        body: "I synthesized transit pain points to understand how parents and administrators interact during the morning and afternoon commute. The research revealed that success isn't just about showing a map—it is about 'glanceability.' Parents are multitasking; they need to absorb critical timing data in a split-second."
+        title: "The Problem: The 'Anxiety Tax' of Kathmandu Transit",
+        body: "For a working parent in Nepal, the morning commute is a high-stakes guessing game. With no real-time data, a bus that is 10 minutes late due to a 'jam' at Kalanki feels like an eternity. My research found that local parents experience an 'Anxiety Tax' of 7.7/10 during the wait window. The current system relies on frantic phone calls to drivers—calls that are dangerous for the driver to pick up and stressful for the parent to make."
       },
       {
         type: "text",
-        title: "Information Architecture",
-        body: "I mapped out the structural hierarchy to ensure the 'Path to Data' was as short as possible. I stripped away unnecessary map clutter and prioritized a visual hierarchy of urgency: Live Map first, big ETA second, and driver safety verification third."
+        title: "Empathy-Driven Discovery",
+        body: "I spent time observing the 'daily rhythm' of Kathmandu households. I realized that 'Anxious Amy' isn't just a persona; she is my sister, my neighbor, and the woman rushing to catch a micro-bus. They don't need a complex map; they need a 'Glanceable Truth' that fits into a hectic morning of making breakfast and getting ready for work."
       },
       {
         type: "image",
-        src: "https://your-image-hosting-link.com/wheelsup-lowfi-wireframe.png",
-        caption: "Low-Fidelity Wireframes focusing on structural hierarchy"
+        src: "https://your-wireframe-link.jpg",
+        caption: "Low-Fidelity Wireframe: Stripping away complexity to focus on the 'Single Source of Truth' for a busy parent."
       },
       {
         type: "text",
-        title: "Glanceable ETA Tracking",
-        body: "Problem: Parents are busy and don't have time to study a map to calculate arrival times. Solution: Oversized, high-contrast typography displays the ETA in bright yellow. A user can understand exactly when the bus arrives from several feet away."
+        title: "Design Decision: The 2-Second Rule",
+        body: "Problem: A parent in a rush can't study a map. Solution: I implemented the 'Big Data' approach. The ETA (e.g., '4 MINS') is the largest element on the screen, styled in School Bus Yellow. I tested this to ensure it’s readable from across a room—allowing my sister to know exactly when to step out the door without dropping her coffee or her baby’s bag."
       },
       {
         type: "text",
-        title: "The Verified Driver Module",
-        body: "Problem: Security is a top priority, but parents rarely know who is driving their child. Solution: Integrated a dedicated driver profile section with a photo, name, and verification badge directly onto the live tracking sheet to humanize the logistics and build trust."
+        title: "Cultural Trust: The 'Mama/Dai' Module",
+        body: "Problem: In Nepal, trust is personal. Parents want to know who is behind the wheel. Solution: I integrated a 'Verified Driver' section. By showing 'Driver Pratik’s' face and verified status, we move from a cold GPS dot to a human connection. It brings the 'Community Trust' of a small neighborhood into a digital interface."
       },
       {
         type: "text",
-        title: "One-Tap Communication",
-        body: "Problem: Texting or calling while wrangling kids at the curb causes dangerous distractions. Solution: Designed a single, prominent 'I'm at the Curb' button to close the communication loop between the parent and driver silently without a phone call."
+        title: "Action Without Friction",
+        body: "Problem: Typing a message while walking through a busy street is difficult. Solution: The 'I'm at the Curb' button. A single, haptic-confirmed tap that lets the driver know the student is ready. No phone calls, no dangerous distractions—just a seamless loop of communication."
       },
       {
         type: "image",
-        src: "https://your-image-hosting-link.com/wheelsup-hifi-prototype.png",
-        caption: "High-Fidelity Interface utilizing School Bus Yellow and Midnight Navy"
+        src: "https://your-hifi-link.png",
+        caption: "High-Fidelity Prototype: A 'Friendly-Industrial' aesthetic designed for high-visibility under the bright Himalayan sun."
       },
       {
         type: "outcomes",
         items: [
-          "Information access shifted from scanning cluttered maps to 2-second glanceable reading",
-          "Humanized transit safety by bringing driver verification to the foreground",
-          "Closed communication loops between parents and drivers with a single tap system",
-          "Structured an MVP design system that balances accessibility with a modern dark-mode aesthetic"
+          "Reduced 'Time-to-Certainty' from several minutes of worrying to 2 seconds of glancing.",
+          "Digitized the 'Trust Culture' of Kathmandu through verified driver profiles.",
+          "Empowered parents with 'Agency,' replacing helpless waiting with actionable data.",
+          "Built a scalable design system ready for the unique infrastructure of Nepal."
         ]
       },
       {
         type: "text",
-        title: "Reflection",
-        body: "This project taught me the power of visual constraints. By committing to a strict, high-contrast dark theme (using School Bus Yellow on Midnight Navy), I learned how color psychology and typography can actively reduce user anxiety in high-stress, real-time environments."
+        title: "Reflection: Design as a Love Language",
+        body: "Working on WheelsUp reminded me that as a UX Researcher, my greatest tool isn't Figma—it's empathy. This isn't just a project for my portfolio; it’s a solution for my family. It taught me that when we design for the people we love, we create products that the whole world can trust."
       }
     ]
-  }
+}
 ];
 // ─── BLOGS DATA ───────────────────────────────────────────────────────────────
 const BLOGS = [
