@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>WheelsUp — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --amber: #F9A825;
+    --amber-dim: rgba(249,168,37,0.12);
+    --amber-glow: rgba(249,168,37,0.25);
+    --dark: #10141A;
+    --dark2: #181C22;
+    --dark3: #1C2028;
+    --dark4: #252932;
+    --card: rgba(28,32,38,0.92);
+    --text: #DFE2EB;
+    --muted: #64748B;
+    --blue: #2AC6FF;
+  }
+  body { background: #0A0D12; font-family: 'Be Vietnam Pro', sans-serif; color: var(--text); }
+
+  h1.site-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--amber);
+    text-align: center;
+    padding: 48px 0 12px;
+    opacity: 0.7;
+  }
+  h2.site-sub {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 56px;
+    letter-spacing: -1px;
+  }
+  h2.site-sub span { color: var(--amber); }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px 80px;
+  }
+
+  .card {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  /* ---- BANNER SHARED ---- */
+  .banner {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  /* ===========================
+     1. HERO BANNER
+  =========================== */
+  .b1 {
+    height: 420px;
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .b1-map {
+    position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.03) 40px),
+      repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.03) 40px);
+  }
+  .b1-map::after {
+    content:''; position:absolute; inset:0;
+    background: radial-gradient(ellipse 80% 60% at 60% 50%, rgba(249,168,37,0.08) 0%, transparent 70%);
+  }
+  /* Roads */
+  .b1-roads { position:absolute; inset:0; }
+  .b1-roads svg { width:100%; height:100%; }
+  .b1-content {
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column; align-items: flex-start;
+    padding: 0 52px;
+    gap: 12px;
+  }
+  .b1-eyebrow {
+    font-size: 11px; font-weight: 600; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--amber); opacity: 0.8;
+  }
+  .b1-title {
+    font-size: 56px; font-weight: 800; color: #fff;
+    line-height: 1; letter-spacing: -2.5px;
+  }
+  .b1-title span { color: var(--amber); }
+  .b1-sub {
+    font-size: 16px; color: var(--muted); font-family: 'Be Vietnam Pro', sans-serif;
+    max-width: 320px; line-height: 1.6; font-weight: 400; margin-top: 4px;
+  }
+  .b1-pill {
+    background: var(--amber-dim); border: 1px solid var(--amber-glow);
+    color: var(--amber); font-size: 12px; font-weight: 600;
+    padding: 6px 14px; border-radius: 100px; letter-spacing: 0.5px;
+    margin-top: 8px;
+  }
+  .b1-phone {
+    position: absolute; right: 52px; bottom: -20px;
+    width: 160px; z-index: 3;
+  }
+  .phone-shell {
+    width: 160px; height: 310px;
+    background: #181C22;
+    border-radius: 32px;
+    border: 1.5px solid rgba(255,255,255,0.1);
+    position: relative; overflow: hidden;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(249,168,37,0.08);
+  }
+  .phone-screen {
+    position: absolute; inset: 8px;
+    border-radius: 24px;
+    background: var(--dark);
+    overflow: hidden;
+  }
+  .phone-map-bg {
+    position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(0deg, transparent, transparent 11px, rgba(255,255,255,0.04) 12px),
+      repeating-linear-gradient(90deg, transparent, transparent 11px, rgba(255,255,255,0.04) 12px),
+      #0D1117;
+  }
+  .phone-overlay-card {
+    position: absolute; bottom: 8px; left: 8px; right: 8px;
+    background: rgba(28,32,38,0.96);
+    border-radius: 18px; padding: 12px 14px;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .poc-eta {
+    font-size: 22px; font-weight: 800; color: var(--amber);
+    letter-spacing: -1px; line-height: 1;
+  }
+  .poc-badge {
+    display: inline-block;
+    background: var(--amber-dim); color: var(--amber);
+    font-size: 9px; font-weight: 700; letter-spacing: 0.5px;
+    padding: 2px 7px; border-radius: 100px; margin-top: 2px;
+  }
+  .poc-dest {
+    font-size: 9px; color: var(--muted); margin-top: 4px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+  }
+  .poc-btn {
+    margin-top: 8px; background: var(--amber);
+    border-radius: 100px; text-align: center;
+    font-size: 8px; font-weight: 700; color: var(--dark);
+    padding: 5px 0; letter-spacing: 0.8px; text-transform: uppercase;
+  }
+  .phone-notch {
+    position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
+    width: 60px; height: 16px; background: #000; border-radius: 100px;
+    z-index: 5;
+  }
+
+  /* ===========================
+     2. FLOW MAP BANNER
+  =========================== */
+  .b2 {
+    height: 380px; background: var(--dark2);
+    padding: 36px 40px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .b2-label {
+    font-size: 10px; font-weight: 600; color: var(--amber);
+    letter-spacing: 3px; text-transform: uppercase; opacity: 0.7;
+  }
+  .b2-title { font-size: 28px; font-weight: 800; color: #fff; letter-spacing: -1px; margin-top: 6px; }
+  .flow-nodes {
+    display: flex; align-items: center; gap: 0;
+    margin-top: 24px;
+  }
+  .fn {
+    background: var(--dark3); border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px; padding: 14px 16px; min-width: 100px;
+    flex-shrink: 0; text-align: center; position: relative;
+  }
+  .fn.active { border-color: var(--amber); background: rgba(249,168,37,0.06); }
+  .fn-icon { font-size: 20px; margin-bottom: 6px; }
+  .fn-name { font-size: 11px; font-weight: 600; color: var(--text); }
+  .fn-sub { font-size: 9px; color: var(--muted); margin-top: 2px; font-family: 'Be Vietnam Pro', sans-serif; }
+  .fn-arrow {
+    flex: 1; height: 1px;
+    background: linear-gradient(90deg, rgba(249,168,37,0.3), rgba(249,168,37,0.1));
+    position: relative;
+  }
+  .fn-arrow::after {
+    content: '▶'; color: var(--amber); font-size: 8px;
+    position: absolute; right: -4px; top: 50%; transform: translateY(-50%);
+  }
+  .b2-stats { display: flex; gap: 24px; margin-top: 24px; }
+  .stat { }
+  .stat-num { font-size: 28px; font-weight: 800; color: var(--amber); letter-spacing: -1px; }
+  .stat-label { font-size: 10px; color: var(--muted); font-family: 'Be Vietnam Pro', sans-serif; margin-top: 2px; }
+
+  /* ===========================
+     3. LIVE TRACKING
+  =========================== */
+  .b3 {
+    height: 380px; position: relative;
+    background: #0D1117;
+  }
+  .b3-map {
+    position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(0deg, transparent, transparent 29px, rgba(255,255,255,0.025) 30px),
+      repeating-linear-gradient(90deg, transparent, transparent 29px, rgba(255,255,255,0.025) 30px),
+      #0D1117;
+  }
+  .b3-route {
+    position: absolute; inset: 0;
+  }
+  .b3-overlay {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, #0D1117 40%, transparent);
+    padding: 32px 36px 36px;
+  }
+  .b3-card {
+    background: rgba(28,32,38,0.95);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 24px; padding: 20px 24px;
+    display: flex; justify-content: space-between; align-items: center;
+    backdrop-filter: blur(20px);
+  }
+  .b3-left {}
+  .b3-eta { font-size: 42px; font-weight: 800; color: var(--amber); letter-spacing: -2px; line-height: 1; }
+  .b3-mins {
+    display: inline-block; background: var(--amber-dim);
+    color: var(--amber); font-size: 11px; font-weight: 700;
+    padding: 3px 10px; border-radius: 100px; margin-left: 8px;
+    letter-spacing: 0.3px; vertical-align: middle;
+  }
+  .b3-dest { font-size: 13px; color: var(--muted); margin-top: 6px; display: flex; align-items: center; gap: 4px; }
+  .b3-dot { width: 6px; height: 6px; background: var(--amber); border-radius: 50%; }
+  .b3-driver {
+    display: flex; align-items: center; gap: 12px;
+    background: var(--dark2); border-radius: 16px; padding: 12px 16px;
+  }
+  .b3-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, #2AC6FF, #1E90FF);
+    border: 2px solid var(--dark);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; font-weight: 800; color: #fff;
+    position: relative;
+  }
+  .b3-status { width: 12px; height: 12px; background: #22C55E; border-radius: 50%; border: 2px solid var(--dark2); position: absolute; bottom: -2px; right: -2px; }
+  .b3-dname { font-size: 14px; font-weight: 600; color: #fff; }
+  .b3-dsub { font-size: 11px; color: var(--muted); }
+  .b3-label {
+    position: absolute; top: 32px; left: 36px;
+    font-size: 11px; font-weight: 600; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--amber); opacity: 0.8;
+  }
+  .b3-title { position: absolute; top: 50px; left: 36px;
+    font-size: 22px; font-weight: 800; color: #fff; letter-spacing: -0.5px; }
+
+  /* ===========================
+     4. DESIGN SYSTEM
+  =========================== */
+  .b4 {
+    height: 380px; background: var(--dark);
+    padding: 36px 40px;
+    display: flex; flex-direction: column;
+  }
+  .b4-top { display: flex; justify-content: space-between; align-items: flex-start; }
+  .b4-title { font-size: 26px; font-weight: 800; color: #fff; letter-spacing: -0.8px; }
+  .b4-sub { font-size: 12px; color: var(--muted); margin-top: 4px; font-family: 'Be Vietnam Pro', sans-serif; }
+  .colors { display: flex; gap: 8px; margin-top: 28px; }
+  .color-swatch {
+    flex: 1; height: 56px; border-radius: 12px; position: relative;
+    display: flex; align-items: flex-end; padding: 8px;
+  }
+  .cs-label { font-size: 9px; font-weight: 600; color: rgba(255,255,255,0.8); letter-spacing: 0.3px; }
+  .type-scale { margin-top: 20px; }
+  .ts-row {
+    display: flex; align-items: baseline; gap: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 8px 0;
+  }
+  .ts-size { font-size: 9px; color: var(--muted); width: 40px; flex-shrink: 0; font-family: monospace; }
+  .ts-sample { color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; }
+  .comp-row { display: flex; gap: 10px; margin-top: 20px; }
+  .comp-pill {
+    padding: 7px 14px; border-radius: 100px; font-size: 11px; font-weight: 600;
+    font-family: 'Be Vietnam Pro', sans-serif;
+  }
+  .cp-primary { background: var(--amber); color: var(--dark); }
+  .cp-ghost { background: transparent; border: 1px solid rgba(255,255,255,0.15); color: var(--text); }
+  .cp-badge { background: var(--amber-dim); color: var(--amber); border: 1px solid var(--amber-glow); }
+
+  /* ===========================
+     5. CARPOOL CREATION
+  =========================== */
+  .b5 {
+    height: 380px; background: var(--dark2); position: relative; overflow: hidden;
+  }
+  .b5-bg {
+    position: absolute; top: -40px; right: -40px;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(249,168,37,0.06) 0%, transparent 70%);
+  }
+  .b5-content { padding: 36px 40px; position: relative; z-index: 2; }
+  .b5-label { font-size: 10px; font-weight: 600; color: var(--amber); letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; }
+  .b5-title { font-size: 30px; font-weight: 800; color: #fff; letter-spacing: -1px; margin-top: 6px; }
+  .b5-form { margin-top: 24px; display: flex; flex-direction: column; gap: 10px; }
+  .b5-field {
+    background: var(--dark3); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px; padding: 14px 16px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .b5-field.active { border-color: var(--amber); background: rgba(249,168,37,0.04); }
+  .b5-icon { font-size: 16px; opacity: 0.6; }
+  .b5-ftxt { font-size: 13px; font-family: 'Be Vietnam Pro', sans-serif; color: var(--text); }
+  .b5-fph { color: var(--muted); }
+  .annotation-bubble {
+    position: absolute; right: 36px; top: 100px;
+    background: rgba(249,168,37,0.1); border: 1px solid rgba(249,168,37,0.3);
+    border-radius: 12px; padding: 10px 14px; max-width: 160px;
+  }
+  .ab-text { font-size: 11px; color: var(--amber); font-family: 'Be Vietnam Pro', sans-serif; line-height: 1.4; }
+  .ab-line {
+    position: absolute; bottom: -1px; left: 50%; transform: translateX(-50%);
+    width: 1px; height: 20px; background: rgba(249,168,37,0.4);
+  }
+
+  /* ===========================
+     6. BUS TRACKER
+  =========================== */
+  .b6 {
+    height: 380px; background: var(--dark); position: relative;
+  }
+  .b6-top { padding: 32px 36px 0; }
+  .b6-label { font-size: 10px; font-weight: 600; color: var(--blue); letter-spacing: 3px; text-transform: uppercase; opacity: 0.8; }
+  .b6-title { font-size: 26px; font-weight: 800; color: #fff; letter-spacing: -0.8px; margin-top: 6px; }
+  .bus-stops {
+    margin: 24px 36px 0;
+    position: relative;
+  }
+  .bus-line {
+    position: absolute; left: 15px; top: 16px; bottom: 16px;
+    width: 2px; background: linear-gradient(to bottom, var(--blue), rgba(42,198,255,0.2));
+  }
+  .stop {
+    display: flex; align-items: center; gap: 16px;
+    padding: 10px 0; position: relative;
+  }
+  .stop-dot {
+    width: 14px; height: 14px; border-radius: 50%;
+    border: 2px solid var(--dark4); flex-shrink: 0;
+    position: relative; z-index: 2;
+  }
+  .stop-dot.passed { background: var(--blue); border-color: var(--blue); }
+  .stop-dot.current {
+    background: var(--amber); border-color: var(--amber);
+    box-shadow: 0 0 0 4px rgba(249,168,37,0.2);
+    animation: pulse 2s infinite;
+  }
+  .stop-dot.upcoming { background: var(--dark4); border-color: rgba(255,255,255,0.15); }
+  @keyframes pulse {
+    0%,100% { box-shadow: 0 0 0 4px rgba(249,168,37,0.2); }
+    50% { box-shadow: 0 0 0 8px rgba(249,168,37,0.08); }
+  }
+  .stop-info {}
+  .stop-name { font-size: 13px; font-weight: 600; color: var(--text); }
+  .stop-name.current { color: var(--amber); }
+  .stop-time { font-size: 11px; color: var(--muted); font-family: 'Be Vietnam Pro', sans-serif; }
+  .bus-badge {
+    position: absolute; right: 0; top: 50%;
+    background: var(--dark3); border: 1px solid rgba(42,198,255,0.2);
+    color: var(--blue); font-size: 10px; font-weight: 700;
+    padding: 4px 10px; border-radius: 100px; letter-spacing: 0.3px;
+  }
+
+  /* ===========================
+     7. STUDENT SAFETY
+  =========================== */
+  .b7 {
+    height: 380px; background: var(--dark2); position: relative; overflow: hidden;
+  }
+  .b7-glow {
+    position: absolute; top: -60px; left: -60px;
+    width: 240px; height: 240px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(42,198,255,0.08) 0%, transparent 70%);
+  }
+  .b7-content { padding: 36px 40px; position: relative; z-index: 2; }
+  .b7-label { font-size: 10px; font-weight: 600; color: var(--blue); letter-spacing: 3px; text-transform: uppercase; opacity: 0.8; }
+  .b7-title { font-size: 26px; font-weight: 800; color: #fff; letter-spacing: -0.8px; margin-top: 6px; }
+  .safety-card {
+    margin-top: 24px; background: var(--dark3);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 20px; padding: 20px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .safety-avatar-wrap { position: relative; }
+  .safety-avatar {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: linear-gradient(135deg, #F97316, #EF4444);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; font-weight: 800; color: #fff;
+    border: 2px solid var(--dark3);
+  }
+  .pulse-ring {
+    position: absolute; inset: -6px; border-radius: 50%;
+    border: 2px solid rgba(42,198,255,0.3);
+    animation: pulse-ring 2s infinite;
+  }
+  @keyframes pulse-ring {
+    0%,100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(1.1); }
+  }
+  .safety-info {}
+  .safety-name { font-size: 16px; font-weight: 700; color: #fff; }
+  .safety-status { font-size: 12px; color: #22C55E; margin-top: 2px; display: flex; align-items: center; gap: 6px; }
+  .s-green-dot { width: 6px; height: 6px; background: #22C55E; border-radius: 50%; }
+  .safety-loc { font-size: 12px; color: var(--muted); margin-top: 2px; font-family: 'Be Vietnam Pro', sans-serif; }
+  .safety-tags { display: flex; gap: 8px; margin-top: 20px; flex-wrap: wrap; }
+  .stag {
+    padding: 6px 12px; border-radius: 100px; font-size: 10px; font-weight: 600;
+    font-family: 'Be Vietnam Pro', sans-serif; letter-spacing: 0.3px;
+  }
+  .st-blue { background: rgba(42,198,255,0.1); color: var(--blue); border: 1px solid rgba(42,198,255,0.2); }
+  .st-green { background: rgba(34,197,94,0.1); color: #22C55E; border: 1px solid rgba(34,197,94,0.2); }
+  .st-amber { background: var(--amber-dim); color: var(--amber); border: 1px solid var(--amber-glow); }
+  .annot-right {
+    position: absolute; right: 36px; top: 130px;
+    display: flex; flex-direction: column; align-items: flex-end; gap: 16px;
+  }
+  .annot-chip {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px; padding: 8px 12px; text-align: right;
+  }
+  .ac-label { font-size: 9px; color: var(--muted); font-family: 'Be Vietnam Pro', sans-serif; letter-spacing: 0.3px; text-transform: uppercase; }
+  .ac-val { font-size: 16px; font-weight: 800; color: #fff; margin-top: 1px; }
+
+  /* ===========================
+     8. MULTI-SCREEN SHOWCASE
+  =========================== */
+  .b8 {
+    height: 380px; background: #0A0D12; position: relative; overflow: hidden;
+  }
+  .b8-glow1 { position: absolute; top: 20%; left: 10%; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(249,168,37,0.06) 0%, transparent 70%); }
+  .b8-glow2 { position: absolute; bottom: 10%; right: 10%; width: 160px; height: 160px; border-radius: 50%; background: radial-gradient(circle, rgba(42,198,255,0.05) 0%, transparent 70%); }
+  .b8-content { padding: 36px 40px; position: relative; z-index: 2; }
+  .b8-label { font-size: 10px; font-weight: 600; color: var(--amber); letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; }
+  .b8-title { font-size: 24px; font-weight: 800; color: #fff; letter-spacing: -0.8px; margin-top: 6px; max-width: 260px; line-height: 1.2; }
+  .screens-row {
+    display: flex; gap: 12px; margin-top: 28px; align-items: flex-end;
+  }
+  .mini-screen {
+    border-radius: 18px; overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+    flex-shrink: 0; position: relative;
+    background: var(--dark);
+  }
+  .ms-header {
+    background: rgba(249,168,37,0.08); padding: 10px 12px 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .ms-logo { font-size: 10px; font-weight: 800; color: var(--amber); letter-spacing: -0.3px; }
+  .ms-body { padding: 10px 12px; }
+  .ms-line { height: 6px; border-radius: 3px; margin-bottom: 6px; }
+  .ms-line.full { background: rgba(255,255,255,0.08); width: 100%; }
+  .ms-line.half { background: rgba(255,255,255,0.05); width: 60%; }
+  .ms-line.amber { background: rgba(249,168,37,0.3); width: 80%; }
+  .ms-map {
+    height: 50px;
+    background: repeating-linear-gradient(0deg, transparent, transparent 9px, rgba(255,255,255,0.03) 10px),
+                repeating-linear-gradient(90deg, transparent, transparent 9px, rgba(255,255,255,0.03) 10px),
+                #0D1117;
+    border-radius: 8px; margin-top: 6px; position: relative;
+    overflow: hidden;
+  }
+  .ms-map-dot { position: absolute; width: 8px; height: 8px; border-radius: 50%; background: var(--amber); top: 50%; left: 50%; transform: translate(-50%, -50%); }
+  .ms-nav {
+    display: flex; gap: 4px; padding: 8px 12px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+  .ms-nav-dot { flex: 1; height: 4px; border-radius: 2px; background: rgba(255,255,255,0.08); }
+  .ms-nav-dot.active { background: var(--amber); }
+  .screen-label {
+    font-size: 9px; color: var(--muted); text-align: center; margin-top: 8px;
+    font-family: 'Be Vietnam Pro', sans-serif; letter-spacing: 0.5px;
+  }
+  .screen-wrap { display: flex; flex-direction: column; align-items: center; }
+
+  /* ===========================
+     9. TYPOGRAPHY / BRAND
+  =========================== */
+  .b9 {
+    height: 380px; background: var(--dark); position: relative; overflow: hidden;
+  }
+  .b9-stripe {
+    position: absolute; top: 0; right: 0; width: 50%; bottom: 0;
+    background: linear-gradient(135deg, var(--dark2) 0%, var(--dark) 100%);
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .b9-content { padding: 36px 40px; position: relative; z-index: 2; }
+  .b9-label { font-size: 10px; font-weight: 600; color: var(--amber); letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; }
+  .b9-title { font-size: 26px; font-weight: 800; color: #fff; letter-spacing: -0.8px; margin-top: 6px; }
+  .brand-name-xl {
+    font-size: 80px; font-weight: 800; color: var(--amber);
+    letter-spacing: -4px; line-height: 1; margin-top: 12px;
+    opacity: 0.15; position: absolute; bottom: 20px; left: 30px;
+    pointer-events: none;
+  }
+  .font-samples { margin-top: 20px; display: flex; flex-direction: column; gap: 12px; }
+  .fs-item { display: flex; align-items: baseline; gap: 16px; }
+  .fs-meta { font-size: 9px; color: var(--muted); font-family: monospace; width: 110px; flex-shrink: 0; }
+  .fs-demo { color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; }
+  .palette-dots { display: flex; gap: 10px; margin-top: 28px; }
+  .pd { width: 40px; height: 40px; border-radius: 10px; position: relative; }
+  .pd-label { position: absolute; bottom: -18px; left: 50%; transform: translateX(-50%); font-size: 8px; color: var(--muted); white-space: nowrap; font-family: monospace; }
+
+  /* ===========================
+     10. ABOUT / PROJECT
+  =========================== */
+  .b10 {
+    height: 380px; background: var(--dark2); position: relative; overflow: hidden;
+  }
+  .b10-accent {
+    position: absolute; bottom: -60px; right: -60px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    border: 1px solid rgba(249,168,37,0.1);
+  }
+  .b10-accent2 {
+    position: absolute; bottom: -30px; right: -30px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    border: 1px solid rgba(249,168,37,0.06);
+  }
+  .b10-content { padding: 44px 48px; position: relative; z-index: 2; }
+  .b10-eyebrow { font-size: 10px; font-weight: 600; color: var(--amber); letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; }
+  .b10-title { font-size: 36px; font-weight: 800; color: #fff; letter-spacing: -1.5px; margin-top: 10px; line-height: 1.1; }
+  .b10-title span { color: var(--amber); }
+  .b10-body {
+    font-size: 14px; color: var(--muted); font-family: 'Be Vietnam Pro', sans-serif;
+    max-width: 400px; line-height: 1.7; margin-top: 16px; font-weight: 400;
+  }
+  .b10-tags { display: flex; gap: 8px; margin-top: 24px; flex-wrap: wrap; }
+  .b10-tag {
+    padding: 6px 14px; border-radius: 100px;
+    font-size: 11px; font-weight: 600;
+    font-family: 'Be Vietnam Pro', sans-serif;
+  }
+  .b10t-dark { background: var(--dark3); color: var(--text); border: 1px solid rgba(255,255,255,0.08); }
+  .b10t-amber { background: var(--amber); color: var(--dark); }
+
+  /* Card labels */
+  .card-label {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+    padding: 24px 24px 20px;
+    display: flex; justify-content: space-between; align-items: flex-end;
+    pointer-events: none;
+  }
+  .cl-num { font-size: 11px; font-weight: 700; color: rgba(249,168,37,0.6); letter-spacing: 2px; }
+  .cl-name { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.5); font-family: 'Be Vietnam Pro', sans-serif; letter-spacing: 0.5px; }
+
+  .full-width { grid-column: 1 / -1; }
+</style>
+</head>
+<body>
+
+<h1 class="site-title">UX Case Study</h1>
+<h2 class="site-sub">Wheels<span>Up</span> — Student Transportation App</h2>
+
+<div class="gallery">
+
+  <!-- 1. HERO -->
+  <div class="card full-width">
+    <div class="banner b1">
+      <div class="b1-map"></div>
+      <svg class="b1-roads" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice">
+        <path d="M0 180 Q200 160 400 200 Q600 240 800 190 Q1000 140 1200 160" stroke="rgba(255,255,255,0.04)" stroke-width="8" fill="none"/>
+        <path d="M0 300 Q300 280 600 310 Q900 340 1200 290" stroke="rgba(255,255,255,0.03)" stroke-width="12" fill="none"/>
+        <path d="M200 0 Q240 150 220 420" stroke="rgba(255,255,255,0.03)" stroke-width="6" fill="none"/>
+        <path d="M700 0 Q740 200 720 420" stroke="rgba(255,255,255,0.04)" stroke-width="8" fill="none"/>
+        <path d="M0 240 Q400 210 600 250 Q800 290 1200 240" stroke="rgba(249,168,37,0.15)" stroke-width="3" fill="none" stroke-dasharray="20 10"/>
+      </svg>
+      <div class="b1-content">
+        <div class="b1-eyebrow">UX / Product Design</div>
+        <div class="b1-title">Wheels<span>Up</span></div>
+        <div class="b1-sub">Safe, smart transportation for students — carpool, bus tracking, and live safety monitoring in one app.</div>
+        <div class="b1-pill">34 Screens &nbsp;·&nbsp; iOS App &nbsp;·&nbsp; Hi-Fi Prototype</div>
+      </div>
+      <div class="b1-phone">
+        <div class="phone-shell">
+          <div class="phone-screen">
+            <div class="phone-map-bg"></div>
+            <div class="phone-notch"></div>
+            <div style="position:absolute;top:28px;left:12px;right:12px;height:14px;background:rgba(249,168,37,0.08);border-radius:4px;display:flex;align-items:center;padding:0 8px;">
+              <span style="font-size:8px;color:#F9A825;font-weight:800;font-family:'Plus Jakarta Sans';">WheelsUp</span>
+            </div>
+            <div class="phone-overlay-card">
+              <div class="poc-eta">04:35</div>
+              <span class="poc-badge">4 MINS AWAY</span>
+              <div class="poc-dest">📍 Arriving at 142 Oak St</div>
+              <div style="margin-top:8px;display:flex;align-items:center;gap:8px;background:#1C2028;border-radius:10px;padding:8px 10px;">
+                <div style="width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#2AC6FF,#1E90FF);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff;">M</div>
+                <div>
+                  <div style="font-size:9px;font-weight:700;color:#fff;font-family:'Be Vietnam Pro';">Driver Mike</div>
+                  <div style="font-size:8px;color:#64748B;font-family:'Be Vietnam Pro';">4.9 · White Toyota</div>
+                </div>
+              </div>
+              <div class="poc-btn">I'M AT THE CURB</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-label">
+      <span class="cl-num">01</span>
+      <span class="cl-name">Hero Overview</span>
+    </div>
+  </div>
+
+  <!-- 2. FLOW MAP -->
+  <div class="card">
+    <div class="banner b2">
+      <div>
+        <div class="b2-label">User Journey</div>
+        <div class="b2-title">Prototype Flow Architecture</div>
+        <div class="flow-nodes">
+          <div class="fn">
+            <div class="fn-icon">🔑</div>
+            <div class="fn-name">Login</div>
+            <div class="fn-sub">Student / Parent</div>
+          </div>
+          <div class="fn-arrow"></div>
+          <div class="fn active">
+            <div class="fn-icon">🏠</div>
+            <div class="fn-name">Dashboard</div>
+            <div class="fn-sub">Home hub</div>
+          </div>
+          <div class="fn-arrow"></div>
+          <div class="fn">
+            <div class="fn-icon">🚗</div>
+            <div class="fn-name">Carpool</div>
+            <div class="fn-sub">Create & track</div>
+          </div>
+          <div class="fn-arrow"></div>
+          <div class="fn">
+            <div class="fn-icon">📍</div>
+            <div class="fn-name">Live Trip</div>
+            <div class="fn-sub">Real-time map</div>
+          </div>
+        </div>
+      </div>
+      <div class="b2-stats">
+        <div class="stat"><div class="stat-num">34</div><div class="stat-label">Total screens</div></div>
+        <div class="stat"><div class="stat-num">6</div><div class="stat-label">User flows</div></div>
+        <div class="stat"><div class="stat-num">2</div><div class="stat-label">User personas</div></div>
+        <div class="stat"><div class="stat-num">5</div><div class="stat-label">Nav sections</div></div>
+      </div>
+    </div>
+    <div class="card-label"><span class="cl-num">02</span><span class="cl-name">Flow Architecture</span></div>
+  </div>
+
+  <!-- 3. LIVE TRACKING -->
+  <div class="card">
+    <div class="banner b3">
+      <div class="b3-map"></div>
+      <svg style="position:absolute;inset:0;width:100%;height:100%;" viewBox="0 0 560 380" preserveAspectRatio="xMidYMid slice">
+        <!-- route path -->
+        <path d="M80 80 Q200 60 300 140 Q380 200 420 300" stroke="rgba(249,168,37,0.5)" stroke-width="3" fill="none" stroke-dasharray="8 4"/>
+        <path d="M80 80 Q200 60 300 140 Q380 200 420 300" stroke="rgba(249,168,37,0.15)" stroke-width="12" fill="none"/>
+        <!-- start -->
+        <circle cx="80" cy="80" r="8" fill="#2AC6FF" opacity="0.8"/>
+        <circle cx="80" cy="80" r="14" fill="none" stroke="rgba(42,198,255,0.3)" stroke-width="2"/>
+        <!-- driver dot -->
+        <circle cx="300" cy="140" r="10" fill="#F9A825"/>
+        <circle cx="300" cy="140" r="18" fill="none" stroke="rgba(249,168,37,0.3)" stroke-width="2"/>
+        <!-- destination -->
+        <circle cx="420" cy="300" r="8" fill="rgba(255,255,255,0.3)"/>
+        <!-- grid roads -->
+        <line x1="0" y1="120" x2="560" y2="120" stroke="rgba(255,255,255,0.04)" stroke-width="6"/>
+        <line x1="0" y1="240" x2="560" y2="240" stroke="rgba(255,255,255,0.04)" stroke-width="6"/>
+        <line x1="160" y1="0" x2="160" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="6"/>
+        <line x1="400" y1="0" x2="400" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="6"/>
+      </svg>
+      <div class="b3-label">Feature Screen</div>
+      <div class="b3-title">Live Trip Tracking</div>
+      <div class="b3-overlay">
+        <div class="b3-card">
+          <div class="b3-left">
+            <div>
+              <span class="b3-eta">04:35</span>
+              <span class="b3-mins">4 MINS</span>
+            </div>
+            <div class="b3-dest"><div class="b3-dot"></div>Arriving at 142 Oak St</div>
+          </div>
+          <div class="b3-driver">
+            <div class="b3-avatar">M<div class="b3-status"></div></div>
+            <div>
+              <div class="b3-dname">Driver Mike</div>
+              <div class="b3-dsub">4.9 · White Toyota</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-label"><span class="cl-num">03</span><span class="cl-name">Live Trip Tracking</span></div>
+  </div>
+
+  <!-- 4. DESIGN SYSTEM -->
+  <div class="card">
+    <div class="banner b4">
+      <div class="b4-top">
+        <div>
+          <div class="b4-title">Design System</div>
+          <div class="b4-sub">Colors, typography & components</div>
+        </div>
+      </div>
+      <div class="colors">
+        <div class="color-swatch" style="background:#F9A825;"><span class="cs-label">#F9A825</span></div>
+        <div class="color-swatch" style="background:#10141A;border:1px solid rgba(255,255,255,0.1);"><span class="cs-label">#10141A</span></div>
+        <div class="color-swatch" style="background:#181C22;border:1px solid rgba(255,255,255,0.07);"><span class="cs-label">#181C22</span></div>
+        <div class="color-swatch" style="background:#2AC6FF;"><span class="cs-label">#2AC6FF</span></div>
+        <div class="color-swatch" style="background:#DFE2EB;"><span class="cs-label" style="color:rgba(0,0,0,0.6)">#DFE2EB</span></div>
+      </div>
+      <div class="type-scale">
+        <div class="ts-row">
+          <span class="ts-size">48px</span>
+          <span class="ts-sample" style="font-size:28px;color:#F9A825;">WheelsUp</span>
+        </div>
+        <div class="ts-row">
+          <span class="ts-size">24px</span>
+          <span class="ts-sample" style="font-size:18px;">Dashboard</span>
+        </div>
+        <div class="ts-row">
+          <span class="ts-size">14px</span>
+          <span class="ts-sample" style="font-size:13px;font-weight:400;font-family:'Be Vietnam Pro';">Arriving at 142 Oak Street</span>
+        </div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-pill cp-primary">Primary CTA</div>
+        <div class="comp-pill cp-ghost">Ghost</div>
+        <div class="comp-pill cp-badge">Live</div>
+      </div>
+    </div>
+    <div class="card-label"><span class="cl-num">04</span><span class="cl-name">Design System</span></div>
+  </div>
+
+  <!-- 5. CARPOOL CREATION -->
+  <div class="card">
+    <div class="banner b5">
+      <div class="b5-bg"></div>
+      <div class="b5-content">
+        <div class="b5-label">Core Feature</div>
+        <div class="b5-title">Create Carpool</div>
+        <div class="b5-form">
+          <div class="b5-field active">
+            <span class="b5-icon">👥</span>
+            <span class="b5-ftxt">Carpool for Amy, Jake +2</span>
+          </div>
+          <div class="b5-field">
+            <span class="b5-icon">📍</span>
+            <span class="b5-ftxt b5-fph">Pickup location…</span>
+          </div>
+          <div class="b5-field">
+            <span class="b5-icon">🏫</span>
+            <span class="b5-ftxt">Lincoln Middle School</span>
+          </div>
+          <div class="b5-field">
+            <span class="b5-icon">📅</span>
+            <span class="b5-ftxt">Mon · Wed · Fri, 8:15 AM</span>
+          </div>
+        </div>
+      </div>
+      <div class="annotation-bubble">
+        <div class="ab-text">Asymmetric avatar selector for multi-child households</div>
+        <div class="ab-line"></div>
+      </div>
+    </div>
+    <div class="card-label"><span class="cl-num">05</span><span class="cl-name">Carpool Creation</span></div>
+  </div>
+
+  <!-- 6. BUS TRACKER -->
+  <div class="card">
+    <div class="banner b6">
+      <div class="b6-top">
+        <div class="b6-label">Transit Feature</div>
+        <div class="b6-title">Bus Tracker & Stops</div>
+      </div>
+      <div class="bus-stops" style="margin-top:20px;">
+        <div class="bus-line"></div>
+        <div class="stop">
+          <div class="stop-dot passed"></div>
+          <div class="stop-info">
+            <div class="stop-name">Central Ave & Main</div>
+            <div class="stop-time">Departed 7:52 AM</div>
+          </div>
+        </div>
+        <div class="stop">
+          <div class="stop-dot passed"></div>
+          <div class="stop-info">
+            <div class="stop-name">Oak Street Hub</div>
+            <div class="stop-time">Departed 8:01 AM</div>
+          </div>
+        </div>
+        <div class="stop" style="position:relative;">
+          <div class="stop-dot current"></div>
+          <div class="stop-info">
+            <div class="stop-name current">Maple & 5th ← You are here</div>
+            <div class="stop-time">Arriving now</div>
+          </div>
+          <div class="bus-badge">Route 14B</div>
+        </div>
+        <div class="stop">
+          <div class="stop-dot upcoming"></div>
+          <div class="stop-info">
+            <div class="stop-name" style="color:var(--muted);">Lincoln School</div>
+            <div class="stop-time">Est. 8:24 AM</div>
+          </div>
+        </div>
+        <div class="stop">
+          <div class="stop-dot upcoming"></div>
+          <div class="stop-info">
+            <div class="stop-name" style="color:var(--muted);">Community Center</div>
+            <div class="stop-time">Est. 8:31 AM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-label"><span class="cl-num">06</span><span class="cl-name">Bus Tracker</span></div>
+  </div>
+
+  <!-- 7. SAFETY -->
+  <div class="card">
+    <div class="banner b7">
+      <div class="b7-glow"></div>
+      <div class="b7-content">
+        <div class="b7-label">Safety System</div>
+        <div class="b7-title">Student Safety Monitor</div>
+        <div class="safety-card">
+          <div class="safety-avatar-wrap">
+            <div class="safety-avatar">A</div>
+            <div class="pulse-ring"></div>
+          </div>
+          <div class="safety-info">
+            <div class="safety-name">Amy Chen</div>
+            <div class="safety-status"><div class="s-green-dot"></div>On route · Safe</div>
+            <div class="safety-loc">📍 En route to Lincoln School</div>
+          </div>
+        </div>
+        <div class="safety-tags">
+          <div class="stag st-blue">Live GPS</div>
+          <div class="stag st-green">Parent Notified</div>
+          <div class="stag st-amber">ETA 4 mins</div>
+          <div class="stag st-blue">Driver Verified</div>
+        </div>
+      </div>
+      <div class="annot-right">
+        <div class="annot-chip">
+          <div class="ac-label">Safety pulse</div>
+          <div class="ac-val">Active</div>
+        </div>
+        <div class="annot-chip">
+          <div class="ac-label">Driver rating</div>
+          <div class="ac-val">4.9 ★</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-label"><span class="cl-num">07</span><span class="cl-name">Student Safety</span></div>
+  </div>
+
+  <!-- 8. MULTI SCREEN -->
+  <div class="card">
+    <div class="banner b8">
+      <div class="b8-glow1"></div>
+      <div class="b8-glow2"></div>
+      <div class="b8-content">
+        <div class="b8-label">Screen Library</div>
+        <div class="b8-title">34 Screens Across 6 User Flows</div>
+        <div class="screens-row">
+          <div class="screen-wrap">
+            <div class="mini-screen" style="width:100px;height:160px;">
+              <div class="ms-header"><div class="ms-logo">WheelsUp</div></div>
+              <div class="ms-body">
+                <div class="ms-line amber"></div>
+                <div class="ms-line full"></div>
+                <div class="ms-line half"></div>
+                <div class="ms-map"><div class="ms-map-dot"></div></div>
+              </div>
+              <div class="ms-nav"><div class="ms-nav-dot active"></div><div class="ms-nav-dot"></div><div class="ms-nav-dot"></div><div class="ms-nav-dot"></div><div class="ms-nav-dot"></div></div>
+            </div>
+            <div class="screen-label">Home</div>
+          </div>
+          <div class="screen-wrap">
+            <div class="mini-screen" style="width:86px;height:140px;">
+              <div class="ms-header"><div class="ms-logo">WheelsUp</div></div>
+              <div class="ms-body">
+                <div class="ms-line full"></div>
+                <div class="ms-line full" style="margin-top:4px;"></div>
+                <div class="ms-line half" style="margin-top:4px;background:rgba(42,198,255,0.3);"></div>
+              </div>
+              <div class="ms-nav"><div class="ms-nav-dot"></div><div class="ms-nav-dot active" style="background:#2AC6FF;"></div><div class="ms-nav-dot"></div><div class="ms-nav-dot"></div><div class="ms-nav-dot"></div></div>
+            </div>
+            <div class="screen-label">Bus</div>
+          </div>
+          <div class="screen-wrap">
+            <div class="mini-screen" style="width:100px;height:160px;">
+              <div class="ms-header"><div class="ms-logo">WheelsUp</div></div>
+              <div class="ms-body">
+                <div class="ms-line full"></div>
+                <div class="ms-line half"></div>
+                <div class="ms-map" style="height:60px;">
+                  <div class="ms-map-dot"></div>
+                  <div style="position:absolute;top:30%;left:20%;width:60%;height:1px;background:rgba(249,168,37,0.4);"></div>
+                </div>
+              </div>
+              <div class="ms-nav"><div class="ms-nav-dot"></div><div class="ms-nav-dot"></div><div class="ms-nav-dot active"></div><div class="ms-nav-dot"></div><div class="ms-nav-dot"></div></div>
+            </div>
+            <div class="screen-label">Carpool</div>
+          </div>
+          <div class="screen-wrap">
+            <div class="mini-screen" style="width:86px;height:130px;">
+              <div class="ms-header"><div class="ms-logo">WheelsUp</div></div>
+              <div class="ms-body">
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:4px;">
+                  <div style="height:24px;background:rgba(249,168,37,0.1);border-radius:4px;"></div>
+                  <div style="height:24px;background:rgba(255,255,255,0.05);border-radius:4px;"></div>
+                  <div style="height:24px;background:rgba(255,255,255,0.05);border-radius:4px;"></div>
+                  <div style="height:24px;background:rgba(42,198,255,0.08);border-radius:4px;"></div>
+                </div>
+              </div>
+              <div class="ms-nav"><div class="ms-nav-dot"></div><div class="ms-nav-dot"></div><div class="ms-nav-dot"></div><div class="ms-nav-dot active" style="background:#F9A825;"></div><div class="ms-nav-dot"></div></div>
+            </div>
+            <div class="screen-label">Calendar</div>
+          </div>
+          <div class="screen-wrap">
+            <div class="mini-screen" style="width:86px;height:130px;">
+              <div class="ms-header"><div class="ms-logo">WheelsUp</div></div>
+              <div class="ms-body">
+                <div style="display:flex;flex-direction:column;gap:5px;margin-top:2px;">
+                  <div style="height:18px;background:rgba(255,255,255,0.06);border-radius:6px;display:flex;align-items:center;padding:0 6px;"><div style="width:12px;height:12px;border-radius:50%;background:#2AC6FF;margin-right:4px;flex-shrink:0;"></div><div style="flex:1;height:4px;background:rgba(255,255,255,0.08);border-radius:2px;"></div></div>
+                  <div style="height:18px;background:rgba(255,255,255,0.06);border-radius:6px;display:flex;align-items:center;padding:0 6px;"><div style="width:12px;height:12px;border-radius:50%;background:#F97316;margin-right:4px;flex-shrink:0;"></div><div style="flex:1;height:4px;background:rgba(255,255,255,0.08);border-radius:2px;"></div></div>
+                </div>
+              </div>
+              <div class="ms-nav"><div class="ms-nav-dot"></div><div class="ms-nav-dot"></div><div class="ms-nav-dot"></div><div class="ms-nav-dot"></div><div class="ms-nav-dot active" style="background:#F9A825;"></div></div>
+            </div>
+            <div class="screen-label">Inbox</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-label"><span class="cl-num">08</span><span class="cl-name">Screen Library</span></div>
+  </div>
+
+  <!-- 9. BRAND / TYPOGRAPHY -->
+  <div class="card">
+    <div class="banner b9">
+      <div class="b9-stripe"></div>
+      <div class="brand-name-xl">WU</div>
+      <div class="b9-content">
+        <div class="b9-label">Visual Identity</div>
+        <div class="b9-title">Brand & Typography</div>
+        <div class="font-samples">
+          <div class="fs-item">
+            <div class="fs-meta">Plus Jakarta Sans<br/>ExtraBold · Display</div>
+            <div class="fs-demo" style="font-size:32px;letter-spacing:-1.5px;color:#F9A825;">WheelsUp</div>
+          </div>
+          <div class="fs-item">
+            <div class="fs-meta">Plus Jakarta Sans<br/>Bold · Heading</div>
+            <div class="fs-demo" style="font-size:22px;letter-spacing:-0.5px;">Live Trip Tracking</div>
+          </div>
+          <div class="fs-item">
+            <div class="fs-meta">Be Vietnam Pro<br/>Medium · Body</div>
+            <div class="fs-demo" style="font-size:14px;font-weight:500;font-family:'Be Vietnam Pro';color:var(--muted);">Safe rides for every student, every day.</div>
+          </div>
+        </div>
+        <div class="palette-dots">
+          <div class="pd" style="background:#F9A825;"><div class="pd-label">Amber</div></div>
+          <div class="pd" style="background:#10141A;border:1px solid rgba(255,255,255,0.1);"><div class="pd-label">Base</div></div>
+          <div class="pd" style="background:#2AC6FF;"><div class="pd-label">Blue</div></div>
+          <div class="pd" style="background:#22C55E;"><div class="pd-label">Safe</div></div>
+          <div class="pd" style="background:#DFE2EB;"><div class="pd-label" style="color:var(--muted)">Text</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-label"><span class="cl-num">09</span><span class="cl-name">Brand & Typography</span></div>
+  </div>
+
+  <!-- 10. PROJECT SUMMARY -->
+  <div class="card">
+    <div class="banner b10">
+      <div class="b10-accent"></div>
+      <div class="b10-accent2"></div>
+      <div class="b10-content">
+        <div class="b10-eyebrow">Project Summary</div>
+        <div class="b10-title">Designed for<br/><span>safety</span> first.</div>
+        <div class="b10-body">WheelsUp reimagines student transportation — giving parents peace of mind through live GPS tracking, verified drivers, and instant safety alerts, while keeping kids connected to their carpool and bus schedules in one unified experience.</div>
+        <div class="b10-tags">
+          <div class="b10-tag b10t-amber">UX Design</div>
+          <div class="b10-tag b10t-dark">Figma Hi-Fi</div>
+          <div class="b10-tag b10t-dark">Mobile iOS</div>
+          <div class="b10-tag b10t-dark">Prototyping</div>
+          <div class="b10-tag b10t-dark">User Research</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-label"><span class="cl-num">10</span><span class="cl-name">Project Summary</span></div>
+  </div>
+
+</div>
+
+<!-- Export toolbar -->
+<div id="export-toolbar" style="
+  position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%);
+  background: #181C22; border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 100px; padding: 10px 20px;
+  display: flex; align-items: center; gap: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  z-index: 1000; font-family: 'Be Vietnam Pro', sans-serif;
+">
+  <span style="font-size:12px; color:#64748B; letter-spacing:0.5px;">Export</span>
+  <button onclick="downloadAll()" style="
+    background: #F9A825; color: #10141A; border: none; border-radius: 100px;
+    padding: 8px 20px; font-size: 12px; font-weight: 700; cursor: pointer;
+    font-family: 'Be Vietnam Pro', sans-serif; letter-spacing: 0.5px;
+  ">⬇ Download All 10 PNGs</button>
+  <button onclick="document.getElementById('export-toolbar').style.display='none'" style="
+    background: transparent; color: #64748B; border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 100px; padding: 8px 14px; font-size: 12px; cursor: pointer;
+    font-family: 'Be Vietnam Pro', sans-serif;
+  ">Hide</button>
+</div>
+
+<!-- Per-card download buttons (shown on hover via JS) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+const cardNames = [
+  '01-hero-overview',
+  '02-flow-architecture',
+  '03-live-trip-tracking',
+  '04-design-system',
+  '05-carpool-creation',
+  '06-bus-tracker',
+  '07-student-safety',
+  '08-screen-library',
+  '09-brand-typography',
+  '10-project-summary'
+];
+
+// Add a download button overlay to each card
+document.querySelectorAll('.card').forEach((card, i) => {
+  const btn = document.createElement('button');
+  btn.textContent = '⬇ Save PNG';
+  btn.style.cssText = `
+    position: absolute; top: 14px; right: 14px; z-index: 10;
+    background: rgba(249,168,37,0.15); color: #F9A825;
+    border: 1px solid rgba(249,168,37,0.3); border-radius: 100px;
+    padding: 6px 14px; font-size: 11px; font-weight: 700; cursor: pointer;
+    font-family: 'Be Vietnam Pro', sans-serif; letter-spacing: 0.5px;
+    opacity: 0; transition: opacity 0.2s;
+    backdrop-filter: blur(8px);
+  `;
+  card.style.position = 'relative';
+  card.appendChild(btn);
+
+  card.addEventListener('mouseenter', () => btn.style.opacity = '1');
+  card.addEventListener('mouseleave', () => btn.style.opacity = '0');
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    captureCard(card, cardNames[i] || `card-${i+1}`);
+  });
+});
+
+async function captureCard(el, filename) {
+  // Temporarily hide all download buttons
+  document.querySelectorAll('.card button').forEach(b => b.style.display = 'none');
+  document.getElementById('export-toolbar').style.display = 'none';
+
+  const canvas = await html2canvas(el, {
+    scale: 2,
+    useCORS: true,
+    backgroundColor: null,
+    logging: false
+  });
+
+  // Restore
+  document.querySelectorAll('.card button').forEach(b => b.style.display = '');
+  document.getElementById('export-toolbar').style.display = 'flex';
+
+  const link = document.createElement('a');
+  link.download = `wheelsup-${filename}.png`;
+  link.href = canvas.toDataURL('image/png');
+  link.click();
+}
+
+async function downloadAll() {
+  const cards = document.querySelectorAll('.card');
+  document.querySelectorAll('.card button').forEach(b => b.style.display = 'none');
+  document.getElementById('export-toolbar').style.display = 'none';
+
+  for (let i = 0; i < cards.length; i++) {
+    const canvas = await html2canvas(cards[i], {
+      scale: 2,
+      useCORS: true,
+      backgroundColor: null,
+      logging: false
+    });
+    const link = document.createElement('a');
+    link.download = `wheelsup-${cardNames[i] || `card-${i+1}`}.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+    // Small delay between downloads so browser doesn't block them
+    await new Promise(r => setTimeout(r, 400));
+  }
+
+  document.querySelectorAll('.card button').forEach(b => b.style.display = '');
+  document.getElementById('export-toolbar').style.display = 'flex';
+}
+</script>
+</body>
+</html>

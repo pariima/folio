@@ -276,76 +276,176 @@ const PROJECTS = [
     ]
   },
   {
+  id: 5,
+  title: "WheelsUp: A Letter to My Sister",
+  tag: "UX Research · Social Impact · Mobile",
+  year: "2026",
+  client: "Personal Venture",
+  role: "UX Generalist (Researcher & Designer)",
+  duration: "Ongoing",
 
-    id: 5,
-    title: "WheelsUp: A Letter to My Sister",
-    tag: "UX Research · Social Impact · Mobile",
-    year: "2026",
-    client: "Personal Venture",
-    role: "UX Generalist (Researcher & Designer)",
-    duration: "Ongoing",
-    cover: "https://your-image-link-here.png",
-    excerpt: "Designing a high-fidelity transportation ecosystem for the working parents of Kathmandu, inspired by my sister’s journey into motherhood.",
-    sections: [
-      {
-        type: "text",
-        title: "The 'Why': More Than Just an App",
-        body: "This project didn't start in a boardroom; it started with a phone call from my sister in Kathmandu. She just had her first baby, and amidst the joy was a looming shadow of anxiety: How would she balance her long working hours with the safety of her child’s future commute? In a city like Kathmandu—where traffic is unpredictable and the 'gallis' are narrow—sending a child to school shouldn't feel like a leap of faith. I started WheelsUp as a promise to her: that by the time her little one is ready for school, the 'Information Black Hole' of student transit will be a thing of the past."
-      },
-      {
-        type: "quote",
-        text: "In Kathmandu, we don't just track a bus; we track our peace of mind. I want my sister to focus on her career and her child, not on the dust and delays of the Ring Road."
-      },
-      {
-        type: "text",
-        title: "The Problem: The 'Anxiety Tax' of Kathmandu Transit",
-        body: "For a working parent in Nepal, the morning commute is a high-stakes guessing game. With no real-time data, a bus that is 10 minutes late due to a 'jam' at Kalanki feels like an eternity. My research found that local parents experience an 'Anxiety Tax' of 7.7/10 during the wait window. The current system relies on frantic phone calls to drivers—calls that are dangerous for the driver to pick up and stressful for the parent to make."
-      },
-      {
-        type: "text",
-        title: "Empathy-Driven Discovery",
-        body: "I spent time observing the 'daily rhythm' of Kathmandu households. I realized that 'Anxious Amy' isn't just a persona; she is my sister, my neighbor, and the woman rushing to catch a micro-bus. They don't need a complex map; they need a 'Glanceable Truth' that fits into a hectic morning of making breakfast and getting ready for work."
-      },
-      {
-        type: "image",
-        src: "https://your-wireframe-link.jpg",
-        caption: "Low-Fidelity Wireframe: Stripping away complexity to focus on the 'Single Source of Truth' for a busy parent."
-      },
-      {
-        type: "text",
-        title: "Design Decision: The 2-Second Rule",
-        body: "Problem: A parent in a rush can't study a map. Solution: I implemented the 'Big Data' approach. The ETA (e.g., '4 MINS') is the largest element on the screen, styled in School Bus Yellow. I tested this to ensure it’s readable from across a room—allowing my sister to know exactly when to step out the door without dropping her coffee or her baby’s bag."
-      },
-      {
-        type: "text",
-        title: "Cultural Trust: The 'Mama/Dai' Module",
-        body: "Problem: In Nepal, trust is personal. Parents want to know who is behind the wheel. Solution: I integrated a 'Verified Driver' section. By showing 'Driver Pratik’s' face and verified status, we move from a cold GPS dot to a human connection. It brings the 'Community Trust' of a small neighborhood into a digital interface."
-      },
-      {
-        type: "text",
-        title: "Action Without Friction",
-        body: "Problem: Typing a message while walking through a busy street is difficult. Solution: The 'I'm at the Curb' button. A single, haptic-confirmed tap that lets the driver know the student is ready. No phone calls, no dangerous distractions—just a seamless loop of communication."
-      },
-      {
-        type: "image",
-        src: "https://your-hifi-link.png",
-        caption: "High-Fidelity Prototype: A 'Friendly-Industrial' aesthetic designed for high-visibility under the bright Himalayan sun."
-      },
-      {
-        type: "outcomes",
-        items: [
-          "Reduced 'Time-to-Certainty' from several minutes of worrying to 2 seconds of glancing.",
-          "Digitized the 'Trust Culture' of Kathmandu through verified driver profiles.",
-          "Empowered parents with 'Agency,' replacing helpless waiting with actionable data.",
-          "Built a scalable design system ready for the unique infrastructure of Nepal."
-        ]
-      },
-      {
-        type: "text",
-        title: "Reflection: Design as a Love Language",
-        body: "Working on WheelsUp reminded me that as a UX Researcher, my greatest tool isn't Figma—it's empathy. This isn't just a project for my portfolio; it’s a solution for my family. It taught me that when we design for the people we love, we create products that the whole world can trust."
-      }
-    ]
+  // ── COVER ──────────────────────────────────────────────
+  // Use banner 01 (hero overview) as the card thumbnail
+  cover: "images/wheelsup-01-hero-overview.png",
+
+  excerpt: "Designing a high-fidelity transportation ecosystem for the working parents of Kathmandu, inspired by my sister's journey into motherhood.",
+
+  sections: [
+    {
+      type: "text",
+      title: "The 'Why': More Than Just an App",
+      body: "This project didn't start in a boardroom; it started with a phone call from my sister in Kathmandu. She just had her first baby, and amidst the joy was a looming shadow of anxiety: How would she balance her long working hours with the safety of her child's future commute? In a city like Kathmandu—where traffic is unpredictable and the 'gallis' are narrow—sending a child to school shouldn't feel like a leap of faith. I started WheelsUp as a promise to her: that by the time her little one is ready for school, the 'Information Black Hole' of student transit will be a thing of the past."
+    },
+
+    {
+      type: "quote",
+      text: "In Kathmandu, we don't just track a bus; we track our peace of mind. I want my sister to focus on her career and her child, not on the dust and delays of the Ring Road."
+    },
+
+    // ── BANNER: Flow Architecture ───────────────────────
+    {
+      type: "image",
+      src: "images/wheelsup-02-flow-architecture.png",
+      caption: "6 user flows across 34 screens — mapping every path a parent or student takes through the app."
+    },
+
+    {
+      type: "text",
+      title: "The Problem: The 'Anxiety Tax' of Kathmandu Transit",
+      body: "For a working parent in Nepal, the morning commute is a high-stakes guessing game. With no real-time data, a bus that is 10 minutes late due to a 'jam' at Kalanki feels like an eternity. My research found that local parents experience an 'Anxiety Tax' of 7.7/10 during the wait window. The current system relies on frantic phone calls to drivers—calls that are dangerous for the driver to pick up and stressful for the parent to make."
+    },
+
+    {
+      type: "text",
+      title: "Empathy-Driven Discovery",
+      body: "I spent time observing the 'daily rhythm' of Kathmandu households. I realized that 'Anxious Amy' isn't just a persona; she is my sister, my neighbor, and the woman rushing to catch a micro-bus. They don't need a complex map; they need a 'Glanceable Truth' that fits into a hectic morning of making breakfast and getting ready for work."
+    },
+
+    // ── MOCKUP: Carpool Home ────────────────────────────
+    {
+      type: "image",
+      src: "images/wheelsup-02-carpool-home.png",
+      caption: "Carpool Home — Today's trip, driver status, upcoming rides and recent history at a glance."
+    },
+
+    {
+      type: "text",
+      title: "Design Decision: The 2-Second Rule",
+      body: "Problem: A parent in a rush can't study a map. Solution: I implemented the 'Big Data' approach. The ETA (e.g., '4 MINS') is the largest element on the screen, styled in School Bus Yellow. I tested this to ensure it's readable from across a room—allowing my sister to know exactly when to step out the door without dropping her coffee or her baby's bag."
+    },
+
+    // ── MOCKUP: Live Tracking (hero) ────────────────────
+    {
+      type: "image",
+      src: "images/wheelsup-01-hero-three-screen.png",
+      caption: "The Live Tracking screen — real-time map, 04:35 PM ETA, and the 'I'm at the Curb' CTA. The amber ETA is the single source of truth for a busy parent."
+    },
+
+    {
+      type: "text",
+      title: "Cultural Trust: The 'Mama/Dai' Module",
+      body: "Problem: In Nepal, trust is personal. Parents want to know who is behind the wheel. Solution: I integrated a 'Verified Driver' section. By showing 'Driver Pratik's' face and verified status, we move from a cold GPS dot to a human connection. It brings the 'Community Trust' of a small neighborhood into a digital interface."
+    },
+
+    // ── MOCKUP: Live Status (driver card) ───────────────
+    {
+      type: "image",
+      src: "images/wheelsup-06-live-status.png",
+      caption: "Live Status — Marcus Rivera, Silver Toyota Camry, 4.9 rating (1,200+ rides), security measures active. Trust built into every pixel."
+    },
+
+    {
+      type: "text",
+      title: "Action Without Friction",
+      body: "Problem: Typing a message while walking through a busy street is difficult. Solution: The 'I'm at the Curb' button. A single, haptic-confirmed tap that lets the driver know the student is ready. No phone calls, no dangerous distractions—just a seamless loop of communication."
+    },
+
+    // ── MOCKUP: Ride Status confirmation ────────────────
+    {
+      type: "image",
+      src: "images/wheelsup-05-ride-status.png",
+      caption: "'Are you in the vehicle?' — A safety check-in that closes the loop between parent, student, and driver without a single phone call."
+    },
+
+    {
+      type: "text",
+      title: "Designing the Full Carpool Flow",
+      body: "Every screen in the carpool flow was designed to reduce cognitive load at the moment it matters most. From creating a carpool with child avatars, to editing a ride mid-week, to the live driver card arriving in real time — each step was validated against the real rhythms of a Kathmandu morning."
+    },
+
+    // ── BANNER: Full flow strip ─────────────────────────
+    {
+      type: "image",
+      src: "images/wheelsup-10-full-flow-strip.png",
+      caption: "The complete carpool flow — 9 screens from home to live tracking to editing and back."
+    },
+
+    // ── BANNER: Design System ───────────────────────────
+    {
+      type: "image",
+      src: "images/wheelsup-04-design-system.png",
+      caption: "Design System — School Bus Yellow (#F9A825), dark base (#10141A), Plus Jakarta Sans & Be Vietnam Pro. A 'Friendly-Industrial' palette built for high-visibility under the Himalayan sun."
+    },
+
+    {
+      type: "text",
+      title: "Creating the Carpool",
+      body: "The Create Carpool screen solves a uniquely Nepali problem: multi-child households where a parent needs to book for Leo and Mia in a single flow. The asymmetric avatar selector lets parents assign children instantly without navigating separate menus."
+    },
+
+    // ── MOCKUP: Create Carpool ──────────────────────────
+    {
+      type: "image",
+      src: "images/wheelsup-04-create-carpool.png",
+      caption: "Create Carpool — Child avatars, route details, pickup time and repeat frequency. 'Preview & Invite' sends the carpool to all parents in one tap."
+    },
+
+    // ── MOCKUP: Upcoming Rides ──────────────────────────
+    {
+      type: "image",
+      src: "images/wheelsup-07-upcoming-rides.png",
+      caption: "Upcoming Rides — Transit log showing confirmed rides, driver-needed alerts, and the ability to pick up a ride. Designed for the parent who plans a week ahead."
+    },
+
+    // ── BANNER: Screen Library ──────────────────────────
+    {
+      type: "image",
+      src: "images/wheelsup-08-screen-library.png",
+      caption: "34 screens across 6 flows — Home, Bus, Carpool, Calendar, Inbox, and Onboarding."
+    },
+
+    {
+      type: "outcomes",
+      items: [
+        "Reduced 'Time-to-Certainty' from several minutes of worrying to 2 seconds of glancing.",
+        "Digitized the 'Trust Culture' of Kathmandu through verified driver profiles.",
+        "Empowered parents with 'Agency,' replacing helpless waiting with actionable data.",
+        "Built a scalable design system ready for the unique infrastructure of Nepal.",
+        "Mapped 9-screen carpool flow covering creation, live tracking, safety check-in, and editing.",
+        "Designed for dual personas: the student riding and the parent monitoring from work."
+      ]
+    },
+
+    // ── BANNER: Brand & Typography ──────────────────────
+    {
+      type: "image",
+      src: "images/wheelsup-09-brand-typography.png",
+      caption: "Brand identity — WheelsUp wordmark, type scale, and the five-color palette that anchors every screen."
+    },
+
+    {
+      type: "text",
+      title: "Reflection: Design as a Love Language",
+      body: "Working on WheelsUp reminded me that as a UX Researcher, my greatest tool isn't Figma—it's empathy. This isn't just a project for my portfolio; it's a solution for my family. It taught me that when we design for the people we love, we create products that the whole world can trust."
+    },
+
+    // ── MOCKUP: Ride Details (closing visual) ───────────
+    {
+      type: "image",
+      src: "images/wheelsup-03-ride-details.png",
+      caption: "Ride Details — 3D live tracking map, ETA, pickup and drop-off, and the full passenger list. The screen a parent opens first and closes last."
+    }
+  ]
 }
 ];
 // ─── BLOGS DATA ───────────────────────────────────────────────────────────────
