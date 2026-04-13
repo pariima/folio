@@ -283,14 +283,18 @@ const PROJECTS = [
   client: "Personal Venture",
   role: "UX Generalist (Researcher & Designer)",
   duration: "Ongoing",
-
-  // ── COVER ──────────────────────────────────────────────
-  // Use banner 01 (hero overview) as the card thumbnail
   cover: "images/wheelsup-01-hero-overview.png",
-
   excerpt: "Designing a high-fidelity transportation ecosystem for the working parents of Kathmandu, inspired by my sister's journey into motherhood.",
 
   sections: [
+
+    // ── BANNER: Hero ────────────────────────────────────
+    {
+      type: "image",
+      src: "images/wheelsup-01-hero-overview.png",
+      caption: "WheelsUp — 34 screens, 6 flows, one promise to my sister."
+    },
+
     {
       type: "text",
       title: "The 'Why': More Than Just an App",
@@ -321,11 +325,11 @@ const PROJECTS = [
       body: "I spent time observing the 'daily rhythm' of Kathmandu households. I realized that 'Anxious Amy' isn't just a persona; she is my sister, my neighbor, and the woman rushing to catch a micro-bus. They don't need a complex map; they need a 'Glanceable Truth' that fits into a hectic morning of making breakfast and getting ready for work."
     },
 
-    // ── MOCKUP: Carpool Home ────────────────────────────
+    // ── MOCKUP: Hero Three Phones ───────────────────────
     {
       type: "image",
-      src: "images/wheelsup-02-carpool-home.png",
-      caption: "Carpool Home — Today's trip, driver status, upcoming rides and recent history at a glance."
+      src: "images/wheelsup-01-hero-three-phones.png",
+      caption: "Three core screens — Carpool Home, Live Tracking, and Ride Details — the backbone of the parent experience."
     },
 
     {
@@ -334,24 +338,38 @@ const PROJECTS = [
       body: "Problem: A parent in a rush can't study a map. Solution: I implemented the 'Big Data' approach. The ETA (e.g., '4 MINS') is the largest element on the screen, styled in School Bus Yellow. I tested this to ensure it's readable from across a room—allowing my sister to know exactly when to step out the door without dropping her coffee or her baby's bag."
     },
 
-    // ── MOCKUP: Live Tracking (hero) ────────────────────
+    // ── BANNER: Live Trip Tracking ──────────────────────
     {
       type: "image",
-      src: "images/wheelsup-01-hero-three-screen.png",
-      caption: "The Live Tracking screen — real-time map, 04:35 PM ETA, and the 'I'm at the Curb' CTA. The amber ETA is the single source of truth for a busy parent."
+      src: "images/wheelsup-03-live-trip-tracking.png",
+      caption: "Live Trip Tracking — the amber ETA is the single source of truth. No map-reading required."
+    },
+
+    // ── MOCKUP: Carpool Home ────────────────────────────
+    {
+      type: "image",
+      src: "images/wheelsup-02-carpool-home.png",
+      caption: "Carpool Home — Today's trip card, driver status, upcoming rides and recent history at a glance."
     },
 
     {
       type: "text",
       title: "Cultural Trust: The 'Mama/Dai' Module",
-      body: "Problem: In Nepal, trust is personal. Parents want to know who is behind the wheel. Solution: I integrated a 'Verified Driver' section. By showing 'Driver Pratik's' face and verified status, we move from a cold GPS dot to a human connection. It brings the 'Community Trust' of a small neighborhood into a digital interface."
+      body: "Problem: In Nepal, trust is personal. Parents want to know who is behind the wheel. Solution: I integrated a 'Verified Driver' section. By showing the driver's face and verified status, we move from a cold GPS dot to a human connection. It brings the 'Community Trust' of a small neighborhood into a digital interface."
     },
 
-    // ── MOCKUP: Live Status (driver card) ───────────────
+    // ── MOCKUP: Live Status ─────────────────────────────
     {
       type: "image",
       src: "images/wheelsup-06-live-status.png",
-      caption: "Live Status — Marcus Rivera, Silver Toyota Camry, 4.9 rating (1,200+ rides), security measures active. Trust built into every pixel."
+      caption: "Live Status — Marcus Rivera, Silver Toyota Camry KL-4922, 4.9 rating (1,200+ rides), security measures active. Trust built into every pixel."
+    },
+
+    // ── BANNER: Student Safety ──────────────────────────
+    {
+      type: "image",
+      src: "images/wheelsup-07-student-safety.png",
+      caption: "Student Safety Monitor — live GPS pulse, parent notifications, and driver verification in one screen."
     },
 
     {
@@ -360,11 +378,11 @@ const PROJECTS = [
       body: "Problem: Typing a message while walking through a busy street is difficult. Solution: The 'I'm at the Curb' button. A single, haptic-confirmed tap that lets the driver know the student is ready. No phone calls, no dangerous distractions—just a seamless loop of communication."
     },
 
-    // ── MOCKUP: Ride Status confirmation ────────────────
+    // ── MOCKUP: Ride Status ─────────────────────────────
     {
       type: "image",
       src: "images/wheelsup-05-ride-status.png",
-      caption: "'Are you in the vehicle?' — A safety check-in that closes the loop between parent, student, and driver without a single phone call."
+      caption: "'Are you in the vehicle?' — A safety check-in that closes the loop between parent, student and driver without a single phone call."
     },
 
     {
@@ -373,38 +391,60 @@ const PROJECTS = [
       body: "Every screen in the carpool flow was designed to reduce cognitive load at the moment it matters most. From creating a carpool with child avatars, to editing a ride mid-week, to the live driver card arriving in real time — each step was validated against the real rhythms of a Kathmandu morning."
     },
 
-    // ── BANNER: Full flow strip ─────────────────────────
-    {
-      type: "image",
-      src: "images/wheelsup-10-full-flow-strip.png",
-      caption: "The complete carpool flow — 9 screens from home to live tracking to editing and back."
-    },
-
-    // ── BANNER: Design System ───────────────────────────
-    {
-      type: "image",
-      src: "images/wheelsup-04-design-system.png",
-      caption: "Design System — School Bus Yellow (#F9A825), dark base (#10141A), Plus Jakarta Sans & Be Vietnam Pro. A 'Friendly-Industrial' palette built for high-visibility under the Himalayan sun."
-    },
-
-    {
-      type: "text",
-      title: "Creating the Carpool",
-      body: "The Create Carpool screen solves a uniquely Nepali problem: multi-child households where a parent needs to book for Leo and Mia in a single flow. The asymmetric avatar selector lets parents assign children instantly without navigating separate menus."
-    },
-
     // ── MOCKUP: Create Carpool ──────────────────────────
     {
       type: "image",
       src: "images/wheelsup-04-create-carpool.png",
-      caption: "Create Carpool — Child avatars, route details, pickup time and repeat frequency. 'Preview & Invite' sends the carpool to all parents in one tap."
+      caption: "Create Carpool — child avatars, route details, pickup time and repeat frequency. 'Preview & Invite' sends the carpool to all parents in one tap."
+    },
+
+    // ── BANNER: Carpool Creation ────────────────────────
+    {
+      type: "image",
+      src: "images/wheelsup-05-carpool-creation.png",
+      caption: "Carpool Creation flow — the asymmetric avatar selector lets parents assign multiple children without navigating separate menus."
     },
 
     // ── MOCKUP: Upcoming Rides ──────────────────────────
     {
       type: "image",
       src: "images/wheelsup-07-upcoming-rides.png",
-      caption: "Upcoming Rides — Transit log showing confirmed rides, driver-needed alerts, and the ability to pick up a ride. Designed for the parent who plans a week ahead."
+      caption: "Upcoming Rides — transit log showing confirmed rides, driver-needed alerts, and the ability to pick up a ride."
+    },
+
+    // ── MOCKUP: Upcoming Rides Edit ────────────────────
+    {
+      type: "image",
+      src: "images/wheelsup-08-upcoming-rides-edit.png",
+      caption: "Edit Mode — select any ride to modify. Designed for the parent who plans a week ahead but needs flexibility mid-schedule."
+    },
+
+    // ── MOCKUP: Edit Carpool ────────────────────────────
+    {
+      type: "image",
+      src: "images/wheelsup-09-edit-carpool.png",
+      caption: "Edit Carpool — choose parents, update details, and save. All notified instantly."
+    },
+
+    // ── MOCKUP: Ride Details ────────────────────────────
+    {
+      type: "image",
+      src: "images/wheelsup-03-ride-details.png",
+      caption: "Ride Details — 3D live tracking map, ETA, pickup and drop-off, and the full passenger list. The screen a parent opens first and closes last."
+    },
+
+    // ── BANNER: Bus Tracker ─────────────────────────────
+    {
+      type: "image",
+      src: "images/wheelsup-06-bus-tracker.png",
+      caption: "Bus Tracker — stop-by-stop live progress with the current stop pulsing in amber. No more frantic calls to the driver."
+    },
+
+    // ── MOCKUP: Full Flow Strip ─────────────────────────
+    {
+      type: "image",
+      src: "images/wheelsup-10-full-flow-strip.png",
+      caption: "The complete carpool flow — all 9 screens in sequence from home to live tracking to editing and back."
     },
 
     // ── BANNER: Screen Library ──────────────────────────
@@ -415,22 +455,35 @@ const PROJECTS = [
     },
 
     {
-      type: "outcomes",
-      items: [
-        "Reduced 'Time-to-Certainty' from several minutes of worrying to 2 seconds of glancing.",
-        "Digitized the 'Trust Culture' of Kathmandu through verified driver profiles.",
-        "Empowered parents with 'Agency,' replacing helpless waiting with actionable data.",
-        "Built a scalable design system ready for the unique infrastructure of Nepal.",
-        "Mapped 9-screen carpool flow covering creation, live tracking, safety check-in, and editing.",
-        "Designed for dual personas: the student riding and the parent monitoring from work."
-      ]
+      type: "text",
+      title: "The Design System: Built for Bright Mornings",
+      body: "Every color, typeface and spacing decision was made with one constraint in mind: legibility under the bright Himalayan sun, on a cracked phone screen, by a parent running late. School Bus Yellow (#F9A825) isn't just a brand color — it's a signal that cuts through noise. The dark base (#10141A) reduces glare. Plus Jakarta Sans at ExtraBold renders the ETA in under 2 seconds of reading time."
+    },
+
+    // ── BANNER: Design System ───────────────────────────
+    {
+      type: "image",
+      src: "images/wheelsup-04-design-system.png",
+      caption: "Design System — color tokens, type scale and components. A 'Friendly-Industrial' palette built for high-visibility in any light."
     },
 
     // ── BANNER: Brand & Typography ──────────────────────
     {
       type: "image",
       src: "images/wheelsup-09-brand-typography.png",
-      caption: "Brand identity — WheelsUp wordmark, type scale, and the five-color palette that anchors every screen."
+      caption: "Brand identity — WheelsUp wordmark, type scale and the five-color palette that anchors every screen."
+    },
+
+    {
+      type: "outcomes",
+      items: [
+        "Reduced 'Time-to-Certainty' from several minutes of worrying to 2 seconds of glancing.",
+        "Digitized the 'Trust Culture' of Kathmandu through verified driver profiles.",
+        "Empowered parents with 'Agency,' replacing helpless waiting with actionable data.",
+        "Built a scalable design system ready for the unique infrastructure of Nepal.",
+        "Mapped a 9-screen carpool flow covering creation, live tracking, safety check-in, and editing.",
+        "Designed for dual personas: the student riding and the parent monitoring from work."
+      ]
     },
 
     {
@@ -439,12 +492,13 @@ const PROJECTS = [
       body: "Working on WheelsUp reminded me that as a UX Researcher, my greatest tool isn't Figma—it's empathy. This isn't just a project for my portfolio; it's a solution for my family. It taught me that when we design for the people we love, we create products that the whole world can trust."
     },
 
-    // ── MOCKUP: Ride Details (closing visual) ───────────
+    // ── BANNER: Project Summary (closing) ──────────────
     {
       type: "image",
-      src: "images/wheelsup-03-ride-details.png",
-      caption: "Ride Details — 3D live tracking map, ETA, pickup and drop-off, and the full passenger list. The screen a parent opens first and closes last."
+      src: "images/wheelsup-10-project-summary.png",
+      caption: "Designed for safety first — WheelsUp, 2026."
     }
+
   ]
 }
 ];
