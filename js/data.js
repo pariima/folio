@@ -291,7 +291,7 @@ const PROJECTS = [
     // ── BANNER: Hero ────────────────────────────────────
     {
       type: "image",
-      src: "images/wheelsup-01-hero-overview.png",
+      src: "/images/wheelsup-01-hero-overview.png",
       caption: "WheelsUp — 34 screens, 6 flows, one promise to my sister."
     },
 
@@ -309,7 +309,7 @@ const PROJECTS = [
     // ── BANNER: Flow Architecture ───────────────────────
     {
       type: "image",
-      src: "images/wheelsup-02-flow-architecture.png",
+      src: "/images/wheelsup-02-flow-architecture.png",
       caption: "6 user flows across 34 screens — mapping every path a parent or student takes through the app."
     },
 
@@ -328,7 +328,7 @@ const PROJECTS = [
     // ── MOCKUP: Hero Three Phones ───────────────────────
     {
       type: "image",
-      src: "images/wheelsup-01-hero-three-phones.png",
+      src: "/images/wheelsup-01-hero-three-phones.png",
       caption: "Three core screens — Carpool Home, Live Tracking, and Ride Details — the backbone of the parent experience."
     },
 
@@ -341,14 +341,14 @@ const PROJECTS = [
     // ── BANNER: Live Trip Tracking ──────────────────────
     {
       type: "image",
-      src: "images/wheelsup-03-live-trip-tracking.png",
+      src: "/images/wheelsup-03-live-trip-tracking.png",
       caption: "Live Trip Tracking — the amber ETA is the single source of truth. No map-reading required."
     },
 
     // ── MOCKUP: Carpool Home ────────────────────────────
     {
       type: "image",
-      src: "images/wheelsup-02-carpool-home.png",
+      src: "/images/wheelsup-02-carpool-home.png",
       caption: "Carpool Home — Today's trip card, driver status, upcoming rides and recent history at a glance."
     },
 
@@ -361,14 +361,14 @@ const PROJECTS = [
     // ── MOCKUP: Live Status ─────────────────────────────
     {
       type: "image",
-      src: "images/wheelsup-06-live-status.png",
+      src: "/images/wheelsup-06-live-status.png",
       caption: "Live Status — Marcus Rivera, Silver Toyota Camry KL-4922, 4.9 rating (1,200+ rides), security measures active. Trust built into every pixel."
     },
 
     // ── BANNER: Student Safety ──────────────────────────
     {
       type: "image",
-      src: "images/wheelsup-07-student-safety.png",
+      src: "/images/wheelsup-07-student-safety.png",
       caption: "Student Safety Monitor — live GPS pulse, parent notifications, and driver verification in one screen."
     },
 
@@ -381,7 +381,7 @@ const PROJECTS = [
     // ── MOCKUP: Ride Status ─────────────────────────────
     {
       type: "image",
-      src: "images/wheelsup-05-ride-status.png",
+      src: "/images/wheelsup-05-ride-status.png",
       caption: "'Are you in the vehicle?' — A safety check-in that closes the loop between parent, student and driver without a single phone call."
     },
 
@@ -394,63 +394,63 @@ const PROJECTS = [
     // ── MOCKUP: Create Carpool ──────────────────────────
     {
       type: "image",
-      src: "images/wheelsup-04-create-carpool.png",
+      src: "/images/wheelsup-04-create-carpool.png",
       caption: "Create Carpool — child avatars, route details, pickup time and repeat frequency. 'Preview & Invite' sends the carpool to all parents in one tap."
     },
 
     // ── BANNER: Carpool Creation ────────────────────────
     {
       type: "image",
-      src: "images/wheelsup-05-carpool-creation.png",
+      src: "/images/wheelsup-05-carpool-creation.png",
       caption: "Carpool Creation flow — the asymmetric avatar selector lets parents assign multiple children without navigating separate menus."
     },
 
     // ── MOCKUP: Upcoming Rides ──────────────────────────
     {
       type: "image",
-      src: "images/wheelsup-07-upcoming-rides.png",
+      src: "/images/wheelsup-07-upcoming-rides.png",
       caption: "Upcoming Rides — transit log showing confirmed rides, driver-needed alerts, and the ability to pick up a ride."
     },
 
     // ── MOCKUP: Upcoming Rides Edit ────────────────────
     {
       type: "image",
-      src: "images/wheelsup-08-upcoming-rides-edit.png",
+      src: "/images/wheelsup-08-upcoming-rides-edit.png",
       caption: "Edit Mode — select any ride to modify. Designed for the parent who plans a week ahead but needs flexibility mid-schedule."
     },
 
     // ── MOCKUP: Edit Carpool ────────────────────────────
     {
       type: "image",
-      src: "images/wheelsup-09-edit-carpool.png",
+      src: "/images/wheelsup-09-edit-carpool.png",
       caption: "Edit Carpool — choose parents, update details, and save. All notified instantly."
     },
 
     // ── MOCKUP: Ride Details ────────────────────────────
     {
       type: "image",
-      src: "images/wheelsup-03-ride-details.png",
+      src: "/images/wheelsup-03-ride-details.png",
       caption: "Ride Details — 3D live tracking map, ETA, pickup and drop-off, and the full passenger list. The screen a parent opens first and closes last."
     },
 
     // ── BANNER: Bus Tracker ─────────────────────────────
     {
       type: "image",
-      src: "images/wheelsup-06-bus-tracker.png",
+      src: "/images/wheelsup-06-bus-tracker.png",
       caption: "Bus Tracker — stop-by-stop live progress with the current stop pulsing in amber. No more frantic calls to the driver."
     },
 
     // ── MOCKUP: Full Flow Strip ─────────────────────────
     {
       type: "image",
-      src: "images/wheelsup-10-full-flow-strip.png",
+      src: "/images/wheelsup-10-full-flow-strip.png",
       caption: "The complete carpool flow — all 9 screens in sequence from home to live tracking to editing and back."
     },
 
     // ── BANNER: Screen Library ──────────────────────────
     {
       type: "image",
-      src: "images/wheelsup-08-screen-library.png",
+      src: "/images/wheelsup-08-screen-library.png",
       caption: "34 screens across 6 flows — Home, Bus, Carpool, Calendar, Inbox, and Onboarding."
     },
 
@@ -463,14 +463,14 @@ const PROJECTS = [
     // ── BANNER: Design System ───────────────────────────
     {
       type: "image",
-      src: "images/wheelsup-04-design-system.png",
+      src: "/images/wheelsup-04-design-system.png",
       caption: "Design System — color tokens, type scale and components. A 'Friendly-Industrial' palette built for high-visibility in any light."
     },
 
     // ── BANNER: Brand & Typography ──────────────────────
     {
       type: "image",
-      src: "images/wheelsup-09-brand-typography.png",
+      src: "/images/wheelsup-09-brand-typography.png",
       caption: "Brand identity — WheelsUp wordmark, type scale and the five-color palette that anchors every screen."
     },
 
@@ -495,7 +495,7 @@ const PROJECTS = [
     // ── BANNER: Project Summary (closing) ──────────────
     {
       type: "image",
-      src: "images/wheelsup-10-project-summary.png",
+      src: "/images/wheelsup-10-project-summary.png",
       caption: "Designed for safety first — WheelsUp, 2026."
     }
 
