@@ -283,7 +283,7 @@ const PROJECTS = [
   client: "Personal Venture",
   role: "UX Generalist (Researcher & Designer)",
   duration: "Ongoing",
-  cover: "images/wheelsup-01-hero-overview.png",
+  cover: "/images/wheelsup-01-hero-overview.png",
   excerpt: "Designing a high-fidelity transportation ecosystem for the working parents of Kathmandu, inspired by my sister's journey into motherhood.",
 
   sections: [
