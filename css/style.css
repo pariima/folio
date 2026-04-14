@@ -631,9 +631,39 @@ nav {
 }
 .cs-section-right p { font-size: 1.05rem; line-height: 1.85; color: var(--muted); margin-bottom: 20px; }
 .cs-section-right p:last-child { margin-bottom: 0; }
-.cs-image { padding: 48px 0; border-bottom: 1px solid var(--border); }
-.cs-image img { width: 100%; height: auto; display: block; cursor: none; transition: opacity .2s; }
+.cs-image { 
+  padding: 48px 0; 
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cs-image img { 
+  width: 100%; 
+  height: auto; 
+  display: block; 
+  cursor: none; 
+  transition: opacity .2s;
+  border-radius: 12px;
+}
+
 .cs-image img:hover { opacity: .9; }
+
+/* for tall portrait mockups (single phone) */
+.cs-image.is-phone img {
+  max-width: 320px;
+}
+
+/* for wide landscape banners (flow diagrams, design system etc) */
+.cs-image.is-banner img {
+  max-width: 100%;
+}
+
+/* for medium (3-phone hero, flow strip) */
+.cs-image.is-wide img {
+  max-width: 800px;
+}
 .cs-caption { font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-top: 12px; }
 .cs-quote { padding: 64px 0; border-bottom: 1px solid var(--border); position: relative; }
 .cs-quote-mark {

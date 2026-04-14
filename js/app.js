@@ -118,12 +118,12 @@ function renderHome() {
   mqTrack.innerHTML = items + items;
 
   // home project grid
-const homeGrid = document.getElementById('homeGrid');
-homeGrid.innerHTML = projects.slice(0, 4).map((p, i) => {
-  const imgEl = p.cover
-    ? `<img src="${p.cover}" alt="${p.title}">`
-    : `<div style="width:100%;height:100%;background:var(--ink)"></div>`;
-  return `
+  const homeGrid = document.getElementById('homeGrid');
+  homeGrid.innerHTML = projects.slice(0, 4).map((p, i) => {
+    const imgEl = p.cover
+      ? `<img src="${p.cover}" alt="${p.title}">`
+      : `<div style="width:100%;height:100%;background:var(--ink)"></div>`;
+    return `
     <div class="hp-card" onclick="pushProject(${p.id})">
       <div class="hp-info">
         <div class="hp-tag">${p.tag}</div>
@@ -137,7 +137,7 @@ homeGrid.innerHTML = projects.slice(0, 4).map((p, i) => {
       </div>
       <div class="hp-bg">${imgEl}</div>
     </div>`;
-}).join('');
+  }).join('');
 
 
 
@@ -190,7 +190,7 @@ function renderProjects() {
 }
 // ─── RENDER SECTION ──────────────────────────────────────────────────────────
 function renderSection(s) {
-  switch(s.type) {
+  switch (s.type) {
     case 'text': return `
       <div class="cs-section">
         <div class="cs-section-left">
@@ -201,10 +201,10 @@ function renderSection(s) {
         </div>
       </div>`;
     case 'image': return `
-      <div class="cs-image">
-        <img src="${s.src}" alt="${s.caption || ''}">
-        ${s.caption ? `<div class="cs-caption">${s.caption}</div>` : ''}
-      </div>`;
+      <div class="cs-image ${s.size ? 'is-' + s.size : 'is-banner'}">
+    <img src="${s.src}" alt="${s.caption || ''}">
+    ${s.caption ? `<div class="cs-caption">${s.caption}</div>` : ''}
+  </div>`;
     case 'quote': return `
       <div class="cs-quote">
         <div class="cs-quote-mark">"</div>
@@ -262,7 +262,7 @@ function renderDetail(id) {
         <div class="detail-body">${marked.parse(item.content)}</div>
       </div>`;
   } else {
-   
+
     const heroImg = item.cover
       ? `<img src="${item.cover}" alt="${item.title}">`
       : `<div style="width:100%;height:100%;background:linear-gradient(135deg,#1a2550,var(--blue))"></div>`;
@@ -299,7 +299,7 @@ function renderDetail(id) {
       });
     }
   }
-  }
+}
 
 // Image zoom //
 

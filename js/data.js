@@ -199,83 +199,6 @@ const PROJECTS = [
     ]
   },
   {
-    id: 4,
-    title: "Vrroom VR",
-    tag: "VR Development · Unity · Interaction Design",
-    year: "2024",
-    client: "Academic Project",
-    role: "VR Developer & Designer",
-    duration: "Semester project",
-    cover: "https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d47d763576770286fb64bc_6691892e7fd89cd15de4351e_667a30fd77eb9c4eac93a8aa_Group%252520166.png",
-    excerpt: "Engineering a realistic VR scooter simulation by scripting collision dynamics and controller-to-movement translation in Unity — bridging physical affordances with virtual interaction.",
-    sections: [
-      {
-        type: "text",
-        title: "Overview",
-        body: "Vrroom VR is a virtual reality Vespa scooter simulation built in Unity with Oculus Integration. Players accelerate by pressing trigger buttons on their VR controllers and steer by turning their head — a solution born from a creative pivot when the original tilt-based steering proved too difficult to calibrate."
-      },
-      {
-        type: "text",
-        title: "Phase 1 — Ideation",
-        body: "The original concept used controller tilt to simulate handlebar steering — envisioning the controllers as scooter handles. Accurately calibrating the Y-axis tilt and translating it to scooter rotation proved too complex. I pivoted to head rotation for steering, which felt more intuitive in practice."
-      },
-      {
-        type: "image",
-        src: "https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d47d4b07244ccaa6aa99bc_66918831a5230eba8fdc8dee_667a2f6bd248b3f315142f27_Group%252520165.png",
-        caption: "Ideation Sketches"
-      },
-      {
-        type: "text",
-        title: "Phase 2 — Scooter Model",
-        body: "The project started with a 3D URP project in Unity with the Oculus Integration package installed. I white-boxed a basic scooter model on a simple plane, then refined it with separate detailed components. An OVR player controller was positioned to mimic how a person sits on a scooter, with handles attached to hand anchors."
-      },
-      {
-        type: "image",
-        src: "https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d47d4bb7691ea36ba6f388_669188327ff8807ac60ed87e_667a2f8c749c53c580ae8bb2_Screenshot%2525202024-03-27%252520at%2525208.33.png",
-        caption: "Unity Whitebox and Final Scooter Setup"
-      },
-      {
-        type: "text",
-        title: "Phase 3 — Movement Mechanics",
-        body: "The movement system is driven by an accelerator script for Meta Quest controllers — forward movement triggers when the Secondary Index Trigger is pressed. Steering is determined by the player's head orientation, excluding vertical movements for a consistent and natural riding experience."
-      },
-      {
-        type: "text",
-        title: "Phase 4 — Game Environment",
-        body: "I sourced detailed models from the Unity Asset Store and Sketchfab — a Vespa scooter, houses, roads, vehicles, lamp posts, and animals. My player character was imported from Mixamo. Replacing the whitebox model with a detailed scooter significantly improved visual immersion."
-      },
-      {
-        type: "image",
-        src: "https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d47d763576770286fb64bc_6691892e7fd89cd15de4351e_667a30fd77eb9c4eac93a8aa_Group%252520166.png",
-        caption: "Game Environment Overview"
-      },
-      {
-        type: "text",
-        title: "Phase 5 — Collision Dynamics",
-        body: "I implemented diverse collision scripts to make the environment interactive — particle systems for visual effects, audio triggers on animal objects, and lamp post scripts that change color as the scooter passes. The system uses Non-Trigger Colliders with Rigidbody interactions and Trigger Collider interactions to simulate realistic physics."
-      },
-      {
-        type: "image",
-        src: "https://cdn.prod.website-files.com/67d39c312a0327f90c0a8ed3/67d48766fdf9dba83b7e1c59_669189467fd89cd15de446da_667a4e1106e3891bdbf4a75c_Group%252520168.png",
-        caption: "Collision System Setup"
-      },
-      {
-        type: "outcomes",
-        items: [
-          "Successfully pivoted from tilt-based to head-rotation steering",
-          "Built a fully interactive VR environment with realistic collision physics",
-          "Integrated assets from Unity Asset Store, Sketchfab, and Mixamo",
-          "Demonstrated how UX principles apply directly to game development"
-        ]
-      },
-      {
-        type: "text",
-        title: "Reflection",
-        body: "This project pushed me to think about embodied interaction design — how physical controller affordances translate into virtual movement. The constraints of the medium forced creative problem-solving, and the final result demonstrates that UX thinking applies even in game development contexts."
-      }
-    ]
-  },
-  {
   id: 5,
   title: "WheelsUp: A Letter to My Sister",
   tag: "UX Research · Social Impact · Mobile",
@@ -288,9 +211,9 @@ const PROJECTS = [
 
   sections: [
 
-    // ── BANNER: Hero ────────────────────────────────────
     {
       type: "image",
+      size: "banner",
       src: "/images/wheelsup-01-hero-overview.png",
       caption: "WheelsUp — 34 screens, 6 flows, one promise to my sister."
     },
@@ -306,9 +229,9 @@ const PROJECTS = [
       text: "In Kathmandu, we don't just track a bus; we track our peace of mind. I want my sister to focus on her career and her child, not on the dust and delays of the Ring Road."
     },
 
-    // ── BANNER: Flow Architecture ───────────────────────
     {
       type: "image",
+      size: "banner",
       src: "/images/wheelsup-02-flow-architecture.png",
       caption: "6 user flows across 34 screens — mapping every path a parent or student takes through the app."
     },
@@ -325,9 +248,9 @@ const PROJECTS = [
       body: "I spent time observing the 'daily rhythm' of Kathmandu households. I realized that 'Anxious Amy' isn't just a persona; she is my sister, my neighbor, and the woman rushing to catch a micro-bus. They don't need a complex map; they need a 'Glanceable Truth' that fits into a hectic morning of making breakfast and getting ready for work."
     },
 
-    // ── MOCKUP: Hero Three Phones ───────────────────────
     {
       type: "image",
+      size: "wide",
       src: "/images/wheelsup-01-hero-three-phones.png",
       caption: "Three core screens — Carpool Home, Live Tracking, and Ride Details — the backbone of the parent experience."
     },
@@ -338,16 +261,16 @@ const PROJECTS = [
       body: "Problem: A parent in a rush can't study a map. Solution: I implemented the 'Big Data' approach. The ETA (e.g., '4 MINS') is the largest element on the screen, styled in School Bus Yellow. I tested this to ensure it's readable from across a room—allowing my sister to know exactly when to step out the door without dropping her coffee or her baby's bag."
     },
 
-    // ── BANNER: Live Trip Tracking ──────────────────────
     {
       type: "image",
+      size: "banner",
       src: "/images/wheelsup-03-live-trip-tracking.png",
       caption: "Live Trip Tracking — the amber ETA is the single source of truth. No map-reading required."
     },
 
-    // ── MOCKUP: Carpool Home ────────────────────────────
     {
       type: "image",
+      size: "phone",
       src: "/images/wheelsup-02-carpool-home.png",
       caption: "Carpool Home — Today's trip card, driver status, upcoming rides and recent history at a glance."
     },
@@ -358,16 +281,16 @@ const PROJECTS = [
       body: "Problem: In Nepal, trust is personal. Parents want to know who is behind the wheel. Solution: I integrated a 'Verified Driver' section. By showing the driver's face and verified status, we move from a cold GPS dot to a human connection. It brings the 'Community Trust' of a small neighborhood into a digital interface."
     },
 
-    // ── MOCKUP: Live Status ─────────────────────────────
     {
       type: "image",
+      size: "phone",
       src: "/images/wheelsup-06-live-status.png",
       caption: "Live Status — Marcus Rivera, Silver Toyota Camry KL-4922, 4.9 rating (1,200+ rides), security measures active. Trust built into every pixel."
     },
 
-    // ── BANNER: Student Safety ──────────────────────────
     {
       type: "image",
+      size: "banner",
       src: "/images/wheelsup-07-student-safety.png",
       caption: "Student Safety Monitor — live GPS pulse, parent notifications, and driver verification in one screen."
     },
@@ -378,9 +301,9 @@ const PROJECTS = [
       body: "Problem: Typing a message while walking through a busy street is difficult. Solution: The 'I'm at the Curb' button. A single, haptic-confirmed tap that lets the driver know the student is ready. No phone calls, no dangerous distractions—just a seamless loop of communication."
     },
 
-    // ── MOCKUP: Ride Status ─────────────────────────────
     {
       type: "image",
+      size: "phone",
       src: "/images/wheelsup-05-ride-status.png",
       caption: "'Are you in the vehicle?' — A safety check-in that closes the loop between parent, student and driver without a single phone call."
     },
@@ -391,65 +314,65 @@ const PROJECTS = [
       body: "Every screen in the carpool flow was designed to reduce cognitive load at the moment it matters most. From creating a carpool with child avatars, to editing a ride mid-week, to the live driver card arriving in real time — each step was validated against the real rhythms of a Kathmandu morning."
     },
 
-    // ── MOCKUP: Create Carpool ──────────────────────────
     {
       type: "image",
+      size: "phone",
       src: "/images/wheelsup-04-create-carpool.png",
       caption: "Create Carpool — child avatars, route details, pickup time and repeat frequency. 'Preview & Invite' sends the carpool to all parents in one tap."
     },
 
-    // ── BANNER: Carpool Creation ────────────────────────
     {
       type: "image",
+      size: "banner",
       src: "/images/wheelsup-05-carpool-creation.png",
       caption: "Carpool Creation flow — the asymmetric avatar selector lets parents assign multiple children without navigating separate menus."
     },
 
-    // ── MOCKUP: Upcoming Rides ──────────────────────────
     {
       type: "image",
+      size: "phone",
       src: "/images/wheelsup-07-upcoming-rides.png",
       caption: "Upcoming Rides — transit log showing confirmed rides, driver-needed alerts, and the ability to pick up a ride."
     },
 
-    // ── MOCKUP: Upcoming Rides Edit ────────────────────
     {
       type: "image",
+      size: "phone",
       src: "/images/wheelsup-08-upcoming-rides-edit.png",
       caption: "Edit Mode — select any ride to modify. Designed for the parent who plans a week ahead but needs flexibility mid-schedule."
     },
 
-    // ── MOCKUP: Edit Carpool ────────────────────────────
     {
       type: "image",
+      size: "phone",
       src: "/images/wheelsup-09-edit-carpool.png",
       caption: "Edit Carpool — choose parents, update details, and save. All notified instantly."
     },
 
-    // ── MOCKUP: Ride Details ────────────────────────────
     {
       type: "image",
+      size: "phone",
       src: "/images/wheelsup-03-ride-details.png",
       caption: "Ride Details — 3D live tracking map, ETA, pickup and drop-off, and the full passenger list. The screen a parent opens first and closes last."
     },
 
-    // ── BANNER: Bus Tracker ─────────────────────────────
     {
       type: "image",
+      size: "banner",
       src: "/images/wheelsup-06-bus-tracker.png",
       caption: "Bus Tracker — stop-by-stop live progress with the current stop pulsing in amber. No more frantic calls to the driver."
     },
 
-    // ── MOCKUP: Full Flow Strip ─────────────────────────
     {
       type: "image",
+      size: "wide",
       src: "/images/wheelsup-10-full-flow-strip.png",
       caption: "The complete carpool flow — all 9 screens in sequence from home to live tracking to editing and back."
     },
 
-    // ── BANNER: Screen Library ──────────────────────────
     {
       type: "image",
+      size: "banner",
       src: "/images/wheelsup-08-screen-library.png",
       caption: "34 screens across 6 flows — Home, Bus, Carpool, Calendar, Inbox, and Onboarding."
     },
@@ -460,16 +383,16 @@ const PROJECTS = [
       body: "Every color, typeface and spacing decision was made with one constraint in mind: legibility under the bright Himalayan sun, on a cracked phone screen, by a parent running late. School Bus Yellow (#F9A825) isn't just a brand color — it's a signal that cuts through noise. The dark base (#10141A) reduces glare. Plus Jakarta Sans at ExtraBold renders the ETA in under 2 seconds of reading time."
     },
 
-    // ── BANNER: Design System ───────────────────────────
     {
       type: "image",
+      size: "banner",
       src: "/images/wheelsup-04-design-system.png",
       caption: "Design System — color tokens, type scale and components. A 'Friendly-Industrial' palette built for high-visibility in any light."
     },
 
-    // ── BANNER: Brand & Typography ──────────────────────
     {
       type: "image",
+      size: "banner",
       src: "/images/wheelsup-09-brand-typography.png",
       caption: "Brand identity — WheelsUp wordmark, type scale and the five-color palette that anchors every screen."
     },
@@ -492,16 +415,16 @@ const PROJECTS = [
       body: "Working on WheelsUp reminded me that as a UX Researcher, my greatest tool isn't Figma—it's empathy. This isn't just a project for my portfolio; it's a solution for my family. It taught me that when we design for the people we love, we create products that the whole world can trust."
     },
 
-    // ── BANNER: Project Summary (closing) ──────────────
     {
       type: "image",
+      size: "banner",
       src: "/images/wheelsup-10-project-summary.png",
       caption: "Designed for safety first — WheelsUp, 2026."
     }
 
   ]
 }
-];
+]
 // ─── BLOGS DATA ───────────────────────────────────────────────────────────────
 const BLOGS = [
   {
