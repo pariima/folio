@@ -632,7 +632,7 @@ nav {
 .cs-section-right p { font-size: 1.05rem; line-height: 1.85; color: var(--muted); margin-bottom: 20px; }
 .cs-section-right p:last-child { margin-bottom: 0; }
 .cs-image { padding: 48px 0; border-bottom: 1px solid var(--border); }
-.cs-image img { width: 100%; display: block; cursor: none; transition: opacity .2s; }
+.cs-image img { width: 100%; height: auto; display: block; cursor: none; transition: opacity .2s; }
 .cs-image img:hover { opacity: .9; }
 .cs-caption { font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-top: 12px; }
 .cs-quote { padding: 64px 0; border-bottom: 1px solid var(--border); position: relative; }
