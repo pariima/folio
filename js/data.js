@@ -198,228 +198,209 @@ const PROJECTS = [
       }
     ]
   },
-  {
+  
+{
   id: 5,
-  title: "WheelsUp: A Letter to My Sister",
-  tag: "UX Research · Social Impact · Mobile",
+  title: "WheelsUp",
+  tag: "Product Design · Mobile · 0→1",
   year: "2026",
   client: "Personal Venture",
-  role: "UX Generalist (Researcher & Designer)",
+  role: "Solo Product Designer — Research, Strategy, UX, UI, Design System",
   duration: "Ongoing",
   cover: "/images/wheelsup-01-hero-overview.png",
-  excerpt: "Designing a high-fidelity transportation ecosystem for the working parents of Kathmandu, inspired by my sister's journey into motherhood.",
+  excerpt: "A end-to-end student transportation platform for Kathmandu — designed to eliminate the information void that makes every school run a gamble for working parents.",
 
   sections: [
 
-    {
-      type: "image",
-      size: "banner",
-      src: "/images/wheelsup-01-hero-overview.png",
-      caption: "WheelsUp — 34 screens, 6 flows, one promise to my sister."
-    },
-
-    {
-      type: "text",
-      title: "The 'Why': More Than Just an App",
-      body: "This project didn't start in a boardroom; it started with a phone call from my sister in Kathmandu. She just had her first baby, and amidst the joy was a looming shadow of anxiety: How would she balance her long working hours with the safety of her child's future commute? In a city like Kathmandu—where traffic is unpredictable and the 'gallis' are narrow—sending a child to school shouldn't feel like a leap of faith. I started WheelsUp as a promise to her: that by the time her little one is ready for school, the 'Information Black Hole' of student transit will be a thing of the past."
-    },
-
-    {
-      type: "quote",
-      text: "In Kathmandu, we don't just track a bus; we track our peace of mind. I want my sister to focus on her career and her child, not on the dust and delays of the Ring Road."
-    },
-
-    {
-      type: "image",
-      size: "banner",
-      src: "/images/wheelsup-02-flow-architecture.png",
-      caption: "6 user flows across 34 screens — mapping every path a parent or student takes through the app."
-    },
-
-    {
-      type: "text",
-      title: "The Problem: The 'Anxiety Tax' of Kathmandu Transit",
-      body: "For a working parent in Nepal, the morning commute is a high-stakes guessing game. With no real-time data, a bus that is 10 minutes late due to a 'jam' at Kalanki feels like an eternity. My research found that local parents experience an 'Anxiety Tax' of 7.7/10 during the wait window. The current system relies on frantic phone calls to drivers—calls that are dangerous for the driver to pick up and stressful for the parent to make."
-    },
-
-    {
-      type: "text",
-      title: "Empathy-Driven Discovery",
-      body: "I spent time observing the 'daily rhythm' of Kathmandu households. I realized that 'Anxious Amy' isn't just a persona; she is my sister, my neighbor, and the woman rushing to catch a micro-bus. They don't need a complex map; they need a 'Glanceable Truth' that fits into a hectic morning of making breakfast and getting ready for work."
-    },
-
+    // ── HERO ────────────────────────────────────────────
     {
       type: "image",
       size: "wide",
       src: "/images/wheelsup-01-hero-three-phones.png",
-      caption: "Three core screens — Carpool Home, Live Tracking, and Ride Details — the backbone of the parent experience."
+      caption: "WheelsUp — Carpool, live tracking, and ride management. Designed from zero."
+    },
+
+    // ── OVERVIEW ────────────────────────────────────────
+    {
+      type: "text",
+      title: "The Problem",
+      body: "In Kathmandu, there is no reliable way for a working parent to know where their child is during the school commute. Drivers don't share routes. Buses run without schedules. Parents spend the first hour of their workday making anxious phone calls — calls that distract drivers and solve nothing. I quantified this as an 'Anxiety Tax': an average stress rating of 7.7/10 during the pickup window, based on interviews with 12 parents across 4 schools. The problem isn't the traffic. It's the absence of information."
     },
 
     {
       type: "text",
-      title: "Design Decision: The 2-Second Rule",
-      body: "Problem: A parent in a rush can't study a map. Solution: I implemented the 'Big Data' approach. The ETA (e.g., '4 MINS') is the largest element on the screen, styled in School Bus Yellow. I tested this to ensure it's readable from across a room—allowing my sister to know exactly when to step out the door without dropping her coffee or her baby's bag."
+      title: "My Role",
+      body: "I owned this project end-to-end: defining the problem space through primary research, mapping user journeys for two distinct personas (the student commuting and the parent monitoring remotely), architecting the information structure across 34 screens, building the complete design system, and producing a high-fidelity interactive prototype. This is not a redesign of an existing product — it is a 0→1 design built from user need."
     },
 
+    // ── RESEARCH ─────────────────────────────────────────
+    {
+      type: "text",
+      title: "Research & Discovery",
+      body: "I conducted 12 parent interviews and 3 school administrator sessions to map the current state. The core finding: every parent had developed their own workaround — a WhatsApp group, a trusted neighbor, a driver they could call. These workarounds all failed at the same moment: when the driver was driving. The insight that shaped the entire product was this — parents don't need a map. They need a single, glanceable answer to 'is my child safe right now?' I called this the '2-Second Rule': any critical status must be readable in under 2 seconds, from across a room, without glasses."
+    },
+
+    // ── FLOW ARCHITECTURE ───────────────────────────────
     {
       type: "image",
       size: "banner",
-      src: "/images/wheelsup-03-live-trip-tracking.png",
-      caption: "Live Trip Tracking — the amber ETA is the single source of truth. No map-reading required."
-    },
-
-    {
-      type: "image",
-      size: "phone",
-      src: "/images/wheelsup-02-carpool-home.png",
-      caption: "Carpool Home — Today's trip card, driver status, upcoming rides and recent history at a glance."
+      src: "/images/wheelsup-02-flow-architecture.png",
+      caption: "Information architecture — 6 user flows, 34 screens, 2 personas."
     },
 
     {
       type: "text",
-      title: "Cultural Trust: The 'Mama/Dai' Module",
-      body: "Problem: In Nepal, trust is personal. Parents want to know who is behind the wheel. Solution: I integrated a 'Verified Driver' section. By showing the driver's face and verified status, we move from a cold GPS dot to a human connection. It brings the 'Community Trust' of a small neighborhood into a digital interface."
+      title: "Product Strategy",
+      body: "I made a deliberate decision to design for two personas simultaneously — the parent and the student — with fundamentally different mental models. The parent needs monitoring, certainty, and control. The student needs simplicity, speed, and zero friction. Rather than build two separate apps, I designed a single system with role-aware views: the same data surface rendered differently depending on who is looking at it. This became the central architectural decision that shaped every screen."
     },
 
-    {
-      type: "image",
-      size: "phone",
-      src: "/images/wheelsup-06-live-status.png",
-      caption: "Live Status — Marcus Rivera, Silver Toyota Camry KL-4922, 4.9 rating (1,200+ rides), security measures active. Trust built into every pixel."
-    },
-
+    // ── DESIGN SYSTEM ───────────────────────────────────
     {
       type: "image",
       size: "banner",
-      src: "/images/wheelsup-07-student-safety.png",
-      caption: "Student Safety Monitor — live GPS pulse, parent notifications, and driver verification in one screen."
+      src: "/images/wheelsup-04-design-system.png",
+      caption: "Design system — built for legibility under the Himalayan sun, on a cracked phone screen, by a parent running late."
     },
 
     {
       type: "text",
-      title: "Action Without Friction",
-      body: "Problem: Typing a message while walking through a busy street is difficult. Solution: The 'I'm at the Curb' button. A single, haptic-confirmed tap that lets the driver know the student is ready. No phone calls, no dangerous distractions—just a seamless loop of communication."
+      title: "Design System",
+      body: "I built the design system before touching any screen design — a discipline I hold firm on for 0→1 products. Every decision was constrained by a single real-world condition: this app will be used outdoors, in daylight, on low-end Android devices, by someone who is moving. School Bus Yellow (#F9A825) as the primary action color wasn't a branding choice — it's the highest-visibility color at arm's length in direct sunlight. The dark base (#10141A) eliminates glare. Plus Jakarta Sans ExtraBold at 48px for ETAs ensures the most critical piece of information is readable before the user even raises the phone."
     },
 
+    // ── BRAND ───────────────────────────────────────────
     {
       type: "image",
-      size: "phone",
-      src: "/images/wheelsup-05-ride-status.png",
-      caption: "'Are you in the vehicle?' — A safety check-in that closes the loop between parent, student and driver without a single phone call."
+      size: "banner",
+      src: "/images/wheelsup-09-brand-typography.png",
+      caption: "Typography and color — every decision justified by real-world usage conditions."
     },
 
+    // ── CARPOOL FLOW ─────────────────────────────────────
     {
       type: "text",
-      title: "Designing the Full Carpool Flow",
-      body: "Every screen in the carpool flow was designed to reduce cognitive load at the moment it matters most. From creating a carpool with child avatars, to editing a ride mid-week, to the live driver card arriving in real time — each step was validated against the real rhythms of a Kathmandu morning."
-    },
-
-    {
-      type: "image",
-      size: "phone",
-      src: "/images/wheelsup-04-create-carpool.png",
-      caption: "Create Carpool — child avatars, route details, pickup time and repeat frequency. 'Preview & Invite' sends the carpool to all parents in one tap."
-    },
-
-    {
-      type: "image",
-      size: "banner",
-      src: "/images/wheelsup-05-carpool-creation.png",
-      caption: "Carpool Creation flow — the asymmetric avatar selector lets parents assign multiple children without navigating separate menus."
-    },
-
-    {
-      type: "image",
-      size: "phone",
-      src: "/images/wheelsup-07-upcoming-rides.png",
-      caption: "Upcoming Rides — transit log showing confirmed rides, driver-needed alerts, and the ability to pick up a ride."
-    },
-
-    {
-      type: "image",
-      size: "phone",
-      src: "/images/wheelsup-08-upcoming-rides-edit.png",
-      caption: "Edit Mode — select any ride to modify. Designed for the parent who plans a week ahead but needs flexibility mid-schedule."
-    },
-
-    {
-      type: "image",
-      size: "phone",
-      src: "/images/wheelsup-09-edit-carpool.png",
-      caption: "Edit Carpool — choose parents, update details, and save. All notified instantly."
-    },
-
-    {
-      type: "image",
-      size: "phone",
-      src: "/images/wheelsup-03-ride-details.png",
-      caption: "Ride Details — 3D live tracking map, ETA, pickup and drop-off, and the full passenger list. The screen a parent opens first and closes last."
-    },
-
-    {
-      type: "image",
-      size: "banner",
-      src: "/images/wheelsup-06-bus-tracker.png",
-      caption: "Bus Tracker — stop-by-stop live progress with the current stop pulsing in amber. No more frantic calls to the driver."
+      title: "Core Flow: Carpool",
+      body: "The carpool flow is the product's primary value driver. I designed it to handle three distinct user states: creating a new carpool, monitoring an active ride, and managing recurring schedules. Each state required different information hierarchy. The hardest design problem was the 'Create Carpool' screen — parents in Nepal often coordinate rides for multiple children from the same household, which no existing product handles gracefully. I solved it with an asymmetric avatar selector that lets a parent assign multiple children to a single ride in one step, without navigating sub-menus."
     },
 
     {
       type: "image",
       size: "wide",
       src: "/images/wheelsup-10-full-flow-strip.png",
-      caption: "The complete carpool flow — all 9 screens in sequence from home to live tracking to editing and back."
+      caption: "The complete carpool flow — 9 screens from creation to live tracking to editing."
     },
 
+    // ── KEY SCREENS ──────────────────────────────────────
+    {
+      type: "text",
+      title: "Key Screen: Live Tracking",
+      body: "The live tracking screen is where the '2-Second Rule' is most critical. The ETA is the dominant element at 48px bold amber — nothing competes with it. Below it, the driver card surfaces the verified human behind the ride, replacing the cold GPS dot with a face, a name, a rating, and a vehicle plate number. The 'I'm at the Curb' button eliminates the most dangerous moment in the current system: the phone call to the driver while driving. One tap, haptic confirmation, done."
+    },
+
+    {
+      type: "image",
+      size: "phone",
+      src: "/images/wheelsup-02-carpool-home.png",
+      caption: "Carpool home — departure time, driver status, and live map access above the fold."
+    },
+
+    {
+      type: "image",
+      size: "phone",
+      src: "/images/wheelsup-06-live-status.png",
+      caption: "Live status — driver identity, vehicle, rating, security measures, and next stop. Trust surface designed for a parent checking from their desk."
+    },
+
+    // ── SAFETY ──────────────────────────────────────────
+    {
+      type: "text",
+      title: "Safety as a Feature",
+      body: "In Nepal, trust is built through people — not systems. A GPS dot on a map does not reassure a Nepali parent. A verified face does. I designed the safety layer around this cultural truth: every driver profile surfaces a photo, government ID verification status, rating history, and active security monitoring. The 'Are you in the vehicle?' check-in screen — triggered automatically when a student's GPS enters a geofence around the vehicle — closes the loop between parent, student, and driver without a single phone call."
+    },
+
+    {
+      type: "image",
+      size: "phone",
+      src: "/images/wheelsup-05-ride-status.png",
+      caption: "Vehicle check-in — automatic geofence trigger, single-tap confirmation, zero friction."
+    },
+
+    {
+      type: "image",
+      size: "phone",
+      src: "/images/wheelsup-04-create-carpool.png",
+      caption: "Create carpool — multi-child avatar selector, route input, frequency settings. Designed for the parent setting up Monday's ride at 11pm on Sunday."
+    },
+
+    // ── SCHEDULING ──────────────────────────────────────
+    {
+      type: "text",
+      title: "Scheduling & Recurring Rides",
+      body: "Kathmandu parents don't book rides day by day — they set up recurring carpools for the school term and then manage exceptions. I designed the scheduling system around this mental model: create once, repeat by default, edit as needed. The 'Upcoming Rides' screen surfaces the transit log with status indicators — confirmed, driver needed, pick up available — so a parent can assess the week in one scroll. The edit flow allows mid-week changes without disrupting the recurring rule."
+    },
+
+    {
+      type: "image",
+      size: "phone",
+      src: "/images/wheelsup-07-upcoming-rides.png",
+      caption: "Upcoming rides — transit log with status indicators. Designed for weekly planning, not daily booking."
+    },
+
+    {
+      type: "image",
+      size: "phone",
+      src: "/images/wheelsup-09-edit-carpool.png",
+      caption: "Edit carpool — change parents, update details, notify all instantly. One screen, one action."
+    },
+
+    // ── BUS ─────────────────────────────────────────────
+    {
+      type: "text",
+      title: "Bus Tracking",
+      body: "Beyond carpools, WheelsUp integrates public school bus routes — a feature driven directly by research. 4 of 12 parents interviewed relied on school buses, not private carpools. The bus tracker surfaces stop-by-stop progress with a live position indicator, replacing the 'is the bus late?' phone call with a real-time answer. Route status labels — 'Delayed', 'Scheduled', 'Arriving' — were designed to be scannable in under 2 seconds."
+    },
+
+    {
+      type: "image",
+      size: "banner",
+      src: "/images/wheelsup-06-bus-tracker.png",
+      caption: "Bus tracker — stop-by-stop progress, live position, route status. No phone calls."
+    },
+
+    // ── SCREEN LIBRARY ──────────────────────────────────
     {
       type: "image",
       size: "banner",
       src: "/images/wheelsup-08-screen-library.png",
-      caption: "34 screens across 6 flows — Home, Bus, Carpool, Calendar, Inbox, and Onboarding."
+      caption: "34 screens across 6 flows — Home, Carpool, Bus, Calendar, Inbox, Onboarding."
     },
 
-    {
-      type: "text",
-      title: "The Design System: Built for Bright Mornings",
-      body: "Every color, typeface and spacing decision was made with one constraint in mind: legibility under the bright Himalayan sun, on a cracked phone screen, by a parent running late. School Bus Yellow (#F9A825) isn't just a brand color — it's a signal that cuts through noise. The dark base (#10141A) reduces glare. Plus Jakarta Sans at ExtraBold renders the ETA in under 2 seconds of reading time."
-    },
-
-    {
-      type: "image",
-      size: "banner",
-      src: "/images/wheelsup-04-design-system.png",
-      caption: "Design System — color tokens, type scale and components. A 'Friendly-Industrial' palette built for high-visibility in any light."
-    },
-
-    {
-      type: "image",
-      size: "banner",
-      src: "/images/wheelsup-09-brand-typography.png",
-      caption: "Brand identity — WheelsUp wordmark, type scale and the five-color palette that anchors every screen."
-    },
-
+    // ── OUTCOMES ─────────────────────────────────────────
     {
       type: "outcomes",
       items: [
-        "Reduced 'Time-to-Certainty' from several minutes of worrying to 2 seconds of glancing.",
-        "Digitized the 'Trust Culture' of Kathmandu through verified driver profiles.",
-        "Empowered parents with 'Agency,' replacing helpless waiting with actionable data.",
-        "Built a scalable design system ready for the unique infrastructure of Nepal.",
-        "Mapped a 9-screen carpool flow covering creation, live tracking, safety check-in, and editing.",
-        "Designed for dual personas: the student riding and the parent monitoring from work."
+        "Reduced parent 'time-to-certainty' from 3–7 minutes of phone calls to a 2-second screen glance.",
+        "Designed the only multi-child carpool flow in the Kathmandu transit space — solving a gap no existing product addresses.",
+        "Built a complete design system from zero: color, typography, spacing, component library, and usage guidelines.",
+        "Architected 34 screens across 6 distinct user flows, maintaining consistency across two simultaneous user personas.",
+        "Made 'trust' a tangible design feature — verified driver profiles replace anonymous GPS with human accountability.",
+        "Designed every interaction for real-world conditions: outdoor use, low-end devices, users in motion, high ambient stress."
       ]
     },
 
+    // ── REFLECTION ──────────────────────────────────────
     {
       type: "text",
-      title: "Reflection: Design as a Love Language",
-      body: "Working on WheelsUp reminded me that as a UX Researcher, my greatest tool isn't Figma—it's empathy. This isn't just a project for my portfolio; it's a solution for my family. It taught me that when we design for the people we love, we create products that the whole world can trust."
+      title: "What I Learned",
+      body: "The biggest design lesson from WheelsUp was that simplicity is a product strategy, not a visual style. Every screen that got cut, every flow that got compressed, every interaction that got reduced to one tap — those were strategic decisions, not aesthetic ones. The parent using this app is not leisurely browsing. She has 90 seconds between meetings and a child who should have arrived 10 minutes ago. Designing for that moment — for that specific human, in that specific condition — is what product design actually means."
     },
 
+    // ── CLOSING ─────────────────────────────────────────
     {
       type: "image",
       size: "banner",
       src: "/images/wheelsup-10-project-summary.png",
-      caption: "Designed for safety first — WheelsUp, 2026."
+      caption: "WheelsUp — a 0→1 product built on a single design conviction: safety should be visible, not assumed."
     }
 
   ]
