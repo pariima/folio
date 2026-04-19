@@ -410,111 +410,196 @@ const PROJECTS = [
 const BLOGS = [
   {
     id: 1,
-    title: "Why 'Intuitive Design' Is a Red Flag",
-    date: "November 12, 2024",
-    readTime: "5 min read",
-    excerpt: "When clients ask for 'intuitive' design, what they usually mean is 'design that works for me.' Here's why that framing is dangerous.",
-    content: `When a client says they want something "intuitive," I've learned to pause. It's one of those words that sounds like a clear design requirement but contains a hidden trap.
+    title: "AI Can Generate the Interface. It Can't Generate the Intention.",
+    date: "March 18, 2025",
+    readTime: "9 min read",
+    excerpt: "Everyone is racing to use AI in product design. But the more I work with these tools, the more convinced I am that AI amplifies design decisions — it doesn't make them. Here's what that means for how we work.",
+    content: `I want to be clear about something upfront: I use AI tools in my design practice every day. Generative UI, copilot tools for research synthesis, automated component suggestions — they're genuinely useful. But there's a growing narrative in the industry that AI will eventually *replace* the judgment calls at the centre of good product design, and I think that narrative is not just wrong, it's dangerous.
 
-## Intuitive for whom?
+Let me explain why.
 
-Intuition isn't a universal quality. What feels natural to a 35-year-old who grew up with smartphones is completely foreign to a 70-year-old encountering a touchscreen for the first time. What a developer finds obvious in a dashboard is opaque to a first-time user.
+## What AI is actually doing when it "designs"
 
-When someone says "intuitive," they almost always mean "intuitive for someone like me." That's not a design spec — it's a bias wearing a design spec's clothing.
+When an AI tool generates a UI layout or suggests a user flow, it is performing a sophisticated act of pattern matching. It has been trained on millions of design decisions made by humans, and it is surfacing the statistically most common approaches to a given problem.
 
-## The danger of the word
+That sounds useful. And it often is — for commodity problems.
 
-The problem with accepting "intuitive" as a requirement is that it shuts down the conversation before it starts. It implies that there's an obvious right answer, and that if users struggle, it's their fault for not getting it.
+But here's the thing about great product design: the moments that matter most are almost always *not* commodity problems. They're the edge cases, the emotionally loaded interactions, the decisions that require you to hold the business constraint in one hand and the user's reality in the other and find a path that respects both.
 
-This framing leads to:
+An AI does not know that your onboarding flow needs to account for users who are signing up in the middle of a crisis. It does not know that the "simple" modal you're designing will be seen by people who have just received bad news and need to feel held, not processed. It does not know why that specific user segment abandons at that specific step, because knowing that required being in the room when they tested it.
 
-- Skipping user research because "of course it's obvious"
-- Dismissing user feedback as user error
-- Designing for the client's mental model instead of the user's
+## The seduction of plausible outputs
 
-## What to ask instead
+The real danger with AI in design isn't that it produces bad outputs. It's that it produces *plausible* outputs — layouts that look reasonable, copy that reads coherently, flows that seem logical. Plausible is seductive. It looks like done.
 
-When a client asks for intuitive design, I redirect with questions:
+But plausible is not the same as *right*. And in product design, the gap between plausible and right is exactly where users get hurt.
 
-- *Who are your users, specifically?*
-- *What do they already know how to do?*
-- *What will they be trying to accomplish?*
+I've watched teams use AI-generated wireframes as starting points without questioning the assumptions baked into them. The AI defaulted to a pattern it had seen a thousand times. The team, relieved to have a starting point, iterated on top of that default without ever asking whether the default fit their users. Months later, they were doing user research that revealed exactly what they would have found if they'd started with the user instead of the tool.
 
-These questions reframe the conversation around actual humans — which is where design has to start.
+## Three things AI genuinely cannot do
 
-## The deeper lesson
+**1. It cannot tell you what the problem actually is.**
 
-"Intuitive" is a word that makes designers feel good and users feel blamed. Our job is to build understanding through research, testing, and iteration — not to assume that good design is self-evident.
+AI works on the problem you give it. If you've framed the wrong problem — which is one of the most common and costly mistakes in product design — the AI will produce beautiful solutions to the wrong thing. Problem framing requires judgment, context, and often a willingness to push back on the brief. None of these are computable.
 
-The best interfaces aren't intuitive. They're *learnable*. And there's a big difference.`
+**2. It cannot sit with a user and watch them fail.**
+
+Usability testing is not data entry. The moments that change your understanding of a product are often not in what users say — they're in the pause before they click, the small sigh before they abandon, the way they re-read the same sentence twice. These signals require a human observer who understands what they're looking for and why it matters. AI can help you analyse recordings after the fact. It cannot replace the act of witnessing.
+
+**3. It cannot make the values-based call.**
+
+Every product embeds values. Dark patterns are a design choice. Nudging users toward higher-priced tiers is a design choice. Making the cancellation flow deliberately confusing is a design choice. AI will not refuse to design these things. It will generate them cleanly and efficiently if you ask it to.
+
+The designer is the last line of defence between a technically functional product and an ethically sound one. That is not a role you can automate.
+
+## What this means practically
+
+This isn't a call to use AI less. Use it more. Use it to move faster through the repetitive work — the component generation, the copy variants, the responsive breakpoints. Free up that time for the work that requires you.
+
+It just means keeping a clear-eyed view of what you're delegating and what you're not. You are delegating execution. You are not delegating judgment.
+
+The discipline of product design — the real discipline — is knowing the difference between those two things in the moment. That is not going to change because the tools got smarter.`
   },
   {
     id: 2,
-    title: "The Case for Slower Design",
-    date: "October 3, 2024",
-    readTime: "7 min read",
-    excerpt: "In an industry obsessed with speed and iteration, there's a quiet argument for doing less, more deliberately.",
-    content: `There's a tension at the heart of modern design practice. On one side: the pressure to ship fast, iterate constantly, and treat every release as a learning opportunity. On the other: the nagging feeling that we're optimizing for output instead of impact.
+    title: "Why Every App Feels the Same (And What We Lost When That Happened)",
+    date: "February 4, 2025",
+    readTime: "11 min read",
+    excerpt: "Open ten apps on your phone. Swap the logos and colour schemes. Could you tell them apart? We built the most sophisticated design tools in history and somehow ended up with less diversity than before. This is the story of how that happened.",
+    content: `There's a thought experiment I like to run with design students. I put ten mobile app screenshots on the screen — news reader, banking app, e-commerce, fitness tracker, food delivery — and I remove the logos. Then I ask them to identify which is which.
 
-## The iteration trap
+They can't. Not reliably.
 
-Agile design culture tells us that speed is a virtue. Ship early, learn fast, adjust. It's a compelling framework — and it works, up to a point.
+The layouts are too similar. The typography choices converge. The interaction patterns are interchangeable. The colour systems have a sameness to them that's hard to name but impossible to ignore once you see it.
 
-The trap is when iteration becomes a substitute for thinking. When the sprint cycle moves faster than our ability to synthesize what we've learned. When we're always building the next thing before we've understood the last.
+We are in the age of the most powerful design tools ever built. Design systems that scale. AI that generates UI in seconds. Figma libraries with thousands of components. Component frameworks that any engineer can implement. And the result, somehow, is products that look and feel like they were all designed by the same invisible committee.
 
-## What slower design looks like
+How did this happen?
 
-Slower design isn't about being precious or taking forever to ship. It's about creating deliberate space for:
+## The component library convergence
 
-- **Deep research** before ideation — not parallel to it
-- **Synthesis time** to actually make sense of what users told you
-- **Questioning the brief** instead of just executing it
-- **Sitting with ambiguity** long enough to find the real problem
+It starts with design systems — a concept I genuinely believe in, but whose unintended consequence nobody talks about enough.
 
-## The business case
+When Material Design launched, it was a revelation. A coherent visual language with principled foundations, freely available, well-documented. Other systems followed. And then design tools started shipping with component libraries built on top of these systems. And then Figma Community gave every designer access to polished, production-ready component sets in one click.
 
-Here's the uncomfortable truth: slower design is often faster in practice. When you take three extra days to deeply understand the problem, you avoid the three-week rebuild that comes from solving the wrong one.
+The seductive thing about a pre-built component library is that it solves real problems. Consistency. Speed. Accessibility defaults that would take months to build from scratch. These are not trivial things.
 
-The projects I've seen fail most spectacularly weren't the slow ones. They were the ones that moved fast in the wrong direction.
+But here's what gets lost: **the component library was built to solve someone else's problem.** It encodes the assumptions of the team that made it, for the users they were designing for, expressing the values of the organisation that commissioned it. When you adopt it wholesale, you adopt all of those assumptions too.
 
-## A practical prescription
+And because everyone is adopting the same libraries, built on the same base, the assumptions compound. A generation of products inherits the same spatial decisions, the same typographic hierarchy, the same interaction affordances. The diversity that used to come from genuinely different approaches to the same problems disappears.
 
-Once per project, schedule what I call a "slow day." No deliverables, no outputs. Just thinking, sketching loosely, talking to someone outside the project. It feels inefficient. It rarely is.`
+## The algorithm that rewards the familiar
+
+There's a second force at work, and it's more insidious: algorithmic pressure toward the familiar.
+
+A/B testing culture has taught the industry to treat engagement metrics as the ground truth of good design. If version B has a higher click-through rate than version A, version B wins. Ship it. Move on.
+
+The problem is that users click on things they recognise. Familiarity reduces friction. A button that looks exactly like every other button on every other app will, in a controlled test over a short time horizon, outperform a button that makes you think for half a second. The novel interaction loses to the familiar one even when the novel interaction is better — because novelty has a learning curve, and learning curves don't show up in a two-week A/B test.
+
+The cumulative effect of thousands of design teams running thousands of A/B tests, all optimising for the same short-term engagement metrics, is a slow gravitational pull toward the familiar. Every product converges toward the interaction patterns that users already know. Which are the interaction patterns they learned from every other product. Which were shaped by the same process.
+
+It's a feedback loop that actively selects against distinctiveness.
+
+## AI is accelerating this — but it didn't start it
+
+I want to be careful here because the easy take is to blame AI tools for the homogenisation. That's not quite right. The homogenisation started before AI design tools were widespread. AI is accelerating a process that was already underway.
+
+When an AI generates a UI, it is — as I've written elsewhere — performing sophisticated pattern matching on its training data. The training data is the existing landscape of digital products. The most statistically common patterns in that landscape are the ones that win.
+
+So AI-generated UI is, almost by definition, maximally familiar. It is the average of the design decisions that came before it. It is competent, functional, accessible, and completely indistinct.
+
+Using AI to generate your UI starting point without questioning it is like asking someone to describe the average human face and then using that as your portrait. The average face is recognisable. It is not memorable. It does not tell you anything about the person.
+
+## What we lose when everything looks the same
+
+This is not just an aesthetic complaint. The homogenisation of product design has real costs that don't show up in engagement dashboards.
+
+**Brand differentiation collapses.** When the product experience is interchangeable, the only differentiator left is price and distribution. Companies that spent years building genuine product craft end up competing on the same axis as companies that just shipped a white-label template. The craft becomes invisible.
+
+**User expectations flatten.** When you only ever encounter the same patterns, you stop being surprised by what's possible. You stop expecting the product to understand you specifically — you expect it to process you efficiently. The relationship between user and product becomes transactional. There's a reason people talk about certain apps with genuine affection and others as utilities they begrudgingly use. The ones that earn affection are almost always the ones that made choices.
+
+**Design as a discipline loses its argument.** If AI can generate a product that is indistinguishable from what a design team produces, the case for investing in design weakens. Not because design doesn't matter — it does, more than ever — but because the value of design becomes invisible when its outputs are identical to generated content.
+
+## What distinctiveness actually requires
+
+I've been arguing that the homogenisation is a problem. Let me be specific about what solving it requires.
+
+It requires starting from the user before starting from the component library. This sounds obvious. It is not common practice. Most design work starts with a brief, a timeline, and an existing design system. The user research happens in parallel or after the fact. Genuine distinctiveness requires letting the user's actual situation shape the interaction model before the tools do.
+
+It requires the willingness to be slower than the template. A component library gives you a working UI in hours. Building something that genuinely fits your users — in the way their specific mental models work, in the contexts in which they'll actually use it — takes longer. That time has to be justified to stakeholders who can see the template and wonder why you're not just using it.
+
+It requires treating distinctiveness as a product value, not a design indulgence. The companies that produce memorable digital products have leadership that understands brand experience as a competitive moat. They protect the design time required to build it.
+
+## A small act of resistance
+
+I'm not arguing for novelty for its own sake. Unfamiliar interactions that require learning impose a real cost on users. Distinctive doesn't mean difficult.
+
+But there's a version of this that's available to every designer working right now: the deliberate refusal to accept the default. Not always, not everywhere, but at the moments that matter most — the first impression, the key transaction, the moment the user needs to feel understood.
+
+Those are the moments worth fighting for.
+
+The default will always be there. The question is whether you have a reason to deviate from it. If you don't have the reason, use the default. But if you do — if you've done the research, understood the users, seen the opportunity — then deviate deliberately. Ship something that could only exist for *these* people, in *this* context.
+
+That's what design is. That's what AI tools, as currently constituted, will not do for you.`
   },
   {
     id: 3,
-    title: "What Service Blueprints Taught Me About Empathy",
-    date: "August 19, 2024",
-    readTime: "6 min read",
-    excerpt: "Service blueprints are often treated as operational tools. But when done right, they're one of the most powerful empathy exercises in the designer's toolkit.",
-    content: `I came to service blueprints through necessity — a client project involving a complex, multi-touchpoint service across digital and physical channels. The interactions were too tangled for journey maps alone to capture.
+    title: "The Human in the Loop Is Not Optional",
+    date: "January 9, 2025",
+    readTime: "8 min read",
+    excerpt: "The phrase 'human in the loop' has become a compliance checkbox. In product design, it's actually the whole job. A look at what AI-augmented design gets right, what it gets dangerously wrong, and where the designer's irreplaceable work lives.",
+    content: `"Human in the loop" is a phrase from machine learning that has wandered into product design circles and lost its meaning in the process. In ML, it refers to a specific architectural decision: keeping a human in the feedback cycle so the model doesn't drift toward outcomes nobody actually wants. It's a technical safeguard.
 
-What I didn't expect was how much the process would shift my thinking about empathy in design.
+In design conversations, the phrase has become a kind of reassurance. *Don't worry, there'll be a human in the loop.* It's said in a tone that implies the human's role is supervision — watching over the AI's shoulder, ready to intervene if something goes wrong.
 
-## What a service blueprint reveals
+That framing concerns me. Because in product design, the human isn't in the loop as a safeguard. The human *is* the loop. The rest is tooling.
 
-A journey map shows you what a user experiences. A service blueprint shows you *why* — what's happening behind the curtain that produces that experience.
+## What the tools are genuinely good at
 
-When you map the backstage processes, the support systems, the handoffs between teams — suddenly the frustrating moments make sense. The user who waits three days for a response isn't waiting because the company doesn't care. They're waiting because three different systems don't talk to each other and a team of two is manually reconciling them.
+I want to start here because the critique is only useful if we're honest about the capability.
 
-## Empathy expands
+AI tools are genuinely good at the parts of product design that are essentially pattern-completion problems. Given a brief, they can generate a range of layout options at a speed no human team can match. They can produce copy variants. They can suggest accessible colour combinations. They can scaffold a design system from a handful of brand tokens. They can summarise user research transcripts, identify recurring themes, and flag contradictions in the data.
 
-Here's what surprised me: doing this work expanded my empathy not just for users, but for the people *delivering* the service.
+These are not trivial contributions. A significant portion of the time in a design process goes to tasks like these — not because they're intellectually demanding, but because they're voluminous. Reducing that volume is genuinely valuable.
 
-Customer support agents working with broken tools. Operations staff maintaining a workaround that's outlasted the original problem. The intern who built a critical spreadsheet two years ago and has since left.
+The danger is in overgeneralising from these capabilities. Because the tasks AI handles well all share a property: they are *generative within a defined space*. There is a known input, a known output format, and a large training set of examples. The AI is filling in the middle.
 
-When you see these backstage realities, you stop designing "ideal state" solutions that assume perfect system behavior. You start designing for the messy, human reality of how services actually function.
+## The tasks that don't have that shape
 
-## The design implication
+Here's a partial list of design tasks that *don't* have that shape, and therefore can't be meaningfully delegated to current AI tools:
 
-The best service design interventions I've seen don't just improve the customer experience. They also make the employee experience less painful. Those two things are almost always connected.
+**Deciding what problem to solve.** Every design project involves at least one moment where the stated brief doesn't match the actual problem. Someone asks for a better onboarding flow when the real problem is that users don't understand the product's value proposition by the time they get to onboarding. Someone asks for a redesigned dashboard when the real problem is that the underlying data model is broken and users are working around it. Recognising these moments requires holding the product's purpose, the user's context, and the business's constraints simultaneously — and having the judgment to know when they're in tension. This is not a pattern-completion task.
 
-## Questions worth asking
+**Choosing whose experience to prioritise.** Every non-trivial design decision involves a tradeoff between different users' needs. Optimising for expert users often means more friction for novices. Designing for the most common use case means the edge cases suffer. Making the interface accessible by default sometimes means compromising aesthetic choices that matter to other users. These tradeoffs don't have objectively correct answers. They require the designer to make a call, own it, and be accountable for its consequences. AI can surface the tradeoffs. It cannot make the call.
 
-These questions slow things down. They're worth it:
+**Reading the room in a user session.** Good user research is not transcription. It's observation. When a user says "this is fine" while visibly struggling with an interaction, the researcher has to decide in real time whether to probe or let it go. When a user's body language shifts before they explain a workaround they've built, the researcher has to notice the shift. When silence falls before an answer, the researcher has to decide what the silence means. These judgments happen in seconds and they determine the quality of the insight. They require a human who is present, attuned, and experienced enough to know what they're seeing.
 
-- *What has to go right backstage for this customer moment to feel effortless?*
-- *Who is doing invisible labor to make this work?*
-- *What breaks when this person is out sick?*`
+**Holding the long view.** Design decisions compound. A choice made in sprint one shapes the constraints of sprint twenty. An interaction pattern established early becomes load-bearing infrastructure that's expensive to change. The designer who has been with a product for two years carries a mental model of how decisions have accumulated — what technical debt has built up, where the UX has been patched rather than properly solved, which user complaints point to structural problems versus surface issues. That model does not exist in an AI tool. It exists in the designer.
+
+## The accountability gap
+
+Here's the thing nobody talks about enough: AI tools are not accountable.
+
+When a designer makes a call that harms users — a dark pattern, a misleading interface, an accessibility failure — there is a human who made that call. That human can be challenged, can reflect, can change their practice. The harm has an address.
+
+When an AI generates an interface that harms users, accountability becomes diffuse. The tool doesn't know it caused harm. The designer who accepted the output without interrogating it might not have seen the harm coming. The product manager who approved the spec was trusting the design tool. The engineer who implemented it was trusting the design.
+
+This is not an argument against using AI in design. It's an argument for clarity about who is accountable when AI-augmented design goes wrong. The answer has to be the human who accepted the output and put it in front of users. Which means the human has to be genuinely in the loop — not supervising, not rubber-stamping, but actually interrogating the outputs with the full weight of their professional judgment.
+
+## What that looks like in practice
+
+The designer who uses AI tools well isn't the one who uses them most. It's the one who is clearest about the boundary between what the tool does and what they do.
+
+The tool generates the options. The designer decides which options are worth exploring.
+
+The tool summarises the research. The designer decides what the summary missed.
+
+The tool produces the layout. The designer decides whether the layout fits the specific emotional context of this product, for these users, at this moment in their lives.
+
+The tool moves fast. The designer moves deliberately.
+
+That deliberateness is not inefficiency. It's the work. It's the reason users trust some products and merely tolerate others. It's the reason certain interfaces feel like they were made by someone who thought about you specifically.
+
+AI can produce competence at scale. Humans are still the only source of the thing that makes competence matter.`
   }
 ];

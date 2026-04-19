@@ -485,10 +485,11 @@ nav {
 .about-name-tag::before { content: ''; width: 20px; height: 1px; background: var(--blue); }
 .about-headline {
   font-family: var(--fd); font-size: clamp(3.5rem, 5.5vw, 6rem);
-  letter-spacing: -.05em; line-height: .9; flex: 1;
-  display: flex; flex-direction: column; justify-content: center;
+  letter-spacing: -.05em; line-height: 1; flex: 1;
+  display: flex; flex-direction: column; justify-content: center; gap: 0.08em;
 }
-.about-headline em { font-style: italic; color: var(--blue); display: block; }
+.about-headline em { font-style: italic; color: var(--blue); }
+.about-headline span { display: block; }
 .about-bio { margin-top: 48px; }
 .about-bio p { font-size: 1rem; color: var(--muted); line-height: 1.8; margin-bottom: 16px; max-width: 480px; }
 .about-bio strong { color: var(--ink); }
