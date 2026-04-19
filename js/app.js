@@ -149,7 +149,7 @@ function renderHome() {
 
   // Blog grid
   const homeBlogGrid = document.getElementById('homeBlogGrid');
-  homeBlogGrid.innerHTML = blogs.slice(0, 3).map(b => `
+  if (homeBlogGrid) homeBlogGrid.innerHTML = blogs.slice(0, 3).map(b => `
     <div class="blog-card" onclick="navigate('detail', 'b${b.id}')">
       <div class="blog-date">${b.date}</div>
       <div class="blog-title">${b.title}</div>
