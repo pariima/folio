@@ -602,25 +602,36 @@ function renderProjectDetail(project) {
   });
 }
 
+let appReady = false;
+
 function handleRouting() {
   const path = window.location.pathname;
+
   if (path.startsWith('/project/')) {
     const id = parseInt(path.split('/project/')[1]);
     const project = projects.find(p => p.id === id);
     if (project) {
       renderAll();
       renderProjectDetail(project);
+      // stamp state so refresh stays on this project
+      history.replaceState({ type: 'project', id }, '', path);
       return;
     }
   }
+
   const pathPageMap = { '/work': 'projects', '/writing': 'blog', '/about': 'about' };
   const page = pathPageMap[path] || 'home';
+
+  // stamp the current history entry so back/forward and refresh always resolve correctly
+  history.replaceState({ page }, '', path);
+
   renderAll();
   navigate(page, null, false);
   setTimeout(initFooterWave, 500);
 }
 
-window.addEventListener('popstate', () => handleRouting());
+// guard: ignore popstate events that fire before the app has initialised (Safari fires one on load)
+window.addEventListener('popstate', () => { if (appReady) handleRouting(); });
 
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 function renderAll() {
@@ -631,6 +642,7 @@ function renderAll() {
 
 document.addEventListener('DOMContentLoaded', () => {
   handleRouting();
+  appReady = true;
   initTextCursorProximity();
   initCardOpacity();
 });
