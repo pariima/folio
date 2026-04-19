@@ -88,7 +88,7 @@ document.addEventListener('mouseout', e => {
 });
 
 // ─── NAVIGATION ──────────────────────────────────────────────────────────────
-function navigate(page, id) {
+function navigate(page, id, updateUrl = true) {
   currentPage = page;
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
@@ -101,9 +101,11 @@ function navigate(page, id) {
 
   document.body.classList.toggle('projects-page', page === 'projects' || page === 'detail');
 
-  const urlMap = { home: '/', projects: '/work', blog: '/writing', about: '/about' };
-  const url = urlMap[page] || '/';
-  history.pushState({ page, id }, '', url);
+  if (updateUrl) {
+    const urlMap = { home: '/', projects: '/work', blog: '/writing', about: '/about' };
+    const url = urlMap[page] || '/';
+    history.pushState({ page, id }, '', url);
+  }
 
   if (page === 'detail') renderDetail(id);
   window.scrollTo(0, 0);
@@ -614,11 +616,11 @@ function handleRouting() {
   const pathPageMap = { '/work': 'projects', '/writing': 'blog', '/about': 'about' };
   const page = pathPageMap[path] || 'home';
   renderAll();
-  navigate(page);
+  navigate(page, null, false);
   setTimeout(initFooterWave, 500);
 }
 
-window.addEventListener('popstate', handleRouting);
+window.addEventListener('popstate', () => handleRouting());
 
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 function renderAll() {
