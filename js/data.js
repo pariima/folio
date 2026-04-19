@@ -197,7 +197,7 @@ const PROJECTS = [
         body: "This project pushed me to think seriously about the ethics of designing for emotional vulnerability. The most important design decisions weren't visual — they were about pacing, safety, and giving users genuine control over their own experience."
       }
     ]
-  },
+  }
   
 // {
 //   id: 5,
