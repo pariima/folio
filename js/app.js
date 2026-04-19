@@ -101,6 +101,10 @@ function navigate(page, id) {
 
   document.body.classList.toggle('projects-page', page === 'projects' || page === 'detail');
 
+  const urlMap = { home: '/', projects: '/work', blog: '/writing', about: '/about' };
+  const url = urlMap[page] || '/';
+  history.pushState({ page, id }, '', url);
+
   if (page === 'detail') renderDetail(id);
   window.scrollTo(0, 0);
 }
@@ -607,8 +611,10 @@ function handleRouting() {
       return;
     }
   }
+  const pathPageMap = { '/work': 'projects', '/writing': 'blog', '/about': 'about' };
+  const page = pathPageMap[path] || 'home';
   renderAll();
-  navigate('home');
+  navigate(page);
   setTimeout(initFooterWave, 500);
 }
 
