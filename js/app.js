@@ -235,6 +235,10 @@ function renderSection(s) {
 function renderBlog() {
   const grid = document.getElementById('blogGrid');
   if (!grid) return;
+
+  const blogCount = document.getElementById('blogCount');
+  if (blogCount) blogCount.textContent = String(blogs.length).padStart(2, '0');
+
   grid.innerHTML = blogs.map(b => `
     <div class="blog-card" onclick="navigate('detail', 'b${b.id}')">
       <div class="blog-date">${b.date}</div>
