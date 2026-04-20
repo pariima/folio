@@ -640,11 +640,41 @@ function renderAll() {
   renderBlog();
 }
 
+// ─── FOOTER QUOTES ───────────────────────────────────────────────────────────
+function initFooterQuotes() {
+  const quotes = [
+    'work in progress.',
+    'built with sweat and late nights.',
+    'perpetually in beta.',
+    'always one redesign away.',
+    'shipping feelings, not just pixels.',
+    'made with curiosity and too much coffee.',
+    'still asking "what if?"',
+    'designed with intention, built with love.',
+    'forever iterating.',
+    'the designer is in.',
+  ];
+  let qi = 0;
+  function updateQuotes() {
+    document.querySelectorAll('.footer-quote-el').forEach(el => {
+      el.style.opacity = '0';
+      setTimeout(() => {
+        el.textContent = '— ' + quotes[qi];
+        el.style.opacity = '1';
+      }, 350);
+    });
+    qi = (qi + 1) % quotes.length;
+  }
+  updateQuotes();
+  setInterval(updateQuotes, 4000);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   handleRouting();
   appReady = true;
   initTextCursorProximity();
   initCardOpacity();
+  initFooterQuotes();
 });
 
 // ─── CARD SCROLL OPACITY ─────────────────────────────────────────────────────
