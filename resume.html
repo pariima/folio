@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume — Parima Bajracharya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="/images/favicon-32x32.png">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --ink: #1A1714;
+      --blue: #2B4EE6;
+      --muted: #7A6E65;
+      --border: rgba(43, 78, 230, 0.15);
+      --surface: rgba(237, 232, 223, 0.6);
+      --fd: 'Fraunces', serif;
+      --fb: 'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: #f5f2ee;
+      color: var(--ink);
+      font-family: var(--fb);
+      font-size: 16px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── TOP BAR ── */
+    .resume-topbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 48px;
+      background: rgba(245, 242, 238, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .resume-topbar-left {
+      display: flex; align-items: center; gap: 20px;
+    }
+    .topbar-back {
+      font-size: .72rem; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--muted); text-decoration: none;
+      display: flex; align-items: center; gap: 8px;
+      transition: color .2s, gap .2s;
+    }
+    .topbar-back:hover { color: var(--blue); gap: 12px; }
+    .topbar-name {
+      font-family: var(--fd); font-size: 1rem; color: var(--ink);
+      letter-spacing: -.01em;
+    }
+    .topbar-actions { display: flex; gap: 12px; }
+    .btn-download {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 22px; font-size: .75rem; letter-spacing: .08em;
+      text-transform: uppercase; text-decoration: none;
+      background: var(--ink); color: #fff;
+      border: 1px solid var(--ink); font-family: var(--fb);
+      transition: background .2s, border-color .2s;
+    }
+    .btn-download:hover { background: var(--blue); border-color: var(--blue); }
+    .btn-print {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 22px; font-size: .75rem; letter-spacing: .08em;
+      text-transform: uppercase; text-decoration: none;
+      background: none; color: var(--ink);
+      border: 1px solid var(--border); font-family: var(--fb);
+      cursor: pointer; transition: border-color .2s, color .2s;
+    }
+    .btn-print:hover { border-color: var(--ink); }
+
+    /* ── RESUME SHEET ── */
+    .resume-wrap {
+      padding-top: 80px;
+      display: flex; justify-content: center;
+      padding-bottom: 80px;
+    }
+    .resume-sheet {
+      width: 100%; max-width: 860px;
+      margin: 40px 24px;
+      background: #fff;
+      box-shadow: 0 8px 64px rgba(26,23,20,.10), 0 2px 12px rgba(26,23,20,.06);
+      padding: 72px 80px;
+    }
+
+    /* ── HEADER ── */
+    .rs-name {
+      font-family: var(--fd);
+      font-size: clamp(2.8rem, 5vw, 4rem);
+      letter-spacing: -.04em;
+      line-height: 1;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+    .rs-contact {
+      font-size: .82rem; color: var(--muted); display: flex;
+      flex-wrap: wrap; gap: 6px 20px; align-items: center;
+      margin-bottom: 48px; padding-bottom: 40px;
+      border-bottom: 2px solid var(--ink);
+    }
+    .rs-contact a { color: var(--blue); text-decoration: none; }
+    .rs-contact a:hover { text-decoration: underline; }
+    .rs-contact-sep { color: var(--border); }
+
+    /* ── SECTION ── */
+    .rs-section { margin-bottom: 40px; }
+    .rs-section-title {
+      font-size: .62rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 20px;
+      padding-bottom: 8px; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .rs-section-title::before {
+      content: ''; width: 20px; height: 1px; background: var(--blue);
+    }
+
+    /* ── EXPERIENCE ENTRY ── */
+    .rs-entry { margin-bottom: 28px; }
+    .rs-entry-header {
+      display: flex; justify-content: space-between; align-items: baseline;
+      gap: 16px; margin-bottom: 6px; flex-wrap: wrap;
+    }
+    .rs-entry-title {
+      font-family: var(--fd); font-size: 1.05rem; letter-spacing: -.02em;
+      color: var(--ink); line-height: 1.2;
+    }
+    .rs-entry-title em { font-style: normal; color: var(--blue); }
+    .rs-entry-date {
+      font-size: .72rem; letter-spacing: .08em; color: var(--muted);
+      white-space: nowrap; text-transform: uppercase; flex-shrink: 0;
+    }
+    .rs-entry-sub {
+      font-size: .78rem; color: var(--muted); margin-bottom: 12px;
+      letter-spacing: .02em;
+    }
+    .rs-entry-list { list-style: none; padding: 0; }
+    .rs-entry-list li {
+      font-size: .88rem; color: #4a4540; line-height: 1.7;
+      padding: 5px 0 5px 20px; position: relative;
+    }
+    .rs-entry-list li::before {
+      content: '→'; position: absolute; left: 0;
+      color: var(--blue); font-size: .72rem; top: 6px;
+    }
+
+    /* ── SKILLS ── */
+    .rs-skills-grid { display: flex; flex-direction: column; gap: 12px; }
+    .rs-skill-row { display: grid; grid-template-columns: 180px 1fr; gap: 16px; align-items: baseline; }
+    .rs-skill-label {
+      font-size: .72rem; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--ink); font-weight: 600;
+    }
+    .rs-skill-items { font-size: .88rem; color: var(--muted); line-height: 1.6; }
+
+    /* ── EDUCATION ── */
+    .rs-edu-entry { margin-bottom: 16px; }
+    .rs-edu-degree {
+      font-family: var(--fd); font-size: 1rem; letter-spacing: -.02em; margin-bottom: 4px;
+    }
+    .rs-edu-school { font-size: .82rem; color: var(--muted); }
+
+    /* ── PRINT ── */
+    @media print {
+      .resume-topbar { display: none; }
+      .resume-wrap { padding-top: 0; }
+      .resume-sheet { margin: 0; box-shadow: none; padding: 48px 64px; max-width: 100%; }
+      body { background: #fff; }
+    }
+
+    @media (max-width: 600px) {
+      .resume-topbar { padding: 14px 20px; }
+      .topbar-name { display: none; }
+      .resume-sheet { padding: 40px 28px; margin: 24px 16px; }
+      .rs-skill-row { grid-template-columns: 1fr; gap: 4px; }
+      .rs-entry-header { flex-direction: column; gap: 4px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="resume-topbar">
+    <div class="resume-topbar-left">
+      <a class="topbar-back" href="javascript:history.back()">← Back</a>
+      <div class="topbar-name">Parima Bajracharya</div>
+    </div>
+    <div class="topbar-actions">
+      <button class="btn-print" onclick="window.print()">Print</button>
+      <a class="btn-download" href="/Parima_Bajracharya_Resume.pdf" download="Parima_Bajracharya_Resume.pdf">↓ Download PDF</a>
+    </div>
+  </div>
+
+  <div class="resume-wrap">
+    <div class="resume-sheet">
+
+      <!-- HEADER -->
+      <div class="rs-name">Parima Bajracharya</div>
+      <div class="rs-contact">
+        <a href="mailto:parima.bajra@gmail.com">parima.bajra@gmail.com</a>
+        <span class="rs-contact-sep">·</span>
+        <span>+1 607-261-2647</span>
+        <span class="rs-contact-sep">·</span>
+        <a href="https://parima.com.np" target="_blank">parima.com.np</a>
+        <span class="rs-contact-sep">·</span>
+        <span>Jersey City, NJ</span>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div class="rs-section">
+        <div class="rs-section-title">Professional Experience</div>
+
+        <div class="rs-entry">
+          <div class="rs-entry-header">
+            <div class="rs-entry-title">UX Designer · <em>KGS Technology Group</em></div>
+            <div class="rs-entry-date">Jul 2025 – May 2026</div>
+          </div>
+          <div class="rs-entry-sub">New York, NY</div>
+          <ul class="rs-entry-list">
+            <li>Worked with product and engineering teams across sprint planning and review sessions for internal tooling and client portal projects, contributing UX input on feature discussions and workflow decisions.</li>
+            <li>Conducted user testing to identify usability gaps in client portal workflows and effectively delivered findings to the product and engineering team, contributing to refinement discussions on how to address them.</li>
+            <li>Operated within an Atlassian toolchain (Jira, Confluence) for tracking tickets, reviewing acceptance criteria, and understanding how product requirements move from definition to delivery.</li>
+            <li>Gained direct exposure to Agile delivery cycles across multiple concurrent workstreams, observing how PMs balance stakeholder priorities, scope constraints, and engineering capacity.</li>
+          </ul>
+        </div>
+
+        <div class="rs-entry">
+          <div class="rs-entry-header">
+            <div class="rs-entry-title">Product Designer &amp; Researcher · <em>All Grow Association (DFG)</em></div>
+            <div class="rs-entry-date">May 2024 – Mar 2025</div>
+          </div>
+          <div class="rs-entry-sub">Remote</div>
+          <ul class="rs-entry-list">
+            <li>Conducted competitive and market analysis to inform product roadmap and feature prioritization for a digital learning platform serving K–12 use cases.</li>
+            <li>Synthesized user research and A/B testing insights via UserTesting.com to guide product decisions, replacing manual Excel workflows with a unified digital system and defining requirements validated with stakeholders.</li>
+            <li>Delivered 15+ Figma prototypes to validate product concepts, streamline user flows, and reduce friction for end users.</li>
+            <li>Partnered with product and engineering teams, managing multiple project timelines simultaneously in an Agile environment using Notion and Confluence.</li>
+          </ul>
+        </div>
+
+        <div class="rs-entry">
+          <div class="rs-entry-header">
+            <div class="rs-entry-title">Instructional Designer · <em>New York Institute of Technology</em></div>
+            <div class="rs-entry-date">Aug 2023 – Feb 2024</div>
+          </div>
+          <div class="rs-entry-sub">New York, NY</div>
+          <ul class="rs-entry-list">
+            <li>Designed core curriculum for the Product Design master's program — now actively enrolling students — by integrating design thinking and human-centered methodologies aligned to real-world market strategy.</li>
+            <li>Managed large-scale data collection using Google Apps and Excel; synthesized feedback to iterate on academic roadmaps while applying product iteration principles to curriculum.</li>
+            <li>Leveraged AI tools such as Claude to analyze qualitative datasets, identifying market trends and translating them into actionable recommendations for stakeholders.</li>
+            <li>Collaborated with faculty and industry stakeholders to ensure coursework addressed current market and product strategy challenges.</li>
+          </ul>
+        </div>
+
+        <div class="rs-entry">
+          <div class="rs-entry-header">
+            <div class="rs-entry-title">Web Design Intern · <em>CTS at SUNY Oswego</em></div>
+            <div class="rs-entry-date">Dec 2019 – Mar 2021</div>
+          </div>
+          <div class="rs-entry-sub">Oswego, NY</div>
+          <ul class="rs-entry-list">
+            <li>Redesigned the online ticketing portal in compliance with ServiceNow, improving ticket categorisation, routing efficiency, and submission clarity campus-wide, drawing on firsthand experience as Help Desk Assistant.</li>
+            <li>Conducted usability testing and accessibility audits on Blackboard, Citrix, and other digital service platforms; iterated based on qualitative and quantitative insights.</li>
+            <li>Collaborated with IT, service desk, and web development teams to enhance information architecture, resulting in a more intuitive experience for students, faculty, and staff.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PROJECTS -->
+      <div class="rs-section">
+        <div class="rs-section-title">Projects</div>
+        <div class="rs-entry">
+          <div class="rs-entry-header">
+            <div class="rs-entry-title">MankoVR: Immersive Journaling Research · <em>Master's Thesis</em></div>
+            <div class="rs-entry-date">Award for Research in Emerging Technologies</div>
+          </div>
+          <ul class="rs-entry-list">
+            <li>Identified a gap in the mental wellness app market for VR platforms and conducted end-to-end comparative research between VR and mobile journaling experiences to validate the opportunity.</li>
+            <li>Designed and iterated on prototypes demonstrating how immersive features could enhance emotional processing outcomes over traditional mobile apps.</li>
+            <li>Managed the full project lifecycle independently from problem framing through thesis presentation.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="rs-section">
+        <div class="rs-section-title">Skills</div>
+        <div class="rs-skills-grid">
+          <div class="rs-skill-row">
+            <div class="rs-skill-label">Product &amp; Research</div>
+            <div class="rs-skill-items">User Research, Usability Testing, A/B Testing, Competitive &amp; Market Analysis, User Story Writing, Backlog Prioritization, Feature Definition, Journey Mapping, Information Architecture</div>
+          </div>
+          <div class="rs-skill-row">
+            <div class="rs-skill-label">Technical</div>
+            <div class="rs-skill-items">Figma, Jira, Confluence, Miro, Google Analytics, Tableau, Excel, SQL (Learning), HTML, CSS, JavaScript, UserTesting.com, Generative AI</div>
+          </div>
+          <div class="rs-skill-row">
+            <div class="rs-skill-label">Process</div>
+            <div class="rs-skill-items">Agile &amp; Lean UX, Cross-Functional Collaboration, Stakeholder Communication, Timeline Management, Data-Driven Decision Making</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="rs-section">
+        <div class="rs-section-title">Education</div>
+        <div class="rs-edu-entry">
+          <div class="rs-edu-degree">MA in UX/UI Design and Development</div>
+          <div class="rs-edu-school">New York Institute of Technology</div>
+        </div>
+        <div class="rs-edu-entry">
+          <div class="rs-edu-degree">BA in Computer Science · <span style="font-weight:400;font-family:var(--fb)">Minor: Cognitive Science</span></div>
+          <div class="rs-edu-school">SUNY Oswego</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
