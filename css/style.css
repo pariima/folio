@@ -586,6 +586,17 @@ nav {
 .btn-outline { border: 1px solid var(--border); color: var(--ink); background: none; }
 .btn-outline:hover { border-color: var(--ink); }
 
+/* ─── SCROLL REVEAL ─────────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(-14px);
+  transition: opacity .55s cubic-bezier(.25,.1,.25,1), transform .55s cubic-bezier(.25,.1,.25,1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ─── DETAIL / CASE STUDY ─── */
 .back-btn {
   display: inline-flex; align-items: center; gap: 10px;

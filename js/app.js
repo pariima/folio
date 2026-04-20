@@ -309,6 +309,8 @@ function renderDetail(id) {
       });
     }
   }
+
+  initReveal();
 }
 
 // Image zoom //
@@ -604,6 +606,8 @@ function renderProjectDetail(project) {
   el.querySelectorAll('.cs-image img').forEach(img => {
     img.addEventListener('click', () => openLightbox(img.src, img.alt));
   });
+
+  initReveal();
 }
 
 let appReady = false;
@@ -642,6 +646,30 @@ function renderAll() {
   renderHome();
   renderProjects();
   renderBlog();
+}
+
+// ─── SCROLL REVEAL ───────────────────────────────────────────────────────────
+function initReveal() {
+  const targets = document.querySelectorAll(
+    '#detailContent .cs-section, #detailContent .cs-image, #detailContent .cs-quote, #detailContent .cs-outcomes, #detailContent .detail-meta-item'
+  );
+  if (!targets.length) return;
+
+  targets.forEach((el, i) => {
+    el.classList.add('reveal');
+    el.style.transitionDelay = `${(i % 4) * 60}ms`;
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  targets.forEach(el => observer.observe(el));
 }
 
 // ─── FOOTER QUOTES ───────────────────────────────────────────────────────────
